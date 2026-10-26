@@ -10,3 +10,7 @@
 **/*.rep/
 **/*.gpr
 技术参考/逆向分析资料/reconstructed/build/
+
+# Browser verification artifacts
+.playwright-cli/
+output/playwright/
