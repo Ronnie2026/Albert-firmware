@@ -1,0 +1,31 @@
+/* Firmware entry: 0x4818502a */
+
+undefined4 FUN_ram_4818502a(int param_1,undefined4 *param_2,undefined4 *param_3)
+
+{
+  undefined *puVar1;
+  int iVar2;
+  undefined *puVar3;
+  int iVar4;
+  
+  gp = &PTR_s_Print_task_snapshots_ram_481c0790_ram_4ff48580;
+  if (param_1 == 0) {
+    return 0xffffffd2;
+  }
+  iVar2 = *(int *)(param_1 + 4);
+  puVar3 = &DAT_ram_481df370;
+  puVar1 = &UNK_ram_4823a3fc;
+  while ((*(int *)(puVar1 + 4) != iVar2 ||
+         (iVar4 = FUN_ram_4ff4511a(puVar3,*(undefined4 *)(param_1 + 8),iVar2), iVar4 != 0))) {
+    puVar3 = *(undefined **)(puVar1 + 0x18);
+    puVar1 = puVar1 + 0x18;
+    if (puVar3 == (undefined *)0x0) {
+      return 0xffffffd2;
+    }
+  }
+  *param_2 = *(undefined4 *)(puVar1 + 0x10);
+  *param_3 = *(undefined4 *)(puVar1 + 0x14);
+  return 0;
+}
+
+

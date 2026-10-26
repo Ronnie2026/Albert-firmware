@@ -1,0 +1,156 @@
+/* Firmware entry: 0x4803ae1a */
+
+void FUN_ram_4803ae1a(int *param_1,undefined4 param_2,undefined4 param_3,int param_4,int param_5,
+                     undefined4 *param_6)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 uVar3;
+  undefined1 auStack_50 [16];
+  undefined1 auStack_40 [28];
+  
+  gp = &PTR_s_Print_task_snapshots_ram_481c0790_ram_4ff48580;
+  iVar2 = *param_1;
+  FUN_ram_4802a8a8(auStack_50,&DAT_ram_481c4164);
+  uVar3 = *param_6;
+  FUN_ram_4802f022(auStack_50,"attemptCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[1];
+  FUN_ram_4802f022(auStack_50,"acceptedCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  iVar2 = iVar2 + param_4 * 0x14;
+  uVar3 = *(undefined4 *)(iVar2 + 0x9c4);
+  FUN_ram_4802f022(auStack_50,"adapterAttemptCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = *(undefined4 *)(iVar2 + 0x9c8);
+  FUN_ram_4802f022(auStack_50,"adapterAcceptedCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = *(undefined4 *)(iVar2 + 0x9cc);
+  FUN_ram_4802f022(auStack_50,"adapterUnavailableCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = *(undefined4 *)(iVar2 + 0x9d0);
+  FUN_ram_4802f022(auStack_50,"adapterPendingBusyCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = *(undefined4 *)(iVar2 + 0x9d4);
+  FUN_ram_4802f022(auStack_50,"adapterDriverRejectedCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[2];
+  FUN_ram_4802f022(auStack_50,"apiLockBusyCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[3];
+  FUN_ram_4802f022(auStack_50,"p0BusyRejectCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[4];
+  FUN_ram_4802f022(auStack_50,"txLimitRejectCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[5];
+  FUN_ram_4802f022(auStack_50,"nodeUnavailableCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[6];
+  FUN_ram_4802f022(auStack_50,"slotUnavailableCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[7];
+  FUN_ram_4802f022(auStack_50,"deadlineExpiredCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[8];
+  FUN_ram_4802f022(auStack_50,"controllerEpochChangedCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[9];
+  FUN_ram_4802f022(auStack_50,"nodeSubmitFailCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[10];
+  FUN_ram_4802f022(auStack_50,"rxStaleDropCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[0xb];
+  FUN_ram_4802f022(auStack_50,"sourceToSubmitLastUs");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[0xc];
+  FUN_ram_4802f022(auStack_50,"sourceToSubmitMaxUs");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[0xd];
+  FUN_ram_4802f022(auStack_50,"sourceToSubmitOver1msCount");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  iVar2 = -1;
+  if (param_6[0xe] != 0) {
+    iVar2 = *(int *)param_1[1] - param_6[0xe];
+  }
+  FUN_ram_4802f022(auStack_50,"lastFailureAgeMs");
+  FUN_ram_4802aa44(auStack_40,iVar2,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = param_6[0xf];
+  FUN_ram_4802f022(auStack_50,"lastError");
+  FUN_ram_4802aa00(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = *(undefined4 *)(*param_1 + (param_5 + 0x230) * 4 + 4);
+  FUN_ram_4802f022(auStack_50,"terminalOk");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = *(undefined4 *)(*param_1 + (param_5 + 0x240) * 4 + 4);
+  FUN_ram_4802f022(auStack_50,"terminalFail");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  iVar1 = *(int *)(*param_1 + (param_5 + 0x250) * 4 + 4);
+  iVar2 = -1;
+  if (iVar1 != 0) {
+    iVar2 = *(int *)param_1[1] - iVar1;
+  }
+  FUN_ram_4802f022(auStack_50,"lastTerminalAgeMs");
+  FUN_ram_4802aa44(auStack_40,iVar2,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  uVar3 = *(undefined4 *)(*param_1 + (param_5 + 0x260) * 4 + 4);
+  FUN_ram_4802f022(auStack_50,"lastTerminalError");
+  FUN_ram_4802aa44(auStack_40,uVar3,10);
+  FUN_ram_4802ae48(auStack_50,auStack_40);
+  FUN_ram_4802a59e(auStack_40);
+  FUN_ram_4802af5a(auStack_50,0x7d);
+  FUN_ram_4802f022(param_2,param_3);
+  FUN_ram_4802ae48(param_2,auStack_50);
+  FUN_ram_4802a59e(auStack_50);
+  return;
+}
+
+

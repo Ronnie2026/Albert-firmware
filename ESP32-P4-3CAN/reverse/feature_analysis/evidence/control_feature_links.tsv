@@ -1,0 +1,438 @@
+index	origin	line	id_or_name	label	initial_hidden	features	mapping_basis	routes	handlers
+0	dashboard.html	414		我已阅读并理解	False	01_ui_auth:legal	内联事件函数		
+1	dashboard.html	423		稍后升级	True	15_ota:ota_online	内联事件函数	GET:/ota/online/status, POST:/ota/online/check, POST:/ota/online/install	0x480bdfce, 0x4806b9ae, 0x4807be92
+2	dashboard.html	423		立即升级	True	15_ota:ota_online	内联事件函数	GET:/ota/online/status, POST:/ota/online/check, POST:/ota/online/install	0x480bdfce, 0x4806b9ae, 0x4807be92
+3	dashboard.html	434	uiModeBtn	UI·自动	False	01_ui_auth:ui_mode	功能显式列出的控件ID		
+4	dashboard.html	435	themeBtn	日间	False	01_ui_auth:theme	功能显式列出的控件ID	GET:/system_status	0x4808334c
+5	dashboard.html	436		退出	False	01_ui_auth:logout	退出表单action	POST:/auth/logout, GET:/auth/status	0x4808adc8, 0x480677f4
+6	dashboard.html	436		退出	False	01_ui_auth:logout	退出表单action	POST:/auth/logout, GET:/auth/status	0x4808adc8, 0x480677f4
+7	dashboard.html	437	rebootButton	重启	False	15_ota:reboot	功能显式列出的控件ID	POST:/reboot, GET:/health	0x480ffb40, 0x480c2bda
+8	dashboard.html	450	canCommsEnabled		False	02_config_can:can_gates	功能显式列出的控件ID	POST:/config, GET:/config	0x48101f34, 0x480bd450
+9	dashboard.html	471		添加驾驶员	False	03_drivers:driver_add	内联事件函数	POST:/driver_profiles	0x480fa85c
+10	dashboard.html	472	driverModeToggle	切换到手动选择	False	03_drivers:driver_selection	功能显式列出的控件ID	POST:/driver_profiles	0x480fa85c
+11	dashboard.html	473		刷新	False	03_drivers:driver_list	内联事件函数	GET:/driver_profiles	0x4806d76e
+12	dashboard.html	494	stalkControlVersion	FSD 车型协议V12 V13 V14	False	04_fsd_activation:fsd_protocol	功能显式列出的控件ID	POST:/config, GET:/config	0x48101f34, 0x480bd450
+13	dashboard.html	495	fsdEnabled	FSD 功能	False	04_fsd_activation:fsd_master	功能显式列出的控件ID	POST:/config, GET:/config	0x48101f34, 0x480bd450
+14	dashboard.html	496	ambientFsdCueEnabled	FSD 激活氛围灯	False	09_ambient:ambient_fsd	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+15	dashboard.html	497	fsdSteadyModeEnabled	稳盘模式	False	04_fsd_activation:fsd_steady	功能显式列出的控件ID	POST:/config	0x48101f34
+16	dashboard.html	499	fsdParkStartEnabled	P 挡启动 FSD	True	04_fsd_activation:fsd_p_start	功能显式列出的控件ID	POST:/config	0x48101f34
+17	dashboard.html	501	enhancedAutopilotEnabled	增强 AP / 智能召唤	True	04_fsd_activation:enhanced_ap	功能显式列出的控件ID	POST:/config	0x48101f34
+18	dashboard.html	502	v13SpaceToSpaceEnabled	自动激活泊车	False	04_fsd_activation:space_parking	功能显式列出的控件ID	POST:/config	0x48101f34
+19	dashboard.html	503	v13ParkingDelayMs	退出 FSD 后开始泊车延迟（毫秒）	True	04_fsd_activation:space_parking	功能显式列出的控件ID	POST:/config	0x48101f34
+20	dashboard.html	504	v13ParkingDurationMs	开始泊车请求持续时间（毫秒）	True	04_fsd_activation:space_parking	功能显式列出的控件ID	POST:/config	0x48101f34
+21	dashboard.html	510	autoSpeedOffsetEnabled	自动速度偏移	False	05_speed:speed_enable	功能显式列出的控件ID	POST:/config	0x48101f34
+22	dashboard.html	515	stableSpeedOffsetEnabled	稳定模式	False	05_speed:speed_enable	功能显式列出的控件ID	POST:/config	0x48101f34
+23	dashboard.html	516	hw3ManualStrategyEnabled	手动选择驾驶策略	False	05_speed:hw3_strategy	功能显式列出的控件ID	POST:/config	0x48101f34
+24	dashboard.html	518	hw3ManualStrategy		False	05_speed:hw3_strategy	功能显式列出的控件ID	POST:/config	0x48101f34
+25	dashboard.html	520		舒适 车距 3·4兼容	False	05_speed:hw3_strategy	内联事件函数	POST:/config	0x48101f34
+26	dashboard.html	521		标准 车距 2	False	05_speed:hw3_strategy	内联事件函数	POST:/config	0x48101f34
+27	dashboard.html	522		迅捷 车距 1	False	05_speed:hw3_strategy	内联事件函数	POST:/config	0x48101f34
+28	dashboard.html	530	v14ManualDrivingProfileEnabled	手动选择驾驶模式	True	05_speed:v14_profile	功能显式列出的控件ID	POST:/config	0x48101f34
+29	dashboard.html	531	v14ManualDrivingProfile	驾驶模式Chill 悠缓 Normal 标准 Hurry 迅捷 Max 极致 Sloth 慵懒	True	05_speed:v14_profile	功能显式列出的控件ID	POST:/config	0x48101f34
+30	dashboard.html	536	speedTargetSourceCustom	自定义模板	False	05_speed:speed_templates	功能显式列出的控件ID	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+31	dashboard.html	537	speedTargetSourceVehicle	车机同步	False	05_speed:speed_templates	功能显式列出的控件ID	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+32	dashboard.html	538	speedTargetRetrySave	重试保存	True	05_speed:speed_conflict	功能显式列出的控件ID	POST:/speed_target/save, GET:/speed_target/config	0x480f9322, 0x480f99bc
+33	dashboard.html	538	customSpeedEnabled		True	05_speed:speed_templates	功能显式列出的控件ID	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+34	dashboard.html	539	speedDownStepKph	缓降幅度 km/h / 500ms	False	05_speed:speed_slew	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+35	dashboard.html	541	v13LowSpeedOffsetPct	低速偏移（限速低于 50 km/h）%	False	05_speed:speed_low	功能显式列出的控件ID	POST:/config	0x48101f34
+36	dashboard.html	542	speedOffsetMaxPctRaw	低速最大偏移 %	True	05_speed:speed_low	功能显式列出的控件ID	POST:/config	0x48101f34
+37	dashboard.html	543	v14SpeedOffsetMaxPctRaw	低速最大偏移 %	True	05_speed:speed_low	功能显式列出的控件ID	POST:/config	0x48101f34
+38	dashboard.html	546	speedTemplateQuickPct	模板快速设置	True	05_speed:speed_quick	功能显式列出的控件ID	POST:/speed_target/save	0x480f9322
+39	dashboard.html	546	speedTemplateQuickApply	同步目标	True	05_speed:speed_quick	功能显式列出的控件ID	POST:/speed_target/save	0x480f9322
+40	dashboard.html	556	speedTarget50	限速 50	True	05_speed:speed_templates	模板参数组	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+41	dashboard.html	557	speedTarget60	限速 60	True	05_speed:speed_templates	模板参数组	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+42	dashboard.html	558	speedTarget70	限速 70	True	05_speed:speed_templates	模板参数组	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+43	dashboard.html	559	speedTarget80	限速 80	True	05_speed:speed_templates	模板参数组	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+44	dashboard.html	560	speedTarget90	限速 90	True	05_speed:speed_templates	模板参数组	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+45	dashboard.html	561	speedTarget100	限速 100	True	05_speed:speed_templates	模板参数组	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+46	dashboard.html	562	speedTarget110	限速 110	True	05_speed:speed_templates	模板参数组	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+47	dashboard.html	563	speedTarget120	限速 120	True	05_speed:speed_templates	模板参数组	GET:/speed_target/config, POST:/speed_target/save	0x480f99bc, 0x480f9322
+48	dashboard.html	567	v13HighSpeedOffsetPct	高速偏移（原车智能设速关闭时使用）%	True	05_speed:speed_high	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+49	dashboard.html	576	hw3ComfortTargetBelow60	目标速度 50～59	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+50	dashboard.html	577	hw3ComfortTarget60	目标速度 60..69	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+51	dashboard.html	578	hw3ComfortTarget70	目标速度 70..79	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+52	dashboard.html	579	hw3ComfortTarget80	目标速度 80..89	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+53	dashboard.html	580	hw3ComfortTarget90	目标速度 90..99	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+54	dashboard.html	581	hw3ComfortTarget100	目标速度 100..109	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+55	dashboard.html	582	hw3ComfortTarget110	目标速度 110..119	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+56	dashboard.html	583	hw3ComfortTarget120	目标速度 120..139	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+57	dashboard.html	586	targetBelow60	目标速度 50～59	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+58	dashboard.html	587	target60	目标速度 60..69	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+59	dashboard.html	588	target70	目标速度 70..79	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+60	dashboard.html	589	target80	目标速度 80..89	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+61	dashboard.html	590	target90	目标速度 90..99	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+62	dashboard.html	591	target100	目标速度 100..109	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+63	dashboard.html	592	target110	目标速度 110..119	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+64	dashboard.html	593	target120	目标速度 120..139	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+65	dashboard.html	596	hw3HurryTargetBelow60	目标速度 50～59	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+66	dashboard.html	597	hw3HurryTarget60	目标速度 60..69	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+67	dashboard.html	598	hw3HurryTarget70	目标速度 70..79	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+68	dashboard.html	599	hw3HurryTarget80	目标速度 80..89	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+69	dashboard.html	600	hw3HurryTarget90	目标速度 90..99	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+70	dashboard.html	601	hw3HurryTarget100	目标速度 100..109	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+71	dashboard.html	602	hw3HurryTarget110	目标速度 110..119	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+72	dashboard.html	603	hw3HurryTarget120	目标速度 120..139	True	05_speed:hw3_strategy	策略参数组	POST:/config	0x48101f34
+73	dashboard.html	620	v14TargetBelow60	目标速度 50～59	True	05_speed:v14_profile	V14策略参数组	POST:/config	0x48101f34
+74	dashboard.html	621	v14Target60	目标速度 60..69	True	05_speed:v14_profile	V14策略参数组	POST:/config	0x48101f34
+75	dashboard.html	622	v14Target70	目标速度 70..79	True	05_speed:v14_profile	V14策略参数组	POST:/config	0x48101f34
+76	dashboard.html	623	v14Target80	目标速度 80..89	True	05_speed:v14_profile	V14策略参数组	POST:/config	0x48101f34
+77	dashboard.html	624	v14Target90	目标速度 90..99	True	05_speed:v14_profile	V14策略参数组	POST:/config	0x48101f34
+78	dashboard.html	625	v14Target100	目标速度 100..109	True	05_speed:v14_profile	V14策略参数组	POST:/config	0x48101f34
+79	dashboard.html	626	v14Target110	目标速度 110..119	True	05_speed:v14_profile	V14策略参数组	POST:/config	0x48101f34
+80	dashboard.html	627	v14Target120	目标速度 120..139	True	05_speed:v14_profile	V14策略参数组	POST:/config	0x48101f34
+81	dashboard.html	636	dndEnabled	免打扰总开关	False	06_dnd_torque:dnd_master	功能显式列出的控件ID	POST:/config	0x48101f34
+82	dashboard.html	638	cabinCameraDisableEnabled	关闭摄像头	False	06_dnd_torque:dnd_camera	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+83	dashboard.html	639	v14CameraDisableDelaySec	V14 摄像头回退延时（秒）	True	06_dnd_torque:dnd_camera	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+84	dashboard.html	641	isaChimeSuppressEnabled	ISA提示音抑制	False	06_dnd_torque:dnd_isa	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+85	dashboard.html	642	dndTorqueEnabled	扭矩免打扰	False	06_dnd_torque:torque_config	功能显式列出的控件ID	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+86	dashboard.html	648	torqueNagMaintenanceEnabled	持续预防扭矩	False	06_dnd_torque:torque_config	功能显式列出的控件ID	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+87	dashboard.html	658	preventiveNegativeMinNm	最小	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+88	dashboard.html	658	preventiveNegativeMaxNm	最大	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+89	dashboard.html	659	preventivePositiveMinNm	最小	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+90	dashboard.html	659	preventivePositiveMaxNm	最大	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+91	dashboard.html	664	correctiveNegativeMinNm	最小	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+92	dashboard.html	664	correctiveNegativeMaxNm	最大	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+93	dashboard.html	665	correctivePositiveMinNm	最小	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+94	dashboard.html	665	correctivePositiveMaxNm	最大	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+95	dashboard.html	666	correctiveNegativeFrames	负向	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+96	dashboard.html	666	correctivePositiveFrames	正向	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+97	dashboard.html	668	correctiveSendMinSec	最短（秒）	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+98	dashboard.html	668	correctiveSendMaxSec	最长（秒）	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+99	dashboard.html	669	correctivePauseMinSec	最短（秒）	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+100	dashboard.html	669	correctivePauseMaxSec	最长（秒）	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+101	dashboard.html	674	activityMinSec	最短（秒）	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+102	dashboard.html	674	activityMaxSec	最长（秒）	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+103	dashboard.html	676	restMinSec	最短（秒）	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+104	dashboard.html	676	restMaxSec	最长（秒）	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+105	dashboard.html	679	h2PersistenceSec	H2升级等待（秒） H2 连续达到该时间后进入纠正前停发	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+106	dashboard.html	680	preCorrectionPauseSec	纠正前停发（秒） 填 0 表示立即进入纠正	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+107	dashboard.html	681	stabilityVerifySec	恢复稳定观察（秒） 观察期间仍发送预防扭矩	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+108	dashboard.html	682	dasFreshTimeoutMs	HOS数据超时（ms） 0x39B 超时未更新即停止注入	False	06_dnd_torque:torque_config	扭矩参数组	POST:/config, GET:/torque_nag/status	0x48101f34, 0x4806e388
+109	dashboard.html	690	dndScrollEnabled	滚轮免打扰	False	06_dnd_torque:dnd_scroll	功能显式列出的控件ID	POST:/config	0x48101f34
+110	dashboard.html	695	dndScrollMode	免打扰方式左滚轮音量 右滚轮速度	False	06_dnd_torque:dnd_scroll	功能显式列出的控件ID	POST:/config	0x48101f34
+111	dashboard.html	696	dndSpeedPeriodicEnabled	滚轮持续发送	False	06_dnd_torque:dnd_periodic	功能显式列出的控件ID	POST:/config	0x48101f34
+112	dashboard.html	698	dndSpeedPeriodMinMs	右滚轮后台随机最短间隔（秒）	True	06_dnd_torque:dnd_periodic	功能显式列出的控件ID	POST:/config	0x48101f34
+113	dashboard.html	699	dndSpeedPeriodMaxMs	右滚轮后台随机最长间隔（秒）	True	06_dnd_torque:dnd_periodic	功能显式列出的控件ID	POST:/config	0x48101f34
+114	dashboard.html	707	fsdAutoStartEnabled	启用 FSD 自动激活	False	04_fsd_activation:auto_start_master	功能显式列出的控件ID	POST:/fsd_auto_start/master, GET:/config	0x480f2fc2, 0x480bd450
+115	dashboard.html	709	fsdAutoStartAvailableConfirmFrames	AP 可用确认帧数	False	04_fsd_activation:availability_frames	功能显式列出的控件ID	POST:/config	0x48101f34
+116	dashboard.html	710	fsdAutoStartLongPressEnabled	右滚轮长按持续激活	False	04_fsd_activation:auto_long_press	功能显式列出的控件ID	POST:/config	0x48101f34
+117	dashboard.html	711	fsdAutoStartFirstParkToDriveEnabled	P→D 自动激活	False	04_fsd_activation:auto_pd	功能显式列出的控件ID	POST:/config	0x48101f34
+118	dashboard.html	712	fsdAutoStartReverseToDriveSpeedKph	R→D 15秒内达到的车速（km/h）	False	04_fsd_activation:auto_rd	功能显式列出的控件ID	POST:/config	0x48101f34
+119	dashboard.html	713	fsdAutoStartGroundEnabled	右滚轮 R 档一键激活	False	04_fsd_activation:auto_ground	功能显式列出的控件ID	POST:/config	0x48101f34
+120	dashboard.html	714	fsdDriverOccupiedSpoofEnabled	驾驶位有人与安全带模拟	False	04_fsd_activation:occupancy_spoof	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+121	dashboard.html	748	fsdWarningActivationEnabled	预警防撞激活 推荐 车道偏离或前撞提醒出现时激活	False	04_fsd_activation:warning_activation	功能显式列出的控件ID	POST:/config	0x48101f34
+122	dashboard.html	753	fsdWarningLaneStandard	标准 左侧与右侧	False	04_fsd_activation:warning_activation	功能显式列出的控件ID	POST:/config	0x48101f34
+123	dashboard.html	754	fsdWarningLaneSevere	严重 左侧与右侧	False	04_fsd_activation:warning_activation	功能显式列出的控件ID	POST:/config	0x48101f34
+124	dashboard.html	756	fsdWarningLaneModes		False	04_fsd_activation:warning_activation	功能显式列出的控件ID	POST:/config	0x48101f34
+125	dashboard.html	759	fsdSideCollisionActivationEnabled	侧撞警告激活 侧方碰撞警告出现时激活	False	04_fsd_activation:side_fatigue_activation	功能显式列出的控件ID	POST:/config	0x48101f34
+126	dashboard.html	760	fsdDdawEnabled	疲倦检测 推荐 检测到疲倦提醒时激活	False	04_fsd_activation:side_fatigue_activation	功能显式列出的控件ID	POST:/config	0x48101f34
+127	dashboard.html	767	blindSpotEnabled	启用盲区氛围灯警报 默认关闭；警报解除后恢复原灯光	False	09_ambient:ambient_blind	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+128	dashboard.html	769	blindSpotBrightness	亮度 100%	False	09_ambient:ambient_blind	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+129	dashboard.html	771	blindSpotAreaFront	前门一对	False	09_ambient:ambient_blind	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+130	dashboard.html	772	blindSpotAreaRear	后门一对	False	09_ambient:ambient_blind	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+131	dashboard.html	773	blindSpotAreaDash	仪表台一对	False	09_ambient:ambient_blind	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+132	dashboard.html	775	blindSpotRestoreDelayMs	恢复延时 ms	False	09_ambient:ambient_blind	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+133	dashboard.html	794	gearAutomationEnabled	启动自动换挡	False	07_gear:gear_gates	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+134	dashboard.html	795	gearSeatbeltSafetyEnabled	换挡前必须系安全带	False	07_gear:gear_gates	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+135	dashboard.html	796	gearBrakeSafetyBypassEnabled	关闭刹车安全门	True	07_gear:gear_gates	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+136	dashboard.html	800	gearShiftLimit	换挡次数（单次刹车周期；0 = 无限）	True	07_gear:gear_gates	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+137	dashboard.html	801	gearAutoShiftMaxSpeedKph	允许自动换挡速度 km/h	True	07_gear:gear_gates	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+138	dashboard.html	802	gearCooldownMs	动作冷却 ms	True	07_gear:gear_gates	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+139	dashboard.html	804	gearSmoothPreset	应用智能流畅参数（1000 ms · P 30° · D/R 60° · 障碍物 30°）	True	07_gear:gear_preset	功能显式列出的控件ID	POST:/config	0x48101f34
+140	dashboard.html	808	gearBrakeToggleEnabled	刹车＋方向盘确认	True	07_gear:gear_steering	功能显式列出的控件ID	POST:/config	0x48101f34
+141	dashboard.html	810	gearDriveReverseSteeringThresholdDeciDeg	D/R 挡转向角度 °	True	07_gear:gear_steering	功能显式列出的控件ID	POST:/config	0x48101f34
+142	dashboard.html	810	gearParkSteeringEnabled	P 挡方向盘确认	True	07_gear:gear_steering	功能显式列出的控件ID	POST:/config	0x48101f34
+143	dashboard.html	810	gearParkSteeringThresholdDeciDeg	P 挡转向角度 °	True	07_gear:gear_steering	功能显式列出的控件ID	POST:/config	0x48101f34
+144	dashboard.html	813	bleObstacleFeatureEnabled	障碍物自动换挡	True	07_gear:obstacle_direct	功能显式列出的控件ID	POST:/config/ble_obstacle, GET:/runtime_status	0x480f1e34, 0x4806851c
+145	dashboard.html	815	bleObstacleSteeringConfirmEnabled	方向盘角度确认	True	07_gear:obstacle_direct	功能显式列出的控件ID	POST:/config/ble_obstacle, GET:/runtime_status	0x480f1e34, 0x4806851c
+146	dashboard.html	815	bleObstacleSteeringThresholdDeciDeg	方向盘确认角度 °	True	07_gear:obstacle_direct	功能显式列出的控件ID	POST:/config/ble_obstacle, GET:/runtime_status	0x480f1e34, 0x4806851c
+147	dashboard.html	821	gearUssDistancePreset	雷达距离预设近 中（默认） 远 自定义	True	07_gear:uss_settings	功能显式列出的控件ID	GET:/config/uss_radar, POST:/config/uss_radar	0x4806afe2, 0x480f43a8
+148	dashboard.html	822	gearUssSdiBlockMax	受阻阈值（原始值）	True	07_gear:uss_settings	功能显式列出的控件ID	GET:/config/uss_radar, POST:/config/uss_radar	0x4806afe2, 0x480f43a8
+149	dashboard.html	822	gearUssSdiCautionMax	谨慎阈值（原始值）	True	07_gear:uss_settings	功能显式列出的控件ID	GET:/config/uss_radar, POST:/config/uss_radar	0x4806afe2, 0x480f43a8
+150	dashboard.html	822	gearUssMinValidSdi	有效雷达数（个）	True	07_gear:uss_settings	功能显式列出的控件ID	GET:/config/uss_radar, POST:/config/uss_radar	0x4806afe2, 0x480f43a8
+151	dashboard.html	822	gearUssRadarBlockMaxRaw	前向雷达受阻阈值（原始值）	True	07_gear:uss_settings	功能显式列出的控件ID	GET:/config/uss_radar, POST:/config/uss_radar	0x4806afe2, 0x480f43a8
+152	dashboard.html	823	gearUssRetryLoad	重试读取	True	07_gear:uss_settings	功能显式列出的控件ID	GET:/config/uss_radar, POST:/config/uss_radar	0x4806afe2, 0x480f43a8
+153	dashboard.html	823	gearUssRetrySave	重试保存	True	07_gear:uss_settings	功能显式列出的控件ID	GET:/config/uss_radar, POST:/config/uss_radar	0x4806afe2, 0x480f43a8
+154	dashboard.html	836	gearScrollEnabled	滚轮换挡	True	07_gear:gear_scroll	功能显式列出的控件ID	POST:/config	0x48101f34
+155	dashboard.html	838	gearScrollBrakeAuthorizationEnabled	低速单次刹车授权	True	07_gear:gear_brake_credit	功能显式列出的控件ID	POST:/config	0x48101f34
+156	dashboard.html	841	gearLeftPositiveAction	正方向无动作 D R P D/R切换	True	07_gear:gear_scroll	功能显式列出的控件ID	POST:/config	0x48101f34
+157	dashboard.html	842	gearLeftNegativeAction	负方向无动作 D R P D/R切换	True	07_gear:gear_scroll	功能显式列出的控件ID	POST:/config	0x48101f34
+158	dashboard.html	845	gearRightPositiveAction	正方向无动作 D R P D/R切换	True	07_gear:gear_scroll	功能显式列出的控件ID	POST:/config	0x48101f34
+159	dashboard.html	846	gearRightNegativeAction	负方向无动作 D R P D/R切换	True	07_gear:gear_scroll	功能显式列出的控件ID	POST:/config	0x48101f34
+160	dashboard.html	873	seatMemoryEnabled	启用座椅记忆	False	08_seats:seat_enable	功能显式列出的控件ID	POST:/config, GET:/status	0x48101f34, 0x480c0178
+161	dashboard.html	875	seatControlBus		False	08_seats:seat_enable	功能显式列出的控件ID	POST:/config, GET:/status	0x48101f34, 0x480c0178
+162	dashboard.html	885		向前	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+163	dashboard.html	885		向后	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+164	dashboard.html	886		前倾	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+165	dashboard.html	886		后仰	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+166	dashboard.html	887		升高	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+167	dashboard.html	887		降低	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+168	dashboard.html	888		抬高	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+169	dashboard.html	888		降低	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+170	dashboard.html	889		向上	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+171	dashboard.html	889		向下	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+172	dashboard.html	890		向内	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+173	dashboard.html	890		向外	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+174	dashboard.html	894			False	08_seats:seat_names	槽名属性		
+175	dashboard.html	894		保存	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+176	dashboard.html	894		调用	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+177	dashboard.html	895			False	08_seats:seat_names	槽名属性		
+178	dashboard.html	895		保存	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+179	dashboard.html	895		调用	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+180	dashboard.html	896			False	08_seats:seat_names	槽名属性		
+181	dashboard.html	896		保存	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+182	dashboard.html	896		调用	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+183	dashboard.html	897			False	08_seats:seat_names	槽名属性		
+184	dashboard.html	897		保存	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+185	dashboard.html	897		调用	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+186	dashboard.html	898			False	08_seats:seat_names	槽名属性		
+187	dashboard.html	898		保存	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+188	dashboard.html	898		调用	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+189	dashboard.html	907		向前	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+190	dashboard.html	907		向后	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+191	dashboard.html	908		前倾	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+192	dashboard.html	908		后仰	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+193	dashboard.html	909		升高	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+194	dashboard.html	909		降低	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+195	dashboard.html	910		抬高	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+196	dashboard.html	910		降低	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+197	dashboard.html	911		向上	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+198	dashboard.html	911		向下	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+199	dashboard.html	912		向内	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+200	dashboard.html	912		向外	False	08_seats:seat_manual	方向掩码属性	POST:/seat_action	0x48100e14
+201	dashboard.html	916			False	08_seats:seat_names	槽名属性		
+202	dashboard.html	916		保存	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+203	dashboard.html	916		调用	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+204	dashboard.html	917			False	08_seats:seat_names	槽名属性		
+205	dashboard.html	917		保存	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+206	dashboard.html	917		调用	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+207	dashboard.html	918			False	08_seats:seat_names	槽名属性		
+208	dashboard.html	918		保存	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+209	dashboard.html	918		调用	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+210	dashboard.html	919			False	08_seats:seat_names	槽名属性		
+211	dashboard.html	919		保存	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+212	dashboard.html	919		调用	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+213	dashboard.html	920			False	08_seats:seat_names	槽名属性		
+214	dashboard.html	920		保存	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+215	dashboard.html	920		调用	False	08_seats:seat_save, 08_seats:seat_recall, 08_seats:seat_cancel	内联事件函数	POST:/seat_action, GET:/status	0x48100e14, 0x480c0178
+216	dashboard.html	924	seatStopButton	停止全部座椅动作	False	08_seats:seat_cancel	功能显式列出的控件ID	POST:/seat_action	0x48100e14
+217	dashboard.html	924		刷新状态	False	02_config_can:read_coordinator	内联事件函数	GET:/status_fast, GET:/status, GET:/health, GET:/web_metrics	0x4806eb88, 0x480c0178, 0x480c2bda, 0x4806f630
+218	dashboard.html	938	fsdForceHighPhysicalEnabled	FSD 强制远光	False	10_lighting:high_force	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+219	dashboard.html	940	longPressHighBeamStrobeEnabled	第二次长按0.5秒远光爆闪	False	10_lighting:high_strobe	功能显式列出的控件ID	POST:/config	0x48101f34
+220	dashboard.html	942	highBeamStrobeIntervalMs	爆闪间隔（1～100 毫秒）	False	10_lighting:high_strobe	功能显式列出的控件ID	POST:/config	0x48101f34
+221	dashboard.html	943	highBeamStrobeCount	爆闪次数（0～20，0=不限）	False	10_lighting:high_strobe	功能显式列出的控件ID	POST:/config	0x48101f34
+222	dashboard.html	958	turnFollowEnabled	氛围灯跟随转向灯 默认关闭；左转仅影响左侧，右转仅影响右侧	False	09_ambient:ambient_turn	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+223	dashboard.html	960	turnFollowColor	跟随颜色	False	09_ambient:ambient_turn	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+224	dashboard.html	961	turnFollowBrightness	亮度 80%	False	09_ambient:ambient_turn	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+225	dashboard.html	963	turnFollowAreaFront	前车门	False	09_ambient:ambient_turn	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+226	dashboard.html	964	turnFollowAreaRear	后车门	False	09_ambient:ambient_turn	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+227	dashboard.html	965	turnFollowAreaDash	仪表台	False	09_ambient:ambient_turn	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+228	dashboard.html	967	turnFollowHazards	跟随双闪 关闭时双闪不会触发氛围灯	False	09_ambient:ambient_turn	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+229	dashboard.html	975	rear-fog-strobe-tgl	自动减速后雾灯	False	10_lighting:fog_deceleration	功能显式列出的控件ID	GET:/rear_fog/config, POST:/rear_fog/config	0x48066e12, 0x480f4dda
+230	dashboard.html	976	reverse-warning-tgl	倒车警示（双闪 + 8 次后雾灯）	False	10_lighting:fog_reverse	功能显式列出的控件ID	POST:/rear_fog/config	0x480f4dda
+231	dashboard.html	977	reverse-rear-fog-steady-tgl	倒车后雾灯常亮	False	10_lighting:fog_reverse_steady	功能显式列出的控件ID	POST:/rear_fog/config	0x480f4dda
+232	dashboard.html	978	rear-fog-pilot-tgl	后雾灯领航许可	False	10_lighting:fog_pilot	功能显式列出的控件ID	POST:/rear_fog/config, POST:/rear_fog/runtime	0x480f4dda, 0x481015a6
+233	dashboard.html	979	rear-fog-pilot-run-btn	启动后雾灯领航	False	10_lighting:fog_pilot	功能显式列出的控件ID	POST:/rear_fog/config, POST:/rear_fog/runtime	0x480f4dda, 0x481015a6
+234	dashboard.html	981	rear-fog-mild-threshold	轻度减速度阈值（0.01 m/s²）	False	10_lighting:fog_deceleration	功能显式列出的控件ID	GET:/rear_fog/config, POST:/rear_fog/config	0x48066e12, 0x480f4dda
+235	dashboard.html	982	rear-fog-hard-threshold	重度减速度阈值（0.01 m/s²）	False	10_lighting:fog_deceleration	功能显式列出的控件ID	GET:/rear_fog/config, POST:/rear_fog/config	0x48066e12, 0x480f4dda
+236	dashboard.html	992	canbServiceModeEnabled	启用维修模式	False	11_preheat_service:service_mode	功能显式列出的控件ID	POST:/config, GET:/config	0x48101f34, 0x480bd450
+237	dashboard.html	998	batteryPreheatEnabled	启用电池预热请求	False	11_preheat_service:preheat_start	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+238	dashboard.html	999	batteryPreheatDurationMin	允许时间15 分钟 30 分钟 45 分钟 60 分钟	False	11_preheat_service:preheat_start	功能显式列出的控件ID	POST:/config, GET:/runtime_status	0x48101f34, 0x4806851c
+239	dashboard.html	1001	batteryPreheatRetryStop	重试关闭	True	11_preheat_service:preheat_retry	功能显式列出的控件ID	POST:/config, GET:/config	0x48101f34, 0x480bd450
+240	dashboard.html	1026	canPinLayoutSelect	线序自动（默认：先检测 A，A 三路无有效帧再检测 B） 固定 A · CH TX2/RX3、VEH TX4/RX5、PARTY TX26/RX27 固定 B · CH TX3/RX2、VEH TX50/RX49、PARTY TX31/RX30	False	02_config_can:pin_layout	功能显式列出的控件ID	GET:/can_pin_layout, POST:/can_pin_layout	0x480681de, 0x480ff1e4
+241	dashboard.html	1027	canPinLayoutSave	保存线序	False	02_config_can:pin_layout	功能显式列出的控件ID	GET:/can_pin_layout, POST:/can_pin_layout	0x480681de, 0x480ff1e4
+242	dashboard.html	1029	can0TxEnabled	CAN0 发送	False	02_config_can:can_gates	功能显式列出的控件ID	POST:/config, GET:/config	0x48101f34, 0x480bd450
+243	dashboard.html	1030	can1TxEnabled	CAN1 发送	False	02_config_can:can_gates	功能显式列出的控件ID	POST:/config, GET:/config	0x48101f34, 0x480bd450
+244	dashboard.html	1031	can2TxEnabled	CAN2 发送	False	02_config_can:can_gates	功能显式列出的控件ID	POST:/config, GET:/config	0x48101f34, 0x480bd450
+245	dashboard.html	1038	recInclude	包含ID	False	12_recorder:rec_filters	功能显式列出的控件ID	POST:/rec_start	0x480fd584
+246	dashboard.html	1039	recExclude	排除ID	False	12_recorder:rec_filters	功能显式列出的控件ID	POST:/rec_start	0x480fd584
+247	dashboard.html	1042	recBus1Enabled	bus=0	False	12_recorder:rec_filters	功能显式列出的控件ID	POST:/rec_start	0x480fd584
+248	dashboard.html	1043	recBus2Enabled	bus=1	False	12_recorder:rec_filters	功能显式列出的控件ID	POST:/rec_start	0x480fd584
+249	dashboard.html	1044	recBus3Enabled	bus=2	False	12_recorder:rec_filters	功能显式列出的控件ID	POST:/rec_start	0x480fd584
+250	dashboard.html	1045	recRxEnabled	RX	False	12_recorder:rec_filters	功能显式列出的控件ID	POST:/rec_start	0x480fd584
+251	dashboard.html	1046	recTxEnabled	TX	False	12_recorder:rec_filters	功能显式列出的控件ID	POST:/rec_start	0x480fd584
+252	dashboard.html	1047	recDurationSec	时长秒	False	12_recorder:rec_start	功能显式列出的控件ID	POST:/rec_start, GET:/rec_status	0x480fd584, 0x4806c4e8
+253	dashboard.html	1051		开始抓包	False	12_recorder:rec_start	内联事件函数	POST:/rec_start, GET:/rec_status	0x480fd584, 0x4806c4e8
+254	dashboard.html	1052		停止	False	12_recorder:rec_stop_clear	内联事件函数	POST:/rec_stop, POST:/rec_clear	0x480fd45c, 0x4806e04e
+255	dashboard.html	1053		清空	False	12_recorder:rec_stop_clear	内联事件函数	POST:/rec_stop, POST:/rec_clear	0x480fd45c, 0x4806e04e
+256	dashboard.html	1054	recDownloadCsv	下载 CSV	False	12_recorder:rec_download	内联事件函数	GET:/rec_download	0x4806fee2
+257	dashboard.html	1055	recDownloadBin	高速下载 BIN	False	12_recorder:rec_download	内联事件函数	GET:/rec_download	0x4806fee2
+258	dashboard.html	1082	onlineOtaCheck	检测更新	False	15_ota:ota_online	功能显式列出的控件ID	GET:/ota/online/status, POST:/ota/online/check, POST:/ota/online/install	0x480bdfce, 0x4806b9ae, 0x4807be92
+259	dashboard.html	1082	onlineOtaInstall	立即升级	False	15_ota:ota_online	功能显式列出的控件ID	GET:/ota/online/status, POST:/ota/online/check, POST:/ota/online/install	0x480bdfce, 0x4806b9ae, 0x4807be92
+260	dashboard.html	1087	otaFile		False	15_ota:ota_file	功能显式列出的控件ID		
+261	dashboard.html	1088	otaStart	开始升级	False	15_ota:ota_upload	功能显式列出的控件ID	POST:/ota/upload	0x480ff860
+262	dashboard.html	1100	ambientEnabled	常亮氛围灯	True	09_ambient:ambient_zones	功能显式列出的控件ID	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+263	dashboard.html	1106		仪表台左 配置开 · 60%	True	09_ambient:ambient_zones	区域选择属性	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+264	dashboard.html	1107		仪表台右 配置开 · 60%	True	09_ambient:ambient_zones	区域选择属性	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+265	dashboard.html	1109		左前门 配置开 · 60%	True	09_ambient:ambient_zones	区域选择属性	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+266	dashboard.html	1111		右前门 配置开 · 60%	True	09_ambient:ambient_zones	区域选择属性	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+267	dashboard.html	1112		左后门 配置开 · 60%	True	09_ambient:ambient_zones	区域选择属性	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+268	dashboard.html	1113		右后门 配置开 · 60%	True	09_ambient:ambient_zones	区域选择属性	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+269	dashboard.html	1116	ambientZone4Enabled	仪表台左	True	09_ambient:ambient_zones	功能显式列出的控件ID	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+270	dashboard.html	1117	ambientZone5Enabled	仪表台右	True	09_ambient:ambient_zones	功能显式列出的控件ID	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+271	dashboard.html	1118	ambientZone0Enabled	左前门	True	09_ambient:ambient_zones	功能显式列出的控件ID	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+272	dashboard.html	1119	ambientZone1Enabled	右前门	True	09_ambient:ambient_zones	功能显式列出的控件ID	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+273	dashboard.html	1120	ambientZone2Enabled	左后门	True	09_ambient:ambient_zones	功能显式列出的控件ID	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+274	dashboard.html	1121	ambientZone3Enabled	右后门	True	09_ambient:ambient_zones	功能显式列出的控件ID	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+275	dashboard.html	1126	ambientBrightness	亮度 60%	True	09_ambient:ambient_zones	功能显式列出的控件ID	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+276	dashboard.html	1127	ambientColor		True	09_ambient:ambient_zones	功能显式列出的控件ID	GET:/ambient_config, POST:/ambient_config	0x4806adda, 0x480f584c
+277	dashboard.html	1128	ambientApplyAll	应用到全部区域	True	09_ambient:ambient_all	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+278	dashboard.html	1134	welcomeEnabled	启用迎宾灯效 与常亮氛围灯独立；默认关闭	True	09_ambient:welcome_styles	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+279	dashboard.html	1137	welcomeStyle0	柔光环抱 灯光沿既有路径平滑渐亮，柔和收尾	True	09_ambient:welcome_styles	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+280	dashboard.html	1138	welcomeStyle1	冰蓝流光 光束沿路径移动，并留下低亮尾迹	True	09_ambient:welcome_styles	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+281	dashboard.html	1139	welcomeStyle2	暖金礼序 灯光沿既有路径依次展开	True	09_ambient:welcome_styles	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+282	dashboard.html	1140	welcomeStyle3	黑幕启幕 先进入暗场，再按既有路径渐亮	True	09_ambient:welcome_styles	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+283	dashboard.html	1141	welcomeStyle4	光迹回环 暗场后逐点巡游，仪表台汇聚再渐亮	True	09_ambient:welcome_styles	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+284	dashboard.html	1144	welcomeTriggerMode0	座椅确认无人后触发	True	09_ambient:welcome_trigger	功能显式列出的控件ID	POST:/ambient_config, GET:/runtime_status	0x480f584c, 0x4806851c
+285	dashboard.html	1145	welcomeTriggerMode1	任何有效开门都触发	True	09_ambient:welcome_trigger	功能显式列出的控件ID	POST:/ambient_config, GET:/runtime_status	0x480f584c, 0x4806851c
+286	dashboard.html	1149	welcomeBrightness	迎宾亮度 40%	True	09_ambient:welcome_params	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+287	dashboard.html	1150	welcomeTempo	灯效节奏舒缓 标准 利落	True	09_ambient:welcome_params	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+288	dashboard.html	1152	welcomeColor	迎宾颜色	True	09_ambient:welcome_params	功能显式列出的控件ID	POST:/ambient_config	0x480f584c
+289	dashboard.html	1154		仪表台左	True	09_ambient:welcome_params	迎宾区域属性	POST:/ambient_config	0x480f584c
+290	dashboard.html	1154		仪表台右	True	09_ambient:welcome_params	迎宾区域属性	POST:/ambient_config	0x480f584c
+291	dashboard.html	1155		左前门	True	09_ambient:welcome_params	迎宾区域属性	POST:/ambient_config	0x480f584c
+292	dashboard.html	1155		右前门	True	09_ambient:welcome_params	迎宾区域属性	POST:/ambient_config	0x480f584c
+293	dashboard.html	1156		左后门	True	09_ambient:welcome_params	迎宾区域属性	POST:/ambient_config	0x480f584c
+294	dashboard.html	1156		右后门	True	09_ambient:welcome_params	迎宾区域属性	POST:/ambient_config	0x480f584c
+295	dashboard.html	1172	wifiApPassword	热点密码	True	14_wifi:wifi_ap_password	功能显式列出的控件ID	POST:/wifi/ap-config	0x480f3d2c
+296	dashboard.html	1173	wifiApSave	保存并重启热点	True	14_wifi:wifi_ap_password	功能显式列出的控件ID	POST:/wifi/ap-config	0x480f3d2c
+297	dashboard.html	1173	wifiOnboardingContinue	继续引导	True	17_cloud_onboarding:onboarding	功能显式列出的控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+298	dashboard.html	1183	wifiExternalEnabled	启用外部 Wi-Fi	True	14_wifi:wifi_connect	功能显式列出的控件ID	POST:/wifi/connect	0x480f38e4
+299	dashboard.html	1184	wifiApAutoOff	外部 Wi-Fi 连接成功 5 分钟后自动关闭 AP（手机连接时保持开启）	True	14_wifi:wifi_ap_autooff	功能显式列出的控件ID	POST:/wifi/ap-auto-off, GET:/wifi/status	0x480f2c14, 0x48066f4c
+300	dashboard.html	1185	wifiNetworkList	手动扫描结果 点击“扫描附近网络”	True	14_wifi:wifi_scan	功能显式列出的控件ID	POST:/wifi/scan, GET:/wifi/status	0x4806b7e4, 0x48066f4c
+301	dashboard.html	1186	wifiSsid	SSID	True	14_wifi:wifi_connect	功能显式列出的控件ID	POST:/wifi/connect	0x480f38e4
+302	dashboard.html	1187	wifiPassword	密码	True	14_wifi:wifi_connect	功能显式列出的控件ID	POST:/wifi/connect	0x480f38e4
+303	dashboard.html	1188	wifiScan	扫描附近网络	True	14_wifi:wifi_scan	功能显式列出的控件ID	POST:/wifi/scan, GET:/wifi/status	0x4806b7e4, 0x48066f4c
+304	dashboard.html	1188	wifiConnect	保存并连接	True	14_wifi:wifi_connect	功能显式列出的控件ID	POST:/wifi/connect	0x480f38e4
+305	dashboard.html	1188	wifiDisconnect	断开	True	14_wifi:wifi_disconnect_forget	功能显式列出的控件ID	POST:/wifi/disconnect, POST:/wifi/forget	0x480f2624, 0x480f2918
+306	dashboard.html	1188	wifiForget	忘记网络	True	14_wifi:wifi_disconnect_forget	功能显式列出的控件ID	POST:/wifi/disconnect, POST:/wifi/forget	0x480f2624, 0x480f2918
+307	dashboard.html	1197	poll	轮询	True	02_config_can:read_coordinator	功能显式列出的控件ID	GET:/status_fast, GET:/status, GET:/health, GET:/web_metrics	0x4806eb88, 0x480c0178, 0x480c2bda, 0x4806f630
+308	dashboard.html	1201		刷新	True	18_diagnostics:can_diag	内联事件函数	GET:/can_diag, GET:/can_hot_ids	0x4807fa5c, 0x480c037a
+309	dashboard.html	1201		导出完整诊断JSON	True	18_diagnostics:diag_export	内联事件函数	GET:/status, GET:/runtime_status, GET:/system_status, GET:/can_diag, GET:/health, GET:/web_metrics	0x480c0178, 0x4806851c, 0x4808334c, 0x4807fa5c, 0x480c2bda, 0x4806f630
+310	dashboard.html	1201	coreDumpDownloadButton	下载崩溃转储	True	18_diagnostics:coredump_download	功能显式列出的控件ID	GET:/coredump.bin, GET:/coredump/info, GET:/ota/status	0x4806d406, 0x4806cbde, 0x4806bbf8
+311	dashboard.html	1239	driverAddName	驾驶员名称	True	03_drivers:driver_add	功能显式列出的控件ID	POST:/driver_profiles	0x480fa85c
+312	dashboard.html	1241		取消	True	03_drivers:driver_list	HTML语义区域；不是调用链证明	GET:/driver_profiles	0x4806d76e
+313	dashboard.html	1241	driverAddSubmit	保存	True	03_drivers:driver_add	功能显式列出的控件ID	POST:/driver_profiles	0x480fa85c
+314	dashboard.html	1252	driverRebindConfirm	我已核对上方位置，并确认用当前驾驶位覆盖原保存位置。	True	03_drivers:driver_rebind	功能显式列出的控件ID	POST:/driver_profiles	0x480fa85c
+315	dashboard.html	1254		取消	True	03_drivers:driver_list	HTML语义区域；不是调用链证明	GET:/driver_profiles	0x4806d76e
+316	dashboard.html	1254	driverRebindSubmit	确认覆盖	True	03_drivers:driver_rebind	功能显式列出的控件ID	POST:/driver_profiles	0x480fa85c
+317	dashboard.html	1260	driverRenameName	驾驶员名称	True	03_drivers:driver_rename	功能显式列出的控件ID	POST:/driver_profiles	0x480fa85c
+318	dashboard.html	1262		取消	True	03_drivers:driver_list	HTML语义区域；不是调用链证明	GET:/driver_profiles	0x4806d76e
+319	dashboard.html	1262	driverRenameSubmit	保存	True	03_drivers:driver_rename	功能显式列出的控件ID	POST:/driver_profiles	0x480fa85c
+320	dashboard.html	1266		✦ 智驾	False	01_ui_auth:navigation	导航属性		
+321	dashboard.html	1267		⇄ 换挡	False	01_ui_auth:navigation	导航属性		
+322	dashboard.html	1268		◇ 车身	False	01_ui_auth:navigation	导航属性		
+323	dashboard.html	1269		⌁ 诊断	False	01_ui_auth:navigation	导航属性		
+324	dashboard.html	1270		⚙ 系统	False	01_ui_auth:navigation	导航属性		
+325	login.html	34		热点密码 登录	False	01_ui_auth:login	登录表单	POST:/auth/login, GET:/auth/status, GET:/	0x4808a8c2, 0x480677f4, 0x4808b134
+326	login.html	35	password	热点密码	False	01_ui_auth:login	登录表单	POST:/auth/login, GET:/auth/status, GET:/	0x4808a8c2, 0x480677f4, 0x4808b134
+327	login.html	36		登录	False	01_ui_auth:login	登录表单	POST:/auth/login, GET:/auth/status, GET:/	0x4808a8c2, 0x480677f4, 0x4808b134
+328	javascript_markup	65	canExperimentHeaderStop	立即停止	True	13_can_experiment:experiment_takeover	内联事件函数	POST:/api/can-experiment/start, POST:/api/can-experiment/stop	0x480eb56e, 0x480eab84
+329	javascript_markup	65		＋ 添加规则	False	13_can_experiment:experiment_rules	内联事件函数	POST:/api/can-experiment/listen	0x480ed598
+330	javascript_markup	65		1. 开始监听	False	13_can_experiment:experiment_listen	内联事件函数	POST:/api/can-experiment/listen, POST:/api/can-experiment/listen/stop, POST:/api/can-experiment/source/confirm	0x480ed598, 0x480ecf86, 0x480ab7ba
+331	javascript_markup	65		2. 确认修改内容	False	13_can_experiment:experiment_validate	内联事件函数	POST:/api/can-experiment/validate	0x480ec3f8
+332	javascript_markup	65	canExperimentStartButton	开启测试	False	13_can_experiment:experiment_start	内联事件函数	POST:/api/can-experiment/start	0x480eb56e
+333	javascript_markup	65		立即停止	False	13_can_experiment:experiment_takeover	内联事件函数	POST:/api/can-experiment/start, POST:/api/can-experiment/stop	0x480eb56e, 0x480eab84
+334	javascript_markup	65	canExperimentPresetSlot		False	13_can_experiment:experiment_presets	功能显式列出的控件ID	GET:/api/can-experiment/presets, POST:/api/can-experiment/presets, DELETE:/api/can-experiment/presets	0x4806da0c, 0x480ac732, 0x4808a37e
+335	javascript_markup	65	canExperimentPresetName		False	13_can_experiment:experiment_presets	功能显式列出的控件ID	GET:/api/can-experiment/presets, POST:/api/can-experiment/presets, DELETE:/api/can-experiment/presets	0x4806da0c, 0x480ac732, 0x4808a37e
+336	javascript_markup	65		载入	False	13_can_experiment:experiment_presets	内联事件函数	GET:/api/can-experiment/presets, POST:/api/can-experiment/presets, DELETE:/api/can-experiment/presets	0x4806da0c, 0x480ac732, 0x4808a37e
+337	javascript_markup	65		保存	False	13_can_experiment:experiment_presets	内联事件函数	GET:/api/can-experiment/presets, POST:/api/can-experiment/presets, DELETE:/api/can-experiment/presets	0x4806da0c, 0x480ac732, 0x4808a37e
+338	javascript_markup	65		重命名	False	13_can_experiment:experiment_presets	内联事件函数	GET:/api/can-experiment/presets, POST:/api/can-experiment/presets, DELETE:/api/can-experiment/presets	0x4806da0c, 0x480ac732, 0x4808a37e
+339	javascript_markup	65		删除	False	13_can_experiment:experiment_presets	内联事件函数	GET:/api/can-experiment/presets, POST:/api/can-experiment/presets, DELETE:/api/can-experiment/presets	0x4806da0c, 0x480ac732, 0x4808a37e
+340	javascript_markup	71		确认帧来源	False	13_can_experiment:experiment_listen	内联事件函数	POST:/api/can-experiment/listen, POST:/api/can-experiment/listen/stop, POST:/api/can-experiment/source/confirm	0x480ed598, 0x480ecf86, 0x480ab7ba
+341	javascript_markup	71		删除	False	13_can_experiment:experiment_rules	内联事件函数	POST:/api/can-experiment/listen	0x480ed598
+342	javascript_markup	71		标准 CAN ID（HEX）	False	13_can_experiment:experiment_rules	模板所属函数／data属性	POST:/api/can-experiment/listen	0x480ed598
+343	javascript_markup	71		线路CAN0 13/14 CAN1 9/10 CAN2 2/3	False	13_can_experiment:experiment_rules	模板所属函数／data属性	POST:/api/can-experiment/listen	0x480ed598
+344	javascript_markup	71		线路CAN0 13/14 CAN1 9/10 CAN2 2/3	False	13_can_experiment:experiment_rules	模板所属函数／data属性	POST:/api/can-experiment/listen	0x480ed598
+345	javascript_markup	71		线路CAN0 13/14 CAN1 9/10 CAN2 2/3	False	13_can_experiment:experiment_rules	模板所属函数／data属性	POST:/api/can-experiment/listen	0x480ed598
+346	javascript_markup	71		已确认 DLC	False	13_can_experiment:experiment_rules	模板所属函数／data属性	POST:/api/can-experiment/listen	0x480ed598
+347	javascript_markup	71		发送方式单次 跟随原始帧 固定周期	False	13_can_experiment:experiment_modes	模板所属函数／data属性	POST:/api/can-experiment/start, GET:/api/can-experiment/status	0x480eb56e, 0x480acf1c
+348	javascript_markup	71		周期 ms	False	13_can_experiment:experiment_modes	模板所属函数／data属性	POST:/api/can-experiment/start, GET:/api/can-experiment/status	0x480eb56e, 0x480acf1c
+349	javascript_markup	71		模板有效 ms（0自动）	False	13_can_experiment:experiment_modes	模板所属函数／data属性	POST:/api/can-experiment/start, GET:/api/can-experiment/status	0x480eb56e, 0x480acf1c
+350	javascript_markup	71		要求所选线路同时就绪	False	13_can_experiment:experiment_modes	模板所属函数／data属性	POST:/api/can-experiment/start, GET:/api/can-experiment/status	0x480eb56e, 0x480acf1c
+351	javascript_markup	71		接管对应内置发送	False	13_can_experiment:experiment_takeover	模板所属函数／data属性	POST:/api/can-experiment/start, POST:/api/can-experiment/stop	0x480eb56e, 0x480eab84
+352	javascript_markup	71		发送等级继承原报文等级 新增报文 P1 新增报文 P2 新增报文 P3	False	13_can_experiment:experiment_takeover	模板所属函数／data属性	POST:/api/can-experiment/start, POST:/api/can-experiment/stop	0x480eb56e, 0x480eab84
+353	javascript_markup	71		跟随延迟 μs（0立即）	False	13_can_experiment:experiment_modes	模板所属函数／data属性	POST:/api/can-experiment/start, GET:/api/can-experiment/status	0x480eb56e, 0x480acf1c
+354	javascript_markup	71		计数器不处理 原值偏移 独立自增	False	13_can_experiment:experiment_counter	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+355	javascript_markup	71		字节	False	13_can_experiment:experiment_counter	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+356	javascript_markup	71		起始 bit	False	13_can_experiment:experiment_counter	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+357	javascript_markup	71		宽度	False	13_can_experiment:experiment_counter	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+358	javascript_markup	71		步长	False	13_can_experiment:experiment_counter	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+359	javascript_markup	71		初值	False	13_can_experiment:experiment_counter	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+360	javascript_markup	71		最小 / 最大	False	13_can_experiment:experiment_counter	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+361	javascript_markup	71		最小 / 最大	False	13_can_experiment:experiment_counter	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+362	javascript_markup	71		原值偏移	False	13_can_experiment:experiment_counter	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+363	javascript_markup	71		校验不处理 SUM XOR CRC8	False	13_can_experiment:experiment_checksums	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+364	javascript_markup	71		输出字节	False	13_can_experiment:experiment_checksums	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+365	javascript_markup	71		加值 HEX	False	13_can_experiment:experiment_checksums	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+366	javascript_markup	71		最终 XOR HEX	False	13_can_experiment:experiment_checksums	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+367	javascript_markup	71		CRC 多项式 HEX	False	13_can_experiment:experiment_checksums	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+368	javascript_markup	71		CRC 初值 HEX	False	13_can_experiment:experiment_checksums	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+369	javascript_markup	71		CRC 输入反射	False	13_can_experiment:experiment_checksums	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+370	javascript_markup	71		CRC 输出反射	False	13_can_experiment:experiment_checksums	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+371	javascript_markup	71		CRC 包含 CAN ID	False	13_can_experiment:experiment_checksums	模板所属函数／data属性	POST:/api/can-experiment/validate	0x480ec3f8
+372	javascript_markup	156		展开 / 收起任务明细	False	01_ui_auth:navigation	DOM布局构造		
+373	javascript_markup	1481		智驾	False	01_ui_auth:navigation	商业界面模板上下文		
+374	javascript_markup	1481		换挡与车身	False	01_ui_auth:navigation	商业界面模板上下文		
+375	javascript_markup	1481		行程	True	16_records:records_view	模板文本上下文	GET:/fsd_records	0x480b4abe
+376	javascript_markup	1481		小计	True	16_records:records_view	模板文本上下文	GET:/fsd_records	0x480b4abe
+377	javascript_markup	1481		累计	True	16_records:records_view	模板文本上下文	GET:/fsd_records	0x480b4abe
+378	javascript_markup	1481	fsdRecordsRefresh	刷新	True	16_records:records_view	功能显式列出的控件ID	GET:/fsd_records	0x480b4abe
+379	javascript_markup	1481	fsdRecordsDetailBack	返回行程	True	16_records:records_view	功能显式列出的控件ID	GET:/fsd_records	0x480b4abe
+380	javascript_markup	1481	fsdRecordsSubtotalReset	重置小计	True	16_records:records_subtotal	功能显式列出的控件ID	POST:/fsd_records/subtotal/reset	0x480d2a5e
+381	javascript_markup	1481	fsdRecordsClear	清空累计与行程历史	True	16_records:records_clear	功能显式列出的控件ID	POST:/fsd_records/clear	0x480d338a
+382	javascript_markup	1481		重置小计？ 仅重置小计，当前驾驶、历史与累计里程保留。 确认重置 取消	False	16_records:records_view	模板文本上下文	GET:/fsd_records	0x480b4abe
+383	javascript_markup	1481	fsdRecordsSubtotalResetConfirm	确认重置	False	16_records:records_subtotal	功能显式列出的控件ID	POST:/fsd_records/subtotal/reset	0x480d2a5e
+384	javascript_markup	1481	fsdRecordsSubtotalResetCancel	取消	False	16_records:records_subtotal	动态控件ID	POST:/fsd_records/subtotal/reset	0x480d2a5e
+385	javascript_markup	1481		清空累计与行程历史？ 将清空当前驾驶、小计、累计和历史记录，此操作不可撤销。 确认清空 取消	False	16_records:records_view	模板文本上下文	GET:/fsd_records	0x480b4abe
+386	javascript_markup	1481	fsdRecordsClearConfirm	确认清空	False	16_records:records_clear	功能显式列出的控件ID	POST:/fsd_records/clear	0x480d338a
+387	javascript_markup	1481	fsdRecordsClearCancel	取消	False	16_records:records_clear	动态控件ID	POST:/fsd_records/clear	0x480d338a
+388	javascript_markup	1481	cloudEnabled	自动同步 关闭后保留设备本地数据与连接状态	True	17_cloud_onboarding:cloud_sync	功能显式列出的控件ID	POST:/cloud/enabled, POST:/cloud/upload, GET:/cloud/status	0x480b3e6c, 0x4808cf68, 0x480d0b14
+389	javascript_markup	1481	cloudDeviceId		True	17_cloud_onboarding:cloud_identity	功能显式列出的控件ID	GET:/cloud/status	0x480d0b14
+390	javascript_markup	1481	cloudCopyButton	复制 ID	True	17_cloud_onboarding:cloud_identity	功能显式列出的控件ID	GET:/cloud/status	0x480d0b14
+391	javascript_markup	1481		打开云端网页	True	17_cloud_onboarding:cloud_identity	模板文本上下文	GET:/cloud/status	0x480d0b14
+392	javascript_markup	1481	cloudWebUrl		True	17_cloud_onboarding:cloud_identity	功能显式列出的控件ID	GET:/cloud/status	0x480d0b14
+393	javascript_markup	1481	cloudCopyUrl	复制网址	True	17_cloud_onboarding:cloud_identity	功能显式列出的控件ID	GET:/cloud/status	0x480d0b14
+394	javascript_markup	1481	cloudUploadButton	立即同步	True	17_cloud_onboarding:cloud_sync	功能显式列出的控件ID	POST:/cloud/enabled, POST:/cloud/upload, GET:/cloud/status	0x480b3e6c, 0x4808cf68, 0x480d0b14
+395	javascript_markup	1481	cloudSettingsRestoreButton	从云端恢复	True	17_cloud_onboarding:cloud_restore	动态控件ID	POST:/cloud/settings/restore, GET:/cloud/status	0x480b6d24, 0x480d0b14
+396	javascript_markup	1481	cloudSettingsConflictsRefresh	查看冲突	True	17_cloud_onboarding:cloud_conflicts	功能显式列出的控件ID	GET:/cloud/settings/conflicts, POST:/cloud/settings/conflict	0x480b31d8, 0x480d103e
+397	javascript_markup	1481		恢复云端备份 恢复范围 设置与驾驶员 已选择 FSD 驾驶记录 已选择 我已确认恢复所选数据 取消 确认恢复	True	17_cloud_onboarding:cloud_identity	模板文本上下文	GET:/cloud/status	0x480d0b14
+398	javascript_markup	1481	cloudRestoreScopeSettings	设置与驾驶员 已选择	True	17_cloud_onboarding:cloud_restore	功能显式列出的控件ID	POST:/cloud/settings/restore, GET:/cloud/status	0x480b6d24, 0x480d0b14
+399	javascript_markup	1481	cloudRestoreScopeRecords	FSD 驾驶记录 已选择	True	17_cloud_onboarding:cloud_restore	功能显式列出的控件ID	POST:/cloud/settings/restore, GET:/cloud/status	0x480b6d24, 0x480d0b14
+400	javascript_markup	1481	cloudSettingsRestoreConfirm	我已确认恢复所选数据	True	17_cloud_onboarding:cloud_restore	功能显式列出的控件ID	POST:/cloud/settings/restore, GET:/cloud/status	0x480b6d24, 0x480d0b14
+401	javascript_markup	1481	cloudRestoreCancelButton	取消	True	17_cloud_onboarding:cloud_restore	动态控件ID	POST:/cloud/settings/restore, GET:/cloud/status	0x480b6d24, 0x480d0b14
+402	javascript_markup	1481	cloudRestoreConfirmButton	确认恢复	True	17_cloud_onboarding:cloud_restore	功能显式列出的控件ID	POST:/cloud/settings/restore, GET:/cloud/status	0x480b6d24, 0x480d0b14
+403	javascript_markup	1481	cloudUrl	服务 URL	True	17_cloud_onboarding:cloud_config	功能显式列出的控件ID	GET:/cloud/config, POST:/cloud/config	0x480b4fa4, 0x480b3e2c
+404	javascript_markup	1481	cloudToken	产品根 Token	True	17_cloud_onboarding:cloud_config	功能显式列出的控件ID	GET:/cloud/config, POST:/cloud/config	0x480b4fa4, 0x480b3e2c
+405	javascript_markup	1481	cloudInterval	同步间隔（15–300 秒）	True	17_cloud_onboarding:cloud_config	功能显式列出的控件ID	GET:/cloud/config, POST:/cloud/config	0x480b4fa4, 0x480b3e2c
+406	javascript_markup	1481	cloudClearToken	清除已保存的产品根 Token	True	17_cloud_onboarding:cloud_config	功能显式列出的控件ID	GET:/cloud/config, POST:/cloud/config	0x480b4fa4, 0x480b3e2c
+407	javascript_markup	1481	cloudTestButton	测试 v2 连接	True	17_cloud_onboarding:cloud_test	功能显式列出的控件ID	POST:/cloud/test	0x4811e15c
+408	javascript_markup	1481	cloudSaveButton	保存连接设置	True	17_cloud_onboarding:cloud_config	功能显式列出的控件ID	GET:/cloud/config, POST:/cloud/config	0x480b4fa4, 0x480b3e2c
+409	javascript_markup	1481		连接 Wi-Fi 连接网络后，可登录云端网站绑定设备，使用云同步功能。 连接 Wi-Fi 跳过，开始使用 云端数据恢复 已有账户可以恢复原设备的数据，也可以稍后恢复或作为新用户开始使用。 账户状态暂不可确认 设备 ID 复制 ID 打开云端网页 复制网址 重新检查 恢复云端数据 稍后恢复 我是新用户 重试完成	False	17_cloud_onboarding:cloud_identity	模板文本上下文	GET:/cloud/status	0x480d0b14
+410	javascript_markup	1481	onboardingConnectWifi	连接 Wi-Fi	False	17_cloud_onboarding:onboarding	功能显式列出的控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+411	javascript_markup	1481	onboardingSkipWifi	跳过，开始使用	False	17_cloud_onboarding:onboarding	功能显式列出的控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+412	javascript_markup	1481	onboardingDeviceId	设备 ID	True	17_cloud_onboarding:onboarding	动态控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+413	javascript_markup	1481	onboardingCopyId	复制 ID	True	17_cloud_onboarding:onboarding	动态控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+414	javascript_markup	1481		打开云端网页	True	17_cloud_onboarding:cloud_identity	模板文本上下文	GET:/cloud/status	0x480d0b14
+415	javascript_markup	1481	onboardingWebUrl		True	17_cloud_onboarding:onboarding	动态控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+416	javascript_markup	1481	onboardingCopyUrl	复制网址	True	17_cloud_onboarding:onboarding	动态控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+417	javascript_markup	1481	onboardingRecheck	重新检查	True	17_cloud_onboarding:onboarding	动态控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+418	javascript_markup	1481	onboardingRestore	恢复云端数据	True	17_cloud_onboarding:onboarding	功能显式列出的控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+419	javascript_markup	1481	onboardingLater	稍后恢复	True	17_cloud_onboarding:onboarding	功能显式列出的控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+420	javascript_markup	1481	onboardingNew	我是新用户	True	17_cloud_onboarding:onboarding	功能显式列出的控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+421	javascript_markup	1481	onboardingCompleteRetry	重试完成	True	17_cloud_onboarding:onboarding	功能显式列出的控件ID	GET:/onboarding/status, POST:/onboarding/complete	0x4808d6c6, 0x4808e07e
+422	javascript_markup	1481	commercialBack	返回	True	01_ui_auth:navigation	动态控件ID		
+423	javascript_markup	1481	commercialHelp	说明	True	01_ui_auth:navigation	动态控件ID		
+424	javascript_markup	1481	commercialLock	退出并锁定	True	01_ui_auth:developer	功能显式列出的控件ID	POST:/cloud/developer	0x4808d958
+425	javascript_markup	1481		功能	False	01_ui_auth:navigation	商业界面模板上下文		
+426	javascript_markup	1481		FSD记录	False	16_records:records_view	动态控件ID	GET:/fsd_records	0x480b4abe
+427	javascript_markup	1481		设置	False	01_ui_auth:navigation	商业界面模板上下文		
+428	javascript_markup	1481	commercialUnlockForm	开发者模式 输入开发者密码，显示诊断、日志与高级工具。 开发者密码 解锁 取消	False	01_ui_auth:developer	动态控件ID	POST:/cloud/developer	0x4808d958
+429	javascript_markup	1481	commercialPassword	开发者密码	False	01_ui_auth:developer	功能显式列出的控件ID	POST:/cloud/developer	0x4808d958
+430	javascript_markup	1481	commercialUnlockButton	解锁	False	01_ui_auth:developer	动态控件ID	POST:/cloud/developer	0x4808d958
+431	javascript_markup	1481	commercialUnlockCancel	取消	False	01_ui_auth:developer	动态控件ID	POST:/cloud/developer	0x4808d958
+432	javascript_markup	1665			False	01_ui_auth:navigation	DOM布局构造		
+433	javascript_markup	1665			False	01_ui_auth:navigation	DOM布局构造		
+434	javascript_markup	1665			False	01_ui_auth:navigation	DOM布局构造		
+435	javascript_markup	1905			False	01_ui_auth:navigation	DOM布局构造		
+436	javascript_markup	1941	settingsSyncBanner	☁ 云同步 读取同步状态	False	17_cloud_onboarding:cloud_identity	动态控件ID	GET:/cloud/status	0x480d0b14

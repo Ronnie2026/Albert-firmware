@@ -1,0 +1,17 @@
+{
+  "compiler": "riscv32-esp-elf-gcc (crosstool-NG esp-12.2.0_20230208) 12.2.0",
+  "architecture": "rv32imac",
+  "abi": "ilp32",
+  "flags": [
+    "-Wall",
+    "-Wextra",
+    "-Werror"
+  ],
+  "object_files": [
+    "reconstructed/build-riscv/board_profile.o",
+    "reconstructed/build-riscv/http_routes.o",
+    "reconstructed/build-riscv/summary.o"
+  ],
+  "passed": true,
+  "full_esp_idf_firmware_built": false
+}

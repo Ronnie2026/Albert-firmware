@@ -1,0 +1,16 @@
+# Generated output and local environments
+.DS_Store
+._*
+**/__pycache__/
+*.pyc
+**/node_modules/
+**/build/
+**/build-*/
+**/sdkconfig
+**/sdkconfig.old
+**/managed_components/
+**/*.rep/
+**/*.gpr
+.venv/
+output/
+.playwright-cli/

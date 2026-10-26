@@ -1,0 +1,233 @@
+{
+  "input": {
+    "path": "/Volumes/csk/other/esp32/Albert/Albert-P4-P1.6.4-V3.2-4d97f369-16MiB-bootstrap.bin",
+    "size": 16777216,
+    "sha256": "11cd02e1d0bcda1cd894a249e963ac54eb67f6cd29ab6d40bcaf85fff8711343"
+  },
+  "bootloader_offset": 8192,
+  "bootloader": {
+    "entry_point": 1341833930,
+    "chip_id": 18,
+    "min_chip_revision_full": 301,
+    "max_chip_revision_full": 399,
+    "spi_mode": "DIO",
+    "flash_size_bytes": 33554432,
+    "flash_frequency_code": 15,
+    "size": 23872,
+    "sha256": "885f73827851f52cc59e52b9a04170f3c009e0f9e0a30ed2266d6e4a51b9cc2d",
+    "segments": [
+      {
+        "index": 0,
+        "address": 1341874384,
+        "size": 5608,
+        "image_offset": 32,
+        "sha256": "60bdc2985145a55562afc675a591efdb49603f09366e9eeb0d7537d569e26b55"
+      },
+      {
+        "index": 1,
+        "address": 1341833920,
+        "size": 4156,
+        "image_offset": 5648,
+        "sha256": "3700623e3d57346ad18acad22ea11b10418a8d4f903e4a5536aa6e0a32781962"
+      },
+      {
+        "index": 2,
+        "address": 1341845440,
+        "size": 14012,
+        "image_offset": 9812,
+        "sha256": "4fd45ff85197e4b817cc2a7c7228c88dbc720f5487eee0215c77c2d454c94b88"
+      }
+    ],
+    "checksum_stored": 33,
+    "checksum_computed": 33,
+    "checksum_valid": true,
+    "validation_hash_stored": "985438af59e2c39faf5a89daeec1e628f401741fae0247f0e5e94c5c48c2f71b",
+    "validation_hash_computed": "985438af59e2c39faf5a89daeec1e628f401741fae0247f0e5e94c5c48c2f71b",
+    "validation_hash_valid": true
+  },
+  "partition_table_offset": 32768,
+  "partition_table_md5_valid": true,
+  "partitions": [
+    {
+      "name": "nvs",
+      "type": 1,
+      "subtype": 2,
+      "offset": 36864,
+      "size": 20480,
+      "flags": 0,
+      "available_bytes": 20480,
+      "complete": true,
+      "erased_in_available_range": true
+    },
+    {
+      "name": "otadata",
+      "type": 1,
+      "subtype": 0,
+      "offset": 57344,
+      "size": 8192,
+      "flags": 0,
+      "available_bytes": 8192,
+      "complete": true,
+      "erased_in_available_range": true
+    },
+    {
+      "name": "app0",
+      "type": 0,
+      "subtype": 16,
+      "offset": 65536,
+      "size": 13107200,
+      "flags": 0,
+      "available_bytes": 13107200,
+      "complete": true,
+      "erased_in_available_range": false
+    },
+    {
+      "name": "app1",
+      "type": 0,
+      "subtype": 17,
+      "offset": 13172736,
+      "size": 13107200,
+      "flags": 0,
+      "available_bytes": 3604480,
+      "complete": false,
+      "erased_in_available_range": true
+    },
+    {
+      "name": "spiffs",
+      "type": 1,
+      "subtype": 130,
+      "offset": 26279936,
+      "size": 7077888,
+      "flags": 0,
+      "available_bytes": 0,
+      "complete": false,
+      "erased_in_available_range": null
+    },
+    {
+      "name": "coredump",
+      "type": 1,
+      "subtype": 3,
+      "offset": 33488896,
+      "size": 65536,
+      "flags": 0,
+      "available_bytes": 0,
+      "complete": false,
+      "erased_in_available_range": null
+    }
+  ],
+  "application_offset": 65536,
+  "application": {
+    "entry_point": 1341260750,
+    "chip_id": 18,
+    "min_chip_revision_full": 301,
+    "max_chip_revision_full": 399,
+    "spi_mode": "DIO",
+    "flash_size_bytes": 33554432,
+    "flash_frequency_code": 15,
+    "size": 2551424,
+    "sha256": "4948504e382ff56fb3cb05ae53688fb5261b96984e17877c83ed1596b5ffd9fa",
+    "segments": [
+      {
+        "index": 0,
+        "address": 1209729056,
+        "size": 574200,
+        "image_offset": 32,
+        "sha256": "2af6c152e372069b5feb9c7434ad02897a6f9514edc45165f5a2c88d598415fc"
+      },
+      {
+        "index": 1,
+        "address": 806354944,
+        "size": 500,
+        "image_offset": 574240,
+        "sha256": "8304a761a08ab90e6327c5d1165f9e6c056686d4c44050e9ecec9771578fbf48"
+      },
+      {
+        "index": 2,
+        "address": 806355456,
+        "size": 72,
+        "image_offset": 574748,
+        "sha256": "9d01ddc6fdfdef31b079b66df026ac2b0371a7e3ffa2b8c660cbe1bf1d358ae2"
+      },
+      {
+        "index": 3,
+        "address": 1341259776,
+        "size": 15020,
+        "image_offset": 574828,
+        "sha256": "a744ed2d12d51232a86c4702683a4e2c54fa598dc22c152958272774b6daaa93"
+      },
+      {
+        "index": 4,
+        "address": 1207959584,
+        "size": 1744736,
+        "image_offset": 589856,
+        "sha256": "b5d7d4f4e97ff269806bad31f805e0f3e383dcc6e34631ebe4bbce18853eef50"
+      },
+      {
+        "index": 5,
+        "address": 1341274796,
+        "size": 148072,
+        "image_offset": 2334600,
+        "sha256": "2061d9d49922ac2050abe5fa7486b06f1d5da915372925df3fb57359acbd05ed"
+      },
+      {
+        "index": 6,
+        "address": 1341422976,
+        "size": 68700,
+        "image_offset": 2482680,
+        "sha256": "ede2d82bf1a69acd8616559e6cba7690268212b8c2809fc3faa44a4cd7974c15"
+      }
+    ],
+    "checksum_stored": 159,
+    "checksum_computed": 159,
+    "checksum_valid": true,
+    "validation_hash_stored": "d2cda0888d69b28036f1fd1d57f1e0dbf3a435e8ede7fd6f88a87a3b11dbfa6b",
+    "validation_hash_computed": "d2cda0888d69b28036f1fd1d57f1e0dbf3a435e8ede7fd6f88a87a3b11dbfa6b",
+    "validation_hash_valid": true
+  },
+  "descriptor": {
+    "version": "P1.6.4",
+    "project_name": "albert_p4",
+    "compile_time": "19:06:47",
+    "compile_date": "Oct  8 2026",
+    "idf_version": "v5.5.5",
+    "original_elf_sha256": "eee2ccf0d7e48b735103ac0c88f690967dbbb37e973ee6edbb89ba0f44d8a6b1",
+    "secure_version": 0
+  },
+  "assets": [
+    {
+      "file": "dashboard.html",
+      "offset": 284564,
+      "address": 1210013588,
+      "compressed_size": 178444,
+      "size": 718371,
+      "sha256": "021f5459f9822c3128b43858a8f4666f8e39d441c01703213ac09072232db1dd"
+    },
+    {
+      "file": "login.html",
+      "offset": 463028,
+      "address": 1210192052,
+      "size": 5393,
+      "sha256": "1a93b1102a9418435ec2cc9b03e27d261eafc94594a00e8c3ed28d7946bc843b"
+    }
+  ],
+  "web_scripts": [
+    {
+      "file": "dashboard.script0.js",
+      "attrs": {}
+    },
+    {
+      "file": "login.script0.js",
+      "attrs": {}
+    }
+  ],
+  "string_count": 8902,
+  "http_path_candidate_count": 84,
+  "partition_end": 33554432,
+  "last_non_erased_byte": 2616959,
+  "ota": {
+    "path": "/Volumes/csk/other/esp32/Albert/Albert-P4-P1.6.4-V3.2-4d97f369-OTA.bin",
+    "size": 2551424,
+    "sha256": "4948504e382ff56fb3cb05ae53688fb5261b96984e17877c83ed1596b5ffd9fa",
+    "identical_to_bootstrap_application": true
+  }
+}

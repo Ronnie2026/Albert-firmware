@@ -1,0 +1,43 @@
+2026-10-09 21:26:30 INFO  ExportRecovered.java> Exported 500 functions; success=500 failed=0  
+2026-10-09 21:26:35 INFO  ExportRecovered.java> Exported 1000 functions; success=1000 failed=0  
+2026-10-09 21:26:52 INFO  ExportRecovered.java> Exported 1500 functions; success=1500 failed=0  
+2026-10-09 21:27:11 INFO  ExportRecovered.java> Exported 2000 functions; success=2000 failed=0  
+2026-10-09 21:27:16 INFO  ExportRecovered.java> Exported 2500 functions; success=2500 failed=0  
+2026-10-09 21:27:20 INFO  ExportRecovered.java> Exported 3000 functions; success=3000 failed=0  
+2026-10-09 21:27:23 INFO  ExportRecovered.java> Exported 3500 functions; success=3500 failed=0  
+2026-10-09 21:27:29 INFO  ExportRecovered.java> Exported 4000 functions; success=4000 failed=0  
+2026-10-09 21:27:32 INFO  ExportRecovered.java> Exported 4500 functions; success=4500 failed=0  
+2026-10-09 21:27:33 INFO  ExportRecovered.java> DONE success=4763 failed=0  
+2026-10-09 21:33:18 INFO  PrepareAnalysis.java> Added recovered BSS, gp context, ROM labels, and selected task entry points.  
+2026-10-09 21:33:36 INFO  ExportRecovered.java> Exported 500 functions; success=500 failed=0  
+2026-10-09 21:33:41 INFO  ExportRecovered.java> Exported 1000 functions; success=1000 failed=0  
+2026-10-09 21:33:58 INFO  ExportRecovered.java> Exported 1500 functions; success=1500 failed=0  
+2026-10-09 21:34:18 INFO  ExportRecovered.java> Exported 2000 functions; success=2000 failed=0  
+2026-10-09 21:34:22 INFO  ExportRecovered.java> Exported 2500 functions; success=2500 failed=0  
+2026-10-09 21:34:25 INFO  ExportRecovered.java> Exported 3000 functions; success=3000 failed=0  
+2026-10-09 21:34:28 INFO  ExportRecovered.java> Exported 3500 functions; success=3500 failed=0  
+2026-10-09 21:34:33 INFO  ExportRecovered.java> Exported 4000 functions; success=4000 failed=0  
+2026-10-09 21:34:37 INFO  ExportRecovered.java> Exported 4500 functions; success=4500 failed=0  
+2026-10-09 21:34:39 INFO  ExportRecovered.java> DONE success=4945 failed=0  
+2026-10-09 21:37:55 INFO  PrepareAnalysis.java> Added recovered BSS, gp context, ROM labels, and selected task entry points.  
+2026-10-09 21:38:11 INFO  ExportRecovered.java> Exported 500 functions; success=500 failed=0  
+2026-10-09 21:38:15 INFO  ExportRecovered.java> Exported 1000 functions; success=1000 failed=0  
+2026-10-09 21:38:32 INFO  ExportRecovered.java> Exported 1500 functions; success=1500 failed=0  
+2026-10-09 21:38:53 INFO  ExportRecovered.java> Exported 2000 functions; success=2000 failed=0  
+2026-10-09 21:38:57 INFO  ExportRecovered.java> Exported 2500 functions; success=2500 failed=0  
+2026-10-09 21:38:59 INFO  ExportRecovered.java> Exported 3000 functions; success=3000 failed=0  
+2026-10-09 21:39:01 INFO  ExportRecovered.java> Exported 3500 functions; success=3500 failed=0  
+2026-10-09 21:39:05 INFO  ExportRecovered.java> Exported 4000 functions; success=4000 failed=0  
+2026-10-09 21:39:08 INFO  ExportRecovered.java> Exported 4500 functions; success=4500 failed=0  
+2026-10-09 21:39:10 INFO  ExportRecovered.java> DONE success=4966 failed=0  
+2026-10-09 21:41:28 INFO  PrepareAnalysis.java> Added recovered BSS, gp context, ROM labels, and selected task entry points.  
+2026-10-09 21:41:45 INFO  ExportRecovered.java> Exported 500 functions; success=500 failed=0  
+2026-10-09 21:41:49 INFO  ExportRecovered.java> Exported 1000 functions; success=1000 failed=0  
+2026-10-09 21:42:06 INFO  ExportRecovered.java> Exported 1500 functions; success=1500 failed=0  
+2026-10-09 21:42:26 INFO  ExportRecovered.java> Exported 2000 functions; success=2000 failed=0  
+2026-10-09 21:42:29 INFO  ExportRecovered.java> Exported 2500 functions; success=2500 failed=0  
+2026-10-09 21:42:31 INFO  ExportRecovered.java> Exported 3000 functions; success=3000 failed=0  
+2026-10-09 21:42:33 INFO  ExportRecovered.java> Exported 3500 functions; success=3500 failed=0  
+2026-10-09 21:42:38 INFO  ExportRecovered.java> Exported 4000 functions; success=4000 failed=0  
+2026-10-09 21:42:40 INFO  ExportRecovered.java> Exported 4500 functions; success=4500 failed=0  
+2026-10-09 21:42:42 INFO  ExportRecovered.java> DONE success=4966 failed=0  

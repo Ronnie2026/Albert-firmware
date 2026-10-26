@@ -1,0 +1,256 @@
+openjdk version "21.0.12" 2026-07-21
+OpenJDK Runtime Environment Homebrew (build 21.0.12)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.12, mixed mode)
+INFO  Using log config file: jar:file:/opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /Volumes/csk/other/esp32/Albert/reverse/analysis/ghidra.log (LoggingInitialization)  
+INFO  Loading user preferences: /Users/csk/Library/ghidra/ghidra_12.1.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (501 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (997 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 59 extension points (20 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/Base/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/FunctionID/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/FileFormats/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Processors/Atmel/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Processors/8051/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Processors/DATA/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Processors/JVM/ghidra_scripts
+    /var/folders/pf/jbs20sj54q920f03ltnhhxb00000gn/T/albert-ghidra.RnBy8o
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Debug/Debugger/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/BSim/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/BytePatterns/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/PyGhidra/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/Decompiler/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/VersionTracking/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Features/PDB/ghidra_scripts
+    /opt/homebrew/Cellar/ghidra/12.1.2/libexec/Ghidra/Processors/PIC/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Opening existing project: /Volumes/csk/other/esp32/Albert/reverse/ghidra/Albert_P4 (HeadlessAnalyzer)  
+INFO  Opening project: /Volumes/csk/other/esp32/Albert/reverse/ghidra/Albert_P4 (HeadlessProject)  
+INFO  REPORT: Processing project file: /application.analysis.elf (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: PrepareAnalysis.java '/Volumes/csk/other/esp32/Albert/reverse/analysis/rom_symbols'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /var/folders/pf/jbs20sj54q920f03ltnhhxb00000gn/T/albert-ghidra.RnBy8o/PrepareAnalysis.java (HeadlessAnalyzer)  
+INFO  PrepareAnalysis.java> Added recovered BSS, gp context, ROM labels, and selected task entry points. (GhidraScript)  
+INFO  ANALYZING all memory and code: /application.analysis.elf (HeadlessAnalyzer)  
+WARN  Decompiling ram:4800e1bc: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e160: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e160: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e1bc: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800df46: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800df46: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800dfaa: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800dfaa: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:48171b10: Unable to read bytes at ram:00000006 (DecompileCallback)  
+WARN  Decompiling ram:4800ecf2: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800ecf2: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e220: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e220: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e00e: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e00e: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:481719ba: Unable to read bytes at ram:00000022 (DecompileCallback)  
+WARN  Decompiling ram:481719ba: Unable to read bytes at ram:0000001e (DecompileCallback)  
+WARN  Decompiling ram:4800eba8: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800eba8: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800eb08: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800eb08: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800ec62: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800ec62: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+INFO  Packed database cache: /var/tmp/csk-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: generic_clib (ApplyDataArchiveAnalyzer)  
+INFO  -----------------------------------------------------
+    ASCII Strings                              0.224 secs
+    Apply Data Archives                        0.374 secs
+    Call Convention ID                         0.009 secs
+    Call-Fixup Installer                       0.026 secs
+    Create Address Tables                      0.250 secs
+    Create Function                            0.001 secs
+    Data Reference                             0.399 secs
+    Decompiler Switch Analysis                 2.774 secs
+    Demangler GNU                              0.048 secs
+    Disassemble Entry Points                   0.087 secs
+    Embedded Media                             0.034 secs
+    External Entry References                  0.000 secs
+    External Symbol Resolver                   0.001 secs
+    Function ID                                0.021 secs
+    Function Start Search                      0.037 secs
+    Non-Returning Functions - Discovered       0.629 secs
+    Non-Returning Functions - Known            0.013 secs
+    RISCV Constant Reference Analyzer          4.701 secs
+    Reference                                  0.350 secs
+    Shared Return Calls                        0.365 secs
+    Stack                                      2.327 secs
+    Subroutine References                      0.347 secs
+-----------------------------------------------------
+     Total Time   13 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: /application.analysis.elf (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: ExportRecovered.java '/Volumes/csk/other/esp32/Albert/reverse/decompiled' '/Volumes/csk/other/esp32/Albert/reverse/analysis/strings.tsv'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /var/folders/pf/jbs20sj54q920f03ltnhhxb00000gn/T/albert-ghidra.RnBy8o/ExportRecovered.java (HeadlessAnalyzer)  
+WARN  Decompiling ram:4800df46: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800df46: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800dfaa: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800dfaa: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e00e: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e00e: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e160: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e160: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e1bc: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e1bc: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e220: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800e220: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800eb08: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800eb08: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800eba8: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800eba8: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800ec62: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800ec62: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800ecf2: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+WARN  Decompiling ram:4800ecf2: Unable to read bytes at ram:4ff5a02c (DecompileCallback)  
+INFO  ExportRecovered.java> Exported 500 functions; success=500 failed=0 (GhidraScript)  
+INFO  ExportRecovered.java> Exported 1000 functions; success=1000 failed=0 (GhidraScript)  
+INFO  ExportRecovered.java> Exported 1500 functions; success=1500 failed=0 (GhidraScript)  
+INFO  ExportRecovered.java> Exported 2000 functions; success=2000 failed=0 (GhidraScript)  
+INFO  ExportRecovered.java> Exported 2500 functions; success=2500 failed=0 (GhidraScript)  
+INFO  ExportRecovered.java> Exported 3000 functions; success=3000 failed=0 (GhidraScript)  
+WARN  Decompiling ram:481719ba: Unable to read bytes at ram:00000022 (DecompileCallback)  
+WARN  Decompiling ram:481719ba: Unable to read bytes at ram:0000001e (DecompileCallback)  
+WARN  Decompiling ram:48171b10: Unable to read bytes at ram:00000006 (DecompileCallback)  
+INFO  ExportRecovered.java> Exported 3500 functions; success=3500 failed=0 (GhidraScript)  
+INFO  ExportRecovered.java> Exported 4000 functions; success=4000 failed=0 (GhidraScript)  
+WARN  Decompiling ram:4fc00018, pcode error at ram:4fc00018: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00024, pcode error at ram:4fc00024: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00028, pcode error at ram:4fc00028: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00030, pcode error at ram:4fc00030: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0003c, pcode error at ram:4fc0003c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00040, pcode error at ram:4fc00040: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00078, pcode error at ram:4fc00078: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00084, pcode error at ram:4fc00084: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00094, pcode error at ram:4fc00094: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc000a8, pcode error at ram:4fc000a8: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00108, pcode error at ram:4fc00108: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0010c, pcode error at ram:4fc0010c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00110, pcode error at ram:4fc00110: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc001f0, pcode error at ram:4fc001f0: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc001fc, pcode error at ram:4fc001fc: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00208, pcode error at ram:4fc00208: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0020c, pcode error at ram:4fc0020c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00210, pcode error at ram:4fc00210: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00214, pcode error at ram:4fc00214: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00218, pcode error at ram:4fc00218: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0021c, pcode error at ram:4fc0021c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00224, pcode error at ram:4fc00224: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00230, pcode error at ram:4fc00230: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00234, pcode error at ram:4fc00234: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0023c, pcode error at ram:4fc0023c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00240, pcode error at ram:4fc00240: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00248, pcode error at ram:4fc00248: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00250, pcode error at ram:4fc00250: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00254, pcode error at ram:4fc00254: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00258, pcode error at ram:4fc00258: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0025c, pcode error at ram:4fc0025c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00260, pcode error at ram:4fc00260: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00264, pcode error at ram:4fc00264: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00268, pcode error at ram:4fc00268: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00288, pcode error at ram:4fc00288: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0028c, pcode error at ram:4fc0028c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc002c4, pcode error at ram:4fc002c4: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc002d0, pcode error at ram:4fc002d0: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc002dc, pcode error at ram:4fc002dc: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc002e4, pcode error at ram:4fc002e4: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc002ec, pcode error at ram:4fc002ec: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc002f0, pcode error at ram:4fc002f0: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc002f4, pcode error at ram:4fc002f4: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc002f8, pcode error at ram:4fc002f8: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00304, pcode error at ram:4fc00304: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0030c, pcode error at ram:4fc0030c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00310, pcode error at ram:4fc00310: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00314, pcode error at ram:4fc00314: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00330, pcode error at ram:4fc00330: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0033c, pcode error at ram:4fc0033c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00348, pcode error at ram:4fc00348: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00358, pcode error at ram:4fc00358: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0035c, pcode error at ram:4fc0035c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00360, pcode error at ram:4fc00360: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00368, pcode error at ram:4fc00368: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0036c, pcode error at ram:4fc0036c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00374, pcode error at ram:4fc00374: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00380, pcode error at ram:4fc00380: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00388, pcode error at ram:4fc00388: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00390, pcode error at ram:4fc00390: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc003d4, pcode error at ram:4fc003d4: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc003e4, pcode error at ram:4fc003e4: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc004d8, pcode error at ram:4fc004d8: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc004dc, pcode error at ram:4fc004dc: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc004e8, pcode error at ram:4fc004e8: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc004ec, pcode error at ram:4fc004ec: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc004f8, pcode error at ram:4fc004f8: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc004fc, pcode error at ram:4fc004fc: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00500, pcode error at ram:4fc00500: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00504, pcode error at ram:4fc00504: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00508, pcode error at ram:4fc00508: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0050c, pcode error at ram:4fc0050c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00560, pcode error at ram:4fc00560: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00564, pcode error at ram:4fc00564: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00584, pcode error at ram:4fc00584: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc005ac, pcode error at ram:4fc005ac: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc005b0, pcode error at ram:4fc005b0: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc005b4, pcode error at ram:4fc005b4: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc005b8, pcode error at ram:4fc005b8: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc005bc, pcode error at ram:4fc005bc: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc005c4, pcode error at ram:4fc005c4: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc005e0, pcode error at ram:4fc005e0: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc005e4, pcode error at ram:4fc005e4: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc005e8, pcode error at ram:4fc005e8: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc005ec, pcode error at ram:4fc005ec: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00744, pcode error at ram:4fc00744: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0074c, pcode error at ram:4fc0074c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00750, pcode error at ram:4fc00750: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00764, pcode error at ram:4fc00764: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0076c, pcode error at ram:4fc0076c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00770, pcode error at ram:4fc00770: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00778, pcode error at ram:4fc00778: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0077c, pcode error at ram:4fc0077c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0078c, pcode error at ram:4fc0078c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00794, pcode error at ram:4fc00794: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc007e0, pcode error at ram:4fc007e0: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00820, pcode error at ram:4fc00820: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00838, pcode error at ram:4fc00838: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00848, pcode error at ram:4fc00848: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00850, pcode error at ram:4fc00850: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00858, pcode error at ram:4fc00858: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0085c, pcode error at ram:4fc0085c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00860, pcode error at ram:4fc00860: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00864, pcode error at ram:4fc00864: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00868, pcode error at ram:4fc00868: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00870, pcode error at ram:4fc00870: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00878, pcode error at ram:4fc00878: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0087c, pcode error at ram:4fc0087c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00880, pcode error at ram:4fc00880: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00884, pcode error at ram:4fc00884: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00888, pcode error at ram:4fc00888: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0088c, pcode error at ram:4fc0088c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00890, pcode error at ram:4fc00890: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00894, pcode error at ram:4fc00894: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00898, pcode error at ram:4fc00898: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc0089c, pcode error at ram:4fc0089c: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc008a0, pcode error at ram:4fc008a0: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+WARN  Decompiling ram:4fc00a40, pcode error at ram:4fc00a40: Disassembly not permitted within uninitialized memory block (DecompileCallback)  
+INFO  ExportRecovered.java> Exported 4500 functions; success=4500 failed=0 (GhidraScript)  
+WARN  Decompiling ram:4ff37718, pcode error at ram:4ff3772a: Unable to resolve constructor at ram:4ff3772a (DecompileCallback)  
+INFO  ExportRecovered.java> DONE success=4966 failed=0 (GhidraScript)  
+INFO  ANALYZING changes made by post scripts: /application.analysis.elf (HeadlessAnalyzer)  
+INFO  REPORT: Post-analysis succeeded for file: /application.analysis.elf (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for processed file: /application.analysis.elf (HeadlessAnalyzer)  

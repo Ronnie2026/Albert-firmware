@@ -1,0 +1,11 @@
+{
+  "function_count": 4945,
+  "string_xrefs": 17002,
+  "route_count": 87,
+  "registered_handlers_missing_function": 19,
+  "warnings": {
+    "decompiler_warning_files": 1261,
+    "halt_baddata_files": 120,
+    "unaffiliated_register_files": 13
+  }
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Albert P4 后台登录</title>
+<style>
+:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#f2f2f7;color:#1c1c1e;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+body{min-width:320px;min-height:100vh;margin:0;display:grid;place-items:center;padding:24px;background:#f2f2f7}
+main{position:relative;isolation:isolate;overflow:hidden;width:min(440px,100%);padding:32px clamp(22px,6vw,36px) 30px;border:1px solid rgba(255,255,255,.88);border-radius:22px;background:rgba(255,255,255,.94);box-shadow:0 22px 60px rgba(35,48,72,.10),0 2px 8px rgba(35,48,72,.04);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+main:before{content:"";position:absolute;z-index:-1;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.98),transparent)}
+.brand{display:flex;align-items:center;gap:16px;margin:0 0 30px}
+.app-icon{display:grid;place-items:center;flex:0 0 56px;width:56px;height:56px;border-radius:17px;background:linear-gradient(145deg,#54a9ff,#0876f9 72%);box-shadow:0 8px 18px rgba(0,122,255,.24),inset 0 1px 0 rgba(255,255,255,.42)}
+.app-icon svg{display:block;width:34px;height:34px}
+h1{font-size:23px;line-height:1.25;letter-spacing:.01em;margin:0;font-weight:700}
+.login-group{padding:20px 18px 18px;border:1px solid #e5e5ea;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(250,250,252,.94));box-shadow:inset 0 1px 0 rgba(255,255,255,.96)}
+.field-label-row{display:flex;align-items:center;gap:10px;margin:0 0 13px}
+label{display:block;margin:0;font-size:15px;font-weight:650;line-height:1.4}
+.field-icon{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:11px;background:#eaf3ff;color:#1677ed}
+.field-icon svg{width:19px;height:19px;display:block}
+input{display:block;width:100%;height:50px;margin:0;padding:0 15px;border:1px solid #d1d1d6;border-radius:13px;outline:none;background:rgba(255,255,255,.96);color:#1c1c1e;font:inherit;font-size:16px;letter-spacing:.02em;box-shadow:0 1px 2px rgba(0,0,0,.025);transition:border-color .16s ease,box-shadow .16s ease,background .16s ease}
+input::placeholder{color:#a1a1a8}
+input:hover{border-color:#b8b8c0}
+input:focus{border-color:#1683ff;background:#fff;box-shadow:0 0 0 4px rgba(0,122,255,.16)}
+button{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:52px;margin-top:18px;padding:0 18px;border:0;border-radius:14px;background:linear-gradient(180deg,#1685ff,#007aff);color:#fff;font:inherit;font-size:16px;font-weight:650;letter-spacing:.01em;cursor:pointer;box-shadow:0 7px 15px rgba(0,122,255,.20),inset 0 1px 0 rgba(255,255,255,.24);transition:transform .14s ease,filter .14s ease,box-shadow .14s ease}
+button:hover{filter:brightness(1.035);box-shadow:0 9px 19px rgba(0,122,255,.24),inset 0 1px 0 rgba(255,255,255,.28)}
+button:active{transform:scale(.985);filter:brightness(.96)}
+button:focus-visible{outline:3px solid rgba(0,122,255,.32);outline-offset:3px}
+#error{margin:15px 2px 0;padding:10px 12px;border:1px solid #ffd2d2;border-radius:12px;background:#fff2f1;color:#c62828;font-size:14px;line-height:1.45}
+#error:empty{display:none}
+@media(min-width:700px){body{padding:40px}main{padding-top:36px}}
+@media(max-width:359px){body{padding:16px}main{padding:25px 20px 22px;border-radius:22px}.brand{gap:13px;margin-bottom:24px}.login-group{padding:17px 14px 15px}h1{font-size:21px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body><main>
+<header class="brand"><div class="app-icon" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M10.2 15.3a11.1 11.1 0 0 1 15.6 0M13.7 18.8a6.15 6.15 0 0 1 8.6 0M17 22.1a1.5 1.5 0 0 1 2 0" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M11.2 25.1h13.6a2.2 2.2 0 0 1 2.2 2.2v3.1a2.2 2.2 0 0 1-2.2 2.2H11.2A2.2 2.2 0 0 1 9 30.4v-3.1a2.2 2.2 0 0 1 2.2-2.2Z" fill="white" fill-opacity=".96"/><circle cx="18" cy="28.8" r="1.1" fill="#1683ff"/></svg></div><div><h1>Albert P4 后台</h1></div></header>
+<section class="login-group" aria-label="登录"><form method="post" action="/auth/login" autocomplete="on">
+<div class="field-label-row"><span class="field-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 10V7.8a5 5 0 0 1 10 0V10M6.8 10h10.4a1.8 1.8 0 0 1 1.8 1.8v7.4a1.8 1.8 0 0 1-1.8 1.8H6.8A1.8 1.8 0 0 1 5 19.2v-7.4A1.8 1.8 0 0 1 6.8 10Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="15.5" r="1.2" fill="currentColor"/></svg></span><label for="password">热点密码</label></div><input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+<button type="submit">登录</button></form></section>
+<div id="error" role="alert" aria-live="polite"></div>
+</main><script>
+const error=new URLSearchParams(location.search).get("error");
+if(error)document.getElementById("error").textContent=error==="locked"?"尝试过多，请稍后再试。":"密码不正确，请重试。";
+</script></body></html>

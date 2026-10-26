@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "skill_markdown_links_checked": 437,
+  "semantic_features_checked": 145,
+  "feature_order_complete": true,
+  "seat_direction_masks_checked": 24,
+  "binary_constants_checked": 6,
+  "speed_zone_bit_preservation_checked": true,
+  "input_binary_sha256": "11cd02e1d0bcda1cd894a249e963ac54eb67f6cd29ab6d40bcaf85fff8711343",
+  "errors": [],
+  "checks_are_static_only": true
+}

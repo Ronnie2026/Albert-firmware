@@ -1,0 +1,17 @@
+/* Firmware entry: 0x4ff2bcc4 */
+
+undefined4 FUN_ram_4ff2bcc4(void)
+
+{
+  undefined4 uVar1;
+  
+  gp = &PTR_s_Print_task_snapshots_ram_481c0790_ram_4ff48580;
+  fence();
+  if (DAT_ram_4ff6e050 != 0) {
+    return 1;
+  }
+  uVar1 = FUN_ram_4ff2bac4();
+  return uVar1;
+}
+
+

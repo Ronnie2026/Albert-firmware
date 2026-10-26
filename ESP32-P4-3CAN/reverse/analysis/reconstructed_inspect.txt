@@ -1,0 +1,104 @@
+Original firmware: P1.6.4, hardware V3.2
+Board: waveshare-p4-wifi6-sn65hvd230-x3
+Commit: 4d97f369e1a32f126b7121a66a70a53fca628dfa
+Original ELF SHA256: eee2ccf0d7e48b735103ac0c88f690967dbbb37e973ee6edbb89ba0f44d8a6b1
+Layout A:
+  CAN0 CH TX=2 RX=3 bitrate=500000
+  CAN1 VEH TX=4 RX=5 bitrate=500000
+  CAN2 PARTY TX=26 RX=27 bitrate=500000
+Layout B:
+  CAN0 CH TX=3 RX=2 bitrate=500000
+  CAN1 VEH TX=50 RX=49 bitrate=500000
+  CAN2 PARTY TX=31 RX=30 bitrate=500000
+Task fsd_p0 priority=24 core=1 stack=4096 bytes entry=0x4ff2520a
+Task can_rt priority=20 core=1 stack=8192 bytes entry=0x4810d080
+Task p4_supervisor priority=3 core=0 stack=4096 bytes entry=0x48121206
+Stored-layout default: Auto (2)
+Routes: 87
+  GET    /                                        original-handler=0x4808b134
+  GET    /management/status                       original-handler=0x480b2722
+  POST   /auth/login                              original-handler=0x4808a8c2
+  POST   /auth/logout                             original-handler=0x4808adc8
+  GET    /auth/status                             original-handler=0x480677f4
+  ANY    /generate_204                            original-handler=0x48067692
+  ANY    /gen_204                                 original-handler=0x48067692
+  ANY    /hotspot-detect.html                     original-handler=0x48067692
+  GET    /health                                  original-handler=0x480c2bda
+  GET    /web_metrics                             original-handler=0x4806f630
+  GET    /status_fast                             original-handler=0x4806eb88
+  GET    /torque_nag/status                       original-handler=0x4806e388
+  GET    /status                                  original-handler=0x480c0178
+  GET    /runtime_status                          original-handler=0x4806851c
+  GET    /system_status                           original-handler=0x4808334c
+  GET    /can_diag                                original-handler=0x4807fa5c
+  GET    /can_hot_ids                             original-handler=0x480c037a
+  GET    /coredump/info                           original-handler=0x4806cbde
+  GET    /coredump.bin                            original-handler=0x4806d406
+  GET    /config                                  original-handler=0x480bd450
+  POST   /config                                  original-handler=0x48101f34
+  GET    /config/uss_radar                        original-handler=0x4806afe2
+  POST   /config/uss_radar                        original-handler=0x480f43a8
+  GET    /ambient_config                          original-handler=0x4806adda
+  POST   /ambient_config                          original-handler=0x480f584c
+  GET    /speed_target/config                     original-handler=0x480f99bc
+  POST   /speed_target/save                       original-handler=0x480f9322
+  GET    /can_pin_layout                          original-handler=0x480681de
+  POST   /can_pin_layout                          original-handler=0x480ff1e4
+  GET    /rear_fog/config                         original-handler=0x48066e12
+  POST   /rear_fog/config                         original-handler=0x480f4dda
+  POST   /rear_fog/runtime                        original-handler=0x481015a6
+  POST   /config/ble_obstacle                     original-handler=0x480f1e34
+  POST   /fsd_auto_start/master                   original-handler=0x480f2fc2
+  POST   /save                                    original-handler=0x480f34ec
+  POST   /seat_action                             original-handler=0x48100e14
+  GET    /driver_profiles                         original-handler=0x4806d76e
+  POST   /driver_profiles                         original-handler=0x480fa85c
+  GET    /fsd_records                             original-handler=0x480b4abe
+  GET    /fsd_records/clock                       original-handler=0x4806c0d4
+  POST   /fsd_records/clock                       original-handler=0x4806ef66
+  POST   /fsd_records/clear                       original-handler=0x480d338a
+  POST   /fsd_records/subtotal/reset              original-handler=0x480d2a5e
+  GET    /cloud/status                            original-handler=0x480d0b14
+  GET    /onboarding/status                       original-handler=0x4808d6c6
+  POST   /onboarding/complete                     original-handler=0x4808e07e
+  GET    /cloud/agent/config                      original-handler=0x4808eb2e
+  POST   /cloud/agent/config                      original-handler=0x4808cf44
+  POST   /cloud/settings/restore                  original-handler=0x480b6d24
+  GET    /cloud/settings/conflicts                original-handler=0x480b31d8
+  POST   /cloud/settings/conflict                 original-handler=0x480d103e
+  POST   /cloud/developer                         original-handler=0x4808d958
+  GET    /cloud/config                            original-handler=0x480b4fa4
+  POST   /cloud/config                            original-handler=0x480b3e2c
+  POST   /cloud/test                              original-handler=0x4811e15c
+  POST   /cloud/enabled                           original-handler=0x480b3e6c
+  POST   /cloud/upload                            original-handler=0x4808cf68
+  POST   /rec_start                               original-handler=0x480fd584
+  POST   /rec_stop                                original-handler=0x480fd45c
+  POST   /rec_clear                               original-handler=0x4806e04e
+  GET    /rec_status                              original-handler=0x4806c4e8
+  GET    /rec_download                            original-handler=0x4806fee2
+  GET    /wifi/status                             original-handler=0x48066f4c
+  POST   /wifi/scan                               original-handler=0x4806b7e4
+  POST   /wifi/connect                            original-handler=0x480f38e4
+  POST   /wifi/disconnect                         original-handler=0x480f2624
+  POST   /wifi/forget                             original-handler=0x480f2918
+  POST   /wifi/ap-config                          original-handler=0x480f3d2c
+  POST   /wifi/ap-auto-off                        original-handler=0x480f2c14
+  GET    /ota/status                              original-handler=0x4806bbf8
+  POST   /ota/start                               original-handler=0x480ffd82
+  POST   /ota/cancel                              original-handler=0x480ff590
+  POST   /ota/upload                              original-handler=0x480ff860
+  GET    /ota/online/status                       original-handler=0x480bdfce
+  POST   /ota/online/check                        original-handler=0x4806b9ae
+  POST   /ota/online/install                      original-handler=0x4807be92
+  POST   /reboot                                  original-handler=0x480ffb40
+  POST   /api/can-experiment/listen               original-handler=0x480ed598
+  POST   /api/can-experiment/listen/stop          original-handler=0x480ecf86
+  POST   /api/can-experiment/source/confirm       original-handler=0x480ab7ba
+  POST   /api/can-experiment/validate             original-handler=0x480ec3f8
+  POST   /api/can-experiment/start                original-handler=0x480eb56e
+  POST   /api/can-experiment/stop                 original-handler=0x480eab84
+  GET    /api/can-experiment/status               original-handler=0x480acf1c
+  GET    /api/can-experiment/presets              original-handler=0x4806da0c
+  POST   /api/can-experiment/presets              original-handler=0x480ac732
+  DELETE /api/can-experiment/presets              original-handler=0x4808a37e

@@ -1,0 +1,6 @@
+{
+  "extraction_reproducible": true,
+  "partition_csv_round_trip_matches": true,
+  "generated_partition_table_bytes": 3072,
+  "partition_csv_validated_with": "ESP-IDF gen_esp32part.py (local v5.1.2 tool; table encoding unchanged)"
+}

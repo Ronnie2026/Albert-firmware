@@ -1,0 +1,1066 @@
+name	start_line	end_line	dom_ids	paths	form_keys
+readDiagnosticPollingPreference	3	3			
+writeDiagnosticPollingPreference	4	4			
+anonymous_L18_2754	18	18			
+recordWebClientMetric	19	19			
+anonymous_L20_3189	20	20			
+snapshotWebClientMetrics	20	20			
+storedUiMode	22	22			
+detectCarUi	23	23			
+applyUiMode	24	24	uiModeBtn		
+cycleUiMode	25	25			
+anonymous_L27_4446	27	27			
+getStoredTheme	30	30			
+setStoredTheme	31	31			
+applyTheme	32	32	themeBtn		
+toggleTheme	33	33			
+syncFirmwareTheme	34	43	themeBtn		
+refreshFirmwareTheme	44	49		/system_status	
+diagnosticCard	53	53			
+setCanPinLayoutControlsDisabled	56	56	canPinLayoutSelect,canPinLayoutSave		
+anonymous_L57_7730	57	57			
+applyCanPinLayoutStatus	57	57	canPinLayoutSelect,canPinLayoutState		
+loadCanPinLayout	58	58	canPinLayoutState	/can_pin_layout	
+saveCanPinLayout	59	59	canPinLayoutSelect	/can_pin_layout	
+anonymous_L60_11224	60	60			
+anonymous_L60_11320	60	60			
+rate	60	60			
+anonymous_L60_11291	60	60			
+canDiagnosticModels	60	60			
+canDiagnosticCardMarkup	61	61			
+configureCanDiagnosticCards	62	62	diagTwaiSummaryDot,diagCanbSummaryDot,canbHotTotalRate,canbHotIdTableBody,canFaultEventTableBody		
+runtimeGroup	63	63			
+anonymous_L67_19056	67	67			
+createCanExperimentCard	64	69	canExperimentStyle		
+bits	70	70			
+anonymous_L71_23406	71	71			
+canExperimentRuleMarkup	70	72			
+canExperimentRules	73	73			
+canExperimentAddRule	74	74	canExperimentRules		
+anonymous_L75_25003	75	75			
+canExperimentRemoveRule	75	75			
+canExperimentCycleBit	76	76			
+anonymous_L77_25711	77	77			
+canExperimentApplyWholeByte	77	77			
+anonymous_L78_26078	78	78			
+anonymous_L78_26284	78	78			
+hex	78	78			
+canExperimentCompileBits	78	78			
+canExperimentField	79	79			
+anonymous_L80_26922	80	80			
+anonymous_L80_27350	80	80			
+anonymous_L80_27917	80	80			
+anonymous_L80_28103	80	80			
+anonymous_L80_26670	80	80			
+canExperimentCollect	80	80			ruleCount
+canExperimentMessage	81	81	canExperimentMessage		
+canExperimentInvalidate	82	82	canExperimentStartButton		
+anonymous_L83_28887	83	83			
+canExperimentRequest	83	83			
+canExperimentListen	84	84		/api/can-experiment/listen	
+canExperimentConfirmSource	85	85		/api/can-experiment/source/confirm	
+anonymous_L86_30103	86	86			
+canExperimentValidate	86	86	canExperimentStartButton	/api/can-experiment/validate	
+canExperimentStart	87	87		/api/can-experiment/start	confirmedGeneration
+canExperimentStop	88	88		/api/can-experiment/stop	
+canExperimentStateLabel	89	89			
+anonymous_L92_31532	92	92			
+anonymous_L100_32391	100	100			
+anonymous_L100_32332	100	100			
+anonymous_L102_32535	102	102			
+anonymous_L105_32811	105	105			
+anonymous_L107_33149	107	107			
+anonymous_L109_33476	109	109		/	
+anonymous_L106_32963	106	112			
+canExperimentApplyStatus	90	116	canExperimentCard,canExperimentHeaderState,canExperimentHeaderStop,canExperimentStartButton,canExperimentStatus		
+canExperimentPollDelay	117	117	canExperimentCard		
+anonymous_L118_35683	118	118			
+syncCanExperimentPolling	118	118			
+anonymous_L119_36409	119	119			
+canExperimentPollStatus	119	119		/api/can-experiment/status	
+anonymous_L123_36744	123	123			
+canExperimentPresetPersistence	121	127			
+canExperimentTrackPreset	128	132			
+anonymous_L136_38428	136	136			
+anonymous_L139_38829	139	139			
+canExperimentLoadPresets	133	140	canExperimentPresetSlot	/api/can-experiment/presets	
+clean	141	141			
+anonymous_L141_39291	141	141			
+canExperimentSetBits	141	141			
+anonymous_L142_39940	142	142			
+anonymous_L142_40293	142	142			
+anonymous_L142_40787	142	142			
+anonymous_L142_40952	142	142			
+anonymous_L142_39689	142	142			
+canExperimentLoadDraft	142	142	canExperimentRules		
+canExperimentPresetAction	143	143	canExperimentPresetSlot,canExperimentPresetName	/api/can-experiment/presets	slot,action,name
+canExperimentPresetDelete	144	144	canExperimentPresetSlot	/api/can-experiment/presets	
+move	147	147			
+anonymous_L150_43465	150	150			
+anonymous_L163_46162	163	163			
+anonymous_L163_46122	163	163			
+initAppPages	145	164	mainPage,gearPage,bodyPage,diagPage,systemPage,poll		
+anonymous_L165_46330	165	165			
+anonymous_L165_46399	165	165			
+setCardCollapsed	165	165			
+anonymous_L166_47114	166	166			
+anonymous_L166_47223	166	166			
+flip	166	166			
+anonymous_L166_48144	166	166			
+anonymous_L166_48300	166	166			
+anonymous_L166_48435	166	166			
+anonymous_L166_46953	166	166			
+initCollapsibleCards	166	166			
+toggleFeatureHelp	167	171			
+anonymous_L176_49434	176	176			
+anonymous_L176_49513	176	176			
+anonymous_L178_49652	178	178			
+anonymous_L187_50523	187	187			
+anonymous_L187_50566	187	187			
+anonymous_L182_50114	182	194			
+anonymous_L196_51193	196	196			
+anonymous_L197_51302	197	197			
+anonymous_L174_49328	174	200			
+initFeatureHelp	172	201			
+closeLegalNotice	202	202	legalNotice		
+defaultSeatSlotName	204	204			
+readSeatSlotNames	205	205			
+seatSlotDisplayName	206	206			
+anonymous_L207_52483	207	207			
+saveSeatSlotNames	207	207			
+anonymous_L208_52971	208	208			
+anonymous_L208_52750	208	208			
+bindSeatSlotNames	208	208			
+lightingNumericInputValid	243	243			
+lightingNumericInputMessage	244	244			
+normalizeLightingConfigValue	247	247			
+setVal	248	248	fsdWarningLaneStandard,fsdWarningLaneSevere		
+anonymous_L249_64384	249	249			
+updateV13SpaceToSpaceUi	249	249	v13SpaceToSpaceEnabled		
+updateV14DrivingProfileUi	250	250	v14ManualDrivingProfileEnabled,v14ManualDrivingProfile		
+updateStableSpeedUi	251	251	stableSpeedOffsetConfig,v13SpeedOffsetPanel		
+anonymous_L252_65149	252	252			
+bindStableSpeedControls	252	252	stableSpeedOffsetEnabled,autoSpeedOffsetEnabled		
+anonymous_L253_65493	253	253			
+anonymous_L253_65325	253	253			
+bindEnableDefaults	253	253			
+anonymous_L254_67235	254	254			
+anonymous_L254_67444	254	254			
+updateV13SpeedOffsetUi	254	254	stalkControlVersion,v13SpeedOffsetPanel,v13SpeedOffsetConfig,v12SpeedOffsetConfig,v12TemplatePanel,v14SpeedOffsetPanel,v14IndependentSpeedTemplate,v14TemplatePanel,v13LowSpeedOffsetRow,v13LegacyStrategyConfig,v14LiveMappingRow,hw3ManualStrategyEnabledRow,hw3ManualStrategy,hw3LegacyLiveMappingRow		
+updateV14ProtocolUi	255	255	stalkControlVersion,v14CameraDelayRow,v14CameraDelayNote,v13SpeedOffsetPanel,v14SpeedOffsetPanel		
+updateLightingProtocolUi	256	256	stalkControlVersion,fsdForceHighGestureHelp,strobeFeatureLabelText,strobeGestureHelp,lightingFrameHelp		
+fsdRightPhysicalInputName	257	257	stalkControlVersion		
+updateFsdAutoStartInputLabels	258	258	fsdAutoStartLongPressLabel,fsdAutoStartGroundLabel,fsdAutoStartSubtitle,fsdProtocolInputHelp		
+updateFsdProtocolUi	259	259	fsdParkStartEnabled		
+bindFsdProtocolControls	260	260	stalkControlVersion		
+anonymous_L261_70310	261	261			
+applyConfigDefaults	261	261			
+getVal	262	262			
+showResult	263	263	testResult		
+anonymous_L266_72335	266	266			
+anonymous_L266_72651	266	266			
+updateFsdAutoStartUi	266	266	fsdAutoStartEnabled,fsdAutoStartFirstParkToDriveEnabled,fsdWarningActivationEnabled		
+anonymous_L267_73031	267	267			
+applyNormalizedFsdAutoStartConfig	267	267			
+applyNormalizedFsdParkStartConfig	268	268			
+anonymous_L276_73934	276	276			
+setFsdAutoStartMaster	269	286	fsdAutoStartEnabled	/fsd_auto_start/master,/config	
+anonymous_L287_75311	287	287			
+anonymous_L287_75746	287	287			
+anonymous_L287_75689	287	287			
+bindFsdAutoStartControls	287	287	fsdAutoStartEnabled,fsdAutoStartFirstParkToDriveEnabled,fsdAutoStartGroundEnabled,fsdWarningActivationEnabled,fsdWarningLaneStandard,fsdWarningLaneSevere,fsdWarningLaneModes		
+updateObstacleConfigDiagnostics	288	288	bleObstacleConfigRequested,bleObstacleConfigRam,bleObstacleConfigFlash,bleObstacleConfigRevision		
+anonymous_L289_76604	289	289			
+waitMs	289	289			
+waitSeatActionResult	290	290		/status	
+triggerSeatAction	291	291		/status,/seat_action	action,slot
+postSeatManual	292	292		/seat_action	action,mask
+releaseSeatManual	293	293			
+anonymous_L294_79862	294	294			
+anonymous_L294_80004	294	294			
+beginSeatManual	294	294			
+anonymous_L295_80226	295	295			
+anonymous_L295_80300	295	295			
+anonymous_L295_80369	295	295			
+anonymous_L295_80443	295	295			
+anonymous_L295_80510	295	295			
+anonymous_L295_80179	295	295			
+anonymous_L295_80574	295	295			
+anonymous_L295_80638	295	295			
+anonymous_L295_80712	295	295			
+bindSeatManualControls	295	295			
+yesNo	296	296			
+dasLcHandsReason	297	352			
+durMs	353	353			
+ageMs	354	354			
+us	355	355			
+kb	356	356			
+asAge	357	357			
+formatLightingAge	358	358			
+asBool	359	359			
+asMap	360	360			
+asSpeed	361	361			
+autoShiftAp	362	362			
+autoShiftGear	363	363			
+autoShiftDir	364	364			
+anonymous_L365_84165	365	365			
+anonymous_L365_84299	365	365			
+setAppPage	365	365	pageTitle,pageDescription,masterStrip		
+fmtStat	377	505	stalkControlVersion	/s,/2	
+isCanonicalHealthSnapshot	506	506			
+anonymous_L507_99459	507	507			
+canonicalHealthHasHistory	507	507			
+canonicalHealthDuration	508	508			
+anonymous_L509_99926	509	509			
+anonymous_L509_99994	509	509			
+anonymous_L509_100019	509	509			
+canonicalHealthHistorySummary	509	509			
+canonicalHealthTransitionSummary	510	515			
+canonicalHealthDetails	516	516			
+acceptCanonicalHealthSnapshot	517	517			
+renderCanonicalAutoDiag	518	532	autoDiagLevel,autoDiagReasons,autoDiagAdvice		
+applyCanonicalHealthSnapshot	533	544	systemHealthText		
+val	552	552			
+inc	553	553			
+add	554	554			
+note	555	555			
+anonymous_L589_107094	589	589			
+anonymous_L589_107048	589	589			
+anonymous_L613_109057	613	613			
+anonymous_L614_109126	614	614			
+anonymous_L621_109652	621	621			
+updateAutoDiag	545	624	autoDiagLevel,autoDiagReasons,autoDiagAdvice		
+updateCanFilterWarning	625	625	canbFilterLoadWarning,recState		
+normalizedHw3Strategy	626	626			
+hw3StrategyText	627	627			
+normalizedV14Profile	628	628			
+v14ProfileText	629	629			
+setText	630	630			
+anonymous_L631_110690	631	631			
+setHw3StrategyButtons	631	631			
+anonymous_L632_111127	632	632			
+selectHw3Strategy	632	632	hw3ManualStrategy		
+anonymous_L633_111491	633	633			
+setHw3RuntimeStrategy	633	633			
+updateV14DrivingProfile	634	634	v14LiveMappingText,v14AutomaticDrivingProfileText,v14EffectiveDrivingProfileText,v14DrivingProfileSourceText		
+updateHw3LiveMapping	635	635	hw3LiveMappingText		
+updateSpeedOffsetDownSlewStatus	636	636	speedOffsetDownSlewText		
+setHw3LiveMappingDisconnected	637	637	hw3LiveMappingText,v14LiveMappingText		
+updateV13SpeedOffsetStatus	638	648	v13SpeedOffsetStatus,v13VehicleOffsetReadout,speedOffsetOscillationLock,speedOffsetOscillationText,customSpeedEnabled,stalkControlVersion		
+updateHw3SpeedOffsetStatus	649	649	stalkControlVersion,hw3FusedLimitText,hw3TargetSpeedText,hw3OffsetText,hw3Mux2TxText		
+updateHw3Strategy	650	650	hw3EffectiveStrategyText,hw3AutomaticStrategyText,hw3StrategySourceText,hw3OffsetEngineText,hw3FollowDistanceText		
+anonymous_L651_119469	651	651			
+updateDndSpeedPeriodicUi	651	651	dndSpeedPeriodFields,dndSpeedPeriodicEnabled,dndScrollMode		
+anonymous_L652_119667	652	652			
+applyDndMasterRequiredChildren	652	652			
+torqueNagControlValue	653	653			
+torqueNagRangeText	654	654			
+secondsRange	655	655			
+anonymous_L655_121580	655	655			
+updateTorqueNagSummary	655	655	torqueNagConfigSummary,torqueNagProfileText		
+anonymous_L656_122090	656	656			
+updateTorqueNagUi	656	656	dndEnabled,dndTorqueEnabled,torqueNagConfigFold		
+renderTorqueNagStatus	657	657	torqueNagStateText,torqueNagTxText		
+torqueNagPollingWanted	658	658	torqueNagConfigFold,dndCard		
+pollTorqueNagStatus	659	659	torqueNagStateText	/torque_nag/status	
+syncTorqueNagPolling	660	660			
+sync	661	661			
+anonymous_L661_124018	661	661			
+bindStableDetailsToggle	661	661			
+saveTorqueNagEnabled	662	662	dndTorqueEnabled	/config,/save	dndTorqueEnabled
+anonymous_L663_126429	663	663			
+anonymous_L663_126599	663	663			
+bindTorqueNagControls	663	663	torqueNagConfigFold,torqueNagAdvancedFold,dndTorqueEnabled,dndEnabled		
+anonymous_L664_127007	664	664			
+applyNormalizedDndConfig	664	664			
+anonymous_L665_127308	665	665			
+applyNormalizedLightingConfig	665	665			
+handleGearMasterChange	666	666			
+anonymous_L670_128542	670	670			
+updateUssRadarUi	670	670	stalkControlVersion,gearAutomationEnabled,bleObstacleFeatureEnabled,gearUssAdvancedSettings,gearUssDistancePreset,gearUssCustomFields,gearUssRetryLoad,gearUssRetrySave		
+ussRadarStatus	671	671	gearUssConfigStatus		
+anonymous_L672_129418	672	672			
+anonymous_L672_129765	672	672			
+anonymous_L672_130057	672	672			
+applyUssRadarConfig	672	672	gearUssDistancePreset		
+flushAutoSaveAfterUssRadar	673	673			
+anonymous_L674_130766	674	674			
+selectUssRadarPreset	674	674	gearUssDistancePreset		
+anonymous_L675_131258	675	675			
+ussRadarConfigBody	675	675	gearUssDistancePreset		gearUssDistancePreset,revision
+anonymous_L676_132147	676	676			
+loadUssRadarConfig	676	676		/config/uss_radar	
+anonymous_L677_133673	677	677			
+scheduleUssRadarSave	677	677			
+anonymous_L678_134151	678	678			
+anonymous_L678_134577	678	678			
+saveUssRadarConfig	678	678		/config/uss_radar	
+anonymous_L679_136358	679	679			
+anonymous_L679_136533	679	679			
+anonymous_L679_136448	679	679			
+bindUssRadarControls	679	679	gearUssDistancePreset,gearUssRetryLoad,gearUssRetrySave		
+anonymous_L683_137180	683	683			
+updateObstacleProtocolUi	680	688	stalkControlVersion,obstacleHelpSource,v12RadarHelp,runtimePartyGroup		
+anonymous_L692_140758	692	692			
+updateGearFeatureUi	689	693	gearAutomationEnabled,gearSeatbeltSafetyEnabled,gearBrakeSafetyBypassEnabled,gearAutomationBody,gearBrakeToggleEnabled,gearBrakeFeatureLabelText,gearBrakeControls,gearParkSteeringEnabled,gearParkSteeringThresholdField,gearParkSteeringThresholdDeciDeg,gearDriveReverseSteeringThresholdDeciDeg,bleObstacleFeatureEnabled,gearObstacleControls,bleObstacleSteeringConfirmEnabled,bleObstacleSteeringThresholdField,bleObstacleSteeringThresholdDeciDeg,gearScrollEnabled,gearScrollControls,gearScrollBrakeAuthorizationEnabled,gearShiftLimit		
+anonymous_L694_141401	694	694			
+applyNormalizedGearConfig	694	694			
+anonymous_L695_141959	695	695			
+applyGearSmoothPreset	695	695			
+formatSystemUptime	696	696			
+anonymous_L697_142606	697	697			
+applyInternalVersion	697	697			
+renderFsdParkStartStatus	698	698	fsdParkStartStatus		
+batteryPreheatRunView	701	709			
+batteryPreheatTerminalText	710	710			
+batteryPreheatAgeText	711	711			
+batteryPreheatTimeText	712	712			
+setText	716	716			
+anonymous_L727_148303	727	727			
+renderBatteryPreheatStatus	713	728	batteryPreheatEnabled,batteryPreheatDurationMin,batteryPreheatRetryStop		
+retryBatteryPreheatStop	729	740	batteryPreheatDurationMin	/config,/save	
+anonymous_L741_149653	741	741			
+updateStats	741	741	systemUptimeText		
+fresh	744	744			
+renderWarningSettings	742	750	warningLaneSettingText,warningElkSettingText,warningFcwSettingText,warningCollisionEventText,warningDdawStatusText		
+anonymous_L751_152154	751	751			
+anonymous_L751_152374	751	751			
+anonymous_L751_152583	751	751			
+anonymous_L751_152734	751	751			
+updateSeatUi	751	751	seatStopButton		
+updateSeatPolling	752	752			
+normalizedHealthLevel	753	753			
+setHealthDot	754	754			
+renderOverviewCanConnection	755	755			
+updateHealth	756	756	systemHealthText,chipTempText		
+anonymous_L757_155175	757	757			
+setCanDiagnosticRoutesDisconnected	757	757			
+setCanConnectionDisconnected	758	758			
+anonymous_L759_155571	759	759			
+anonymous_L759_155639	759	759			
+setHealthDisconnected	759	759			
+pollHealth	760	760		/health	
+tick	761	761			
+startHealthPolling	761	761			
+canDiagId	762	762			
+canDiagDetail	763	763			
+setCanDiagText	764	764			
+anonymous_L765_156950	765	765			
+anonymous_L765_157015	765	765			
+anonymous_L765_157187	765	765			
+anonymous_L765_157264	765	765			
+anonymous_L765_157546	765	765			
+renderCanHotIds	765	765	canbHotIdTableBody	/s	
+pollCanHotIds	766	766	canbHotIdTableBody	/can_hot_ids	
+waitForCanHotPollingIdle	767	767			
+canHotPollingWanted	768	768	canHotIdsCard		
+syncCanHotPolling	769	769			
+anonymous_L770_159420	770	770			
+htmlEscape	770	770			
+anonymous_L771_159539	771	771			
+diagnosticRows	771	771			
+diagnosticBool	772	772			
+diagnosticAge	773	773			
+diagnosticBytes	774	774			
+twaiDiagnosticState	775	775			
+set	776	776			
+anonymous_L776_160983	776	776			
+renderCanDiagnosticCard	776	776		/s,/	
+canTxOwnerName	777	777			
+canErrorDirectionName	778	778			
+canErrorOutcomeName	779	779			
+anonymous_L780_163747	780	780			
+anonymous_L780_163789	780	780			
+canErrorFlagsText	780	780			
+canErrorUs	781	781			
+canErrorCandidateText	782	782			
+anonymous_L783_164485	783	783			
+anonymous_L783_164630	783	783			
+anonymous_L783_164856	783	783			
+anonymous_L783_165270	783	783			
+anonymous_L783_165409	783	783			
+anonymous_L783_165583	783	783			
+renderCanDiagnosticDetails	783	783	canTxFailureTableBody,canFaultEventTableBody		
+anonymous_L784_166421	784	784			
+renderP0Observation	784	784	can0PriorityTx	/	
+anonymous_L785_166957	785	785			
+renderThreeTwai	785	785			
+count	787	787			
+anonymous_L788_167203	788	788			
+fsdTxDiagnosticRows	786	792			
+set	794	794			
+anonymous_L800_171534	800	800			
+renderRuntimeStatus	793	805			
+rebootSessionSummary	806	806			
+rebootHistorySummary	807	807			
+setText	809	809			
+memoryText	813	813			
+anonymous_L815_178565	815	815			
+renderSystemStatus	808	816	boardTaskDetails		
+loadRuntimeStatus	817	817		/runtime_status	
+loadSystemStatus	818	818		/system_status	
+toggleBoardTasks	819	819	boardTaskDetails		
+pollCanDiagnostics	820	820		/can_diag	
+anonymous_L821_179755	821	821			
+diagnosticDelay	821	821			
+captureDiagnosticRequest	822	822			
+captureWebTransportEvidence	823	823		/web_metrics	
+rotate	824	824			
+anonymous_L824_182884	824	824			
+coreDumpSha256Hex	824	824			
+coreDumpBytesToBase64	825	825			
+validateCoreDumpInfo	826	826			
+coreDumpSnapshotIdentity	827	827			
+anonymous_L828_184084	828	828			
+fetchVerifiedCoreDump	828	828		/coredump.bin	
+coreDumpRequestFailure	829	829			
+anonymous_L830_186407	830	830			
+visit	830	830			
+anonymous_L830_186524	830	830			
+anonymous_L830_186605	830	830			
+diagnosticBootSessionConsistency	830	830			
+captureCoreDumpEvidence	831	831		/coredump/info,/ota/status	
+coreDumpStatusText	832	832			
+renderCoreDumpInfo	833	833	boardCoreDump		
+loadCoreDumpInfo	834	834		/coredump/info	
+anonymous_L835_189919	835	835			
+saveBrowserDownload	835	835			
+anonymous_L836_190460	836	836			
+downloadCoreDump	836	836	coreDumpDownloadButton		
+anonymous_L847_192815	847	847			
+requestResult	848	848			
+anonymous_L848_194371	848	848			
+anonymous_L848_194314	848	848			
+anonymous_L848_194989	848	848			
+downloadCanDiagnostics	837	851	diagnosticDownloadButton,otaBuildVersion	/runtime_status,/can_diag,/system_status,/status,/can_hot_ids	
+anonymous_L852_196567	852	852			
+applyBleObstacleConfigResult	853	853			
+saveBleObstacleConfig	854	854		/config/ble_obstacle	enabled,requestId,revision
+bindBleObstacleConfig	855	855			
+updateRearFogRuntimeUi	857	857	rear-fog-pilot-run-btn,rear-fog-pilot-tgl		
+setChecked	858	858			
+setNumber	858	858			
+applyRearFogConfig	858	858			
+checked	859	859			
+number	859	859			
+rearFogConfigBody	859	859			enabled,reverseWarningEnabled,reverseRearFogSteadyEnabled,rearFogPilotEnabled,mildDecelCx100,hardDecelCx100
+anonymous_L860_200376	860	860			
+setRearFogControlsReady	860	860			
+anonymous_L878_202091	878	878			
+anonymous_L866_200831	866	882	testResult	/rear_fog/config	
+loadRearFogConfig	861	885			
+anonymous_L886_202562	886	886			
+saveRearFogConfig	886	886		/rear_fog/config	
+anonymous_L887_203233	887	887			
+scheduleRearFogSave	887	887			
+anonymous_L888_203592	888	888			
+anonymous_L888_203388	888	888			
+bindRearFogControls	888	888			
+toggleRearFogRuntime	889	889	rear-fog-pilot-run-btn	/rear_fog/runtime	enabled
+anonymous_L890_204822	890	890			
+loadConfig	890	890		/config	
+setStatusApiError	891	891	statusApiError		
+updateStatusApiError	892	892			
+statusFullPollDelay	893	893			
+managementDashboardReadsAllowed	894	894			
+anonymous_L910_208452	910	915			
+managementSyncCloudSettings	895	916			
+managementSyncStatusPolling	917	917			
+anonymous_L918_210245	918	918			
+scheduleStatusPoll	918	918			
+isDashboardReadCancelled	919	919			
+dashboardReadScopeAllowed	920	920			
+dashboardRequestTimeout	921	921			
+now	924	924			
+cancelled	925	925			
+notify	926	926			
+finish	927	927			
+anonymous_L935_211741	935	938			
+anonymous_L938_211962	938	938			
+anonymous_L938_212026	938	938			
+pump	928	939			
+anonymous_L950_212964	950	950			
+property_read_L941	941	952			
+property_pause_L953	953	960			
+property_resume_L961	961	961			
+createDashboardReadCoordinator	922	963			
+fetchLiveDashboardJson	964	964			
+fetchSystemDashboardJson	965	965			
+now	967	967			
+anonymous_L967_214344	967	967			
+fetchStatusJson	966	977		/	
+fetchDashboardJson	978	978			
+anonymous_L979_216757	979	979			
+scheduleHostedFastPoll	979	979			
+pollFast	980	980		/status_fast	
+pollStatus	981	981		/status	
+pollDiagnosticBundle	982	982			
+diagnosticPollingAllowed	983	983			
+scheduleDiagnosticPolling	984	984			
+runScheduledDiagnosticPolling	985	985			
+recorderPollingAllowed	986	986			
+recorderPollDelay	987	987	recState		
+scheduleRecorderPolling	988	988			
+runScheduledRecorderPolling	989	989			
+syncDiagnosticPolling	990	990	poll		
+pauseDiagnosticPolling	991	991			
+resumeDiagnosticPolling	992	992			
+setPolling	993	993			
+anonymous_L994_220867	994	994			
+anonymous_L994_221147	994	994			
+body	994	994			fsdConfigRevision
+anonymous_L995_221998	995	995			
+scheduleAutoSave	995	995			
+anonymous_L996_222189	996	996			
+scheduleAutoSaveRetry	996	996			
+autoSaveDelayForControl	997	997			
+schedule	998	998			
+anonymous_L998_223536	998	998			
+bindAutoSave	998	998	dndEnabled,dndSpeedPeriodicEnabled,dndScrollMode,v14ManualDrivingProfileEnabled,gearAutomationEnabled,gearBrakeSafetyBypassEnabled,gearBrakeToggleEnabled,gearParkSteeringEnabled,bleObstacleFeatureEnabled,bleObstacleSteeringConfirmEnabled,gearScrollEnabled,gearSmoothPreset,v13SpaceToSpaceEnabled		
+anonymous_L1004_225219	1004	1004			
+anonymous_L1030_227855	1030	1030			
+anonymous_L1047_229278	1047	1047			
+anonymous_L1050_229911	1050	1050			
+saveConfig	999	1053		/config,/save	
+anonymous_L1054_230766	1054	1054			
+anonymous_L1054_231026	1054	1054			
+rebootWaitForConfirmation	1054	1054		/reboot/status	
+anonymous_L1055_231425	1055	1055			
+rebootBoard	1055	1055	rebootButton	/reboot	
+stopReason	1056	1056			
+recorderBody	1057	1057	recInclude,recExclude,recBus1Enabled,recBus2Enabled,recBus3Enabled,recRxEnabled,recTxEnabled,recDurationSec		include,exclude,buses,rx,tx,duration
+setRecorderPreset	1058	1058	recInclude,recExclude,recBus1Enabled,recBus2Enabled,recBus3Enabled,recRxEnabled,recTxEnabled,recDurationSec		
+presetV12Capture	1059	1059			
+presetV13LightingCapture	1060	1060			
+presetAutoShiftCapture	1061	1061			
+recMemText	1062	1062			
+recorderStartText	1063	1063			
+anonymous_L1064_235407	1064	1064			
+setRecUi	1064	1064	recState,recStartStage,recFilterGeneration,recCustomFilter,recCount,recBus1,recBus2,recBus3,recDrop,recPsram,recElapsed		
+pollRec	1065	1065	recState,recStartStage	/rec_status	
+startRec	1066	1066		/rec_start	
+stopRec	1067	1067		/rec_stop	
+clearRec	1068	1068		/rec_clear	
+anonymous_L1069_237146	1069	1069			
+prepareRecorderDownload	1069	1069			
+downloadRecorderFile	1070	1075		/rec_download	
+setWifiMessage	1076	1076	wifiMessage		
+setWifiApMessage	1077	1077	wifiApMessage		
+wifiFriendlyError	1078	1078			
+wifiPost	1079	1079			
+selectScannedWifi	1080	1080	wifiNetworkList,wifiSsid		
+wifiStateText	1081	1081			
+wifiApStateText	1082	1082			
+anonymous_L1083_241546	1083	1083			
+anonymous_L1083_241742	1083	1083			
+loadWifiStatus	1083	1083	wifiExternalEnabled,wifiApAutoOff,wifiApSsid,wifiApState,wifiApAddress,wifiApSave,wifiSsid,wifiNetworkList,wifiScan,wifiExternalIp,wifiExternalLink,wifiExternalState,wifiConnectedSsid,wifiExternalRssi	/wifi/status	
+saveWifiAp	1084	1084	wifiApPassword,wifiApSave	/wifi/ap-config	password
+setWifiApAutoOff	1085	1085	wifiApAutoOff	/wifi/ap-auto-off	enabled
+scanWifi	1086	1086		/wifi/scan	
+connectWifi	1087	1087	wifiSsid,wifiPassword,wifiExternalEnabled	/wifi/connect	ssid,password
+disconnectWifi	1088	1088		/wifi/disconnect	
+forgetWifi	1089	1089	wifiSsid,wifiPassword	/wifi/forget	
+toggleExternalWifi	1090	1090			
+refreshOtaBusy	1091	1091			
+setOtaControlsDisabled	1092	1092	otaFile,otaStart		
+setOtaMessage	1093	1093	otaMessage		
+otaFriendlyError	1094	1106			
+otaErrorText	1106	1106			
+setOnlineOtaMessage	1107	1107	onlineOtaMessage		
+hostedOtaMode	1109	1109			
+onlineOtaConnected	1110	1110			
+onlineOtaPost	1112	1112			
+onlineRelationText	1113	1113			
+closeOnlineOtaUpdateModal	1114	1114	onlineOtaUpdateModal		
+showOnlineOtaUpdatePrompt	1115	1115	legalNotice,onlineOtaPromptCurrent,onlineOtaPromptLatest,onlineOtaUpdateModal		
+installOnlineOtaFromPrompt	1116	1116			
+maybeAutoCheckOnlineOta	1117	1117			
+loadOnlineOtaStatus	1118	1118	onlineOtaProgress,onlineOtaCheck,onlineOtaInstall,onlineOtaCurrentVersion,onlineOtaCurrentSha,onlineOtaLatestVersion,onlineOtaLatestSha,onlineOtaResult	/ota/online/status	
+checkOnlineOta	1119	1119		/ota/online/check	
+installOnlineOta	1120	1120		/ota/online/install	
+loadOtaStatus	1121	1121	otaVersion,otaBuildVersion,otaSlot,otaBootSlot,otaTargetSlot,otaBootMatchesRunning,otaMaxSizeText	/ota/status	
+validateOtaFile	1122	1131			
+anonymous_L1148_258356	1148	1148			
+anonymous_L1160_259172	1160	1160			
+anonymous_L1161_259372	1161	1164			
+uncertain	1165	1165			
+anonymous_L1166_259818	1166	1166			
+anonymous_L1166_259856	1166	1166			
+anonymous_L1166_259890	1166	1166			
+anonymous_L1157_258917	1157	1168		/ota/upload	
+anonymous_L1173_260159	1173	1173			
+startOta	1132	1180	otaFile,otaProgress	/ota/start,/ota/cancel	
+maybeReloadAfterDriverChange	1185	1191	wifiPassword		
+observeDriverForPageRefresh	1192	1201			
+driverProfilesPollingAllowed	1203	1203			
+syncDriverProfilesPolling	1204	1204			
+driverRecognitionText	1205	1205			
+anonymous_L1206_263011	1206	1206			
+anonymous_L1206_263068	1206	1206			
+commercialDriverShortcutText	1206	1206			
+renderCommercialDriverShortcut	1207	1207			
+renderDriverRecognitionModeButton	1208	1208	driverModeToggle		
+driverBindingText	1209	1209			
+driverParameterMode	1210	1210			
+anonymous_L1211_264020	1211	1211			
+driverSeatText	1211	1211			
+setDriverSettingsMessage	1212	1212	driverSettingsMessage		
+driverBadge	1213	1213			
+itemFor	1220	1220			
+anonymous_L1221_266474	1221	1221			
+anonymous_L1222_266534	1222	1222			
+driverFeatureGroups	1216	1223			
+driverFeatureIndicator	1224	1224			
+driverFeatureControlsBusy	1225	1225			
+anonymous_L1227_267573	1227	1227			
+driverFeatureRequest	1226	1237		/config,/fsd_auto_start/master,/config/ble_obstacle,/rear_fog/config	fsdConfigRevision,revision,requestId,cabinCameraDisableEnabled,isaChimeSuppressEnabled
+anonymous_L1240_268818	1240	1240			
+anonymous_L1243_269190	1243	1243			
+anonymous_L1245_269367	1245	1245			
+anonymous_L1247_269588	1247	1247			
+anonymous_L1249_269720	1249	1249			
+anonymous_L1260_270898	1260	1260			
+anonymous_L1263_271250	1263	1263			
+setDriverFeature	1238	1268		/driver_profiles	
+anonymous_L1277_272313	1277	1277			
+anonymous_L1277_272393	1277	1277			
+anonymous_L1279_272799	1279	1279			
+anonymous_L1279_273251	1279	1279			
+anonymous_L1279_272850	1279	1279			
+update	1283	1283			
+anonymous_L1284_274122	1284	1284			
+renderDriverFeatureSnapshot	1269	1286			
+anonymous_L1294_274705	1294	1294			
+anonymous_L1294_274757	1294	1294			
+anonymous_L1305_275397	1305	1305			
+anonymous_L1315_276531	1315	1315			
+anonymous_L1316_276690	1316	1316			
+anonymous_L1317_276851	1317	1317			
+anonymous_L1318_277034	1318	1318			
+anonymous_L1305_275471	1305	1322			
+renderDriverProfiles	1287	1323	driverProfileList		
+loadDriverProfiles	1324	1346		/driver_profiles	
+anonymous_L1355_279769	1355	1355			
+postDriverProfile	1347	1364		/driver_profiles	action,name,id
+closeDriverModal	1365	1365			
+anonymous_L1368_280822	1368	1373			
+renderDriverSeatAxes	1366	1374			
+driverBindingReady	1375	1375			
+refreshDriverBindingDialogs	1376	1385	driverAddModal,driverRebindModal,driverAddSubmit,driverRebindConfirm,driverRebindSubmit		
+anonymous_L1391_282850	1391	1391			
+openDriverAddModal	1386	1392	driverAddName,driverAddMessage,driverAddModal		
+submitDriverAdd	1393	1403	driverAddName,driverAddMessage,driverAddSubmit		
+selectDriverProfile	1404	1410			
+anonymous_L1412_284297	1412	1412			
+openDriverRebindModal	1411	1418	driverRebindModal,driverRebindConfirm,driverRebindSubmit,driverRebindMessage		
+updateDriverRebindConfirm	1419	1419			
+submitDriverRebind	1420	1432	driverRebindConfirm,driverRebindMessage,driverRebindSubmit		
+anonymous_L1434_286286	1434	1434			
+anonymous_L1438_286748	1438	1438			
+openDriverRenameModal	1433	1439	driverRenameModal,driverRenameName,driverRenameMessage		
+submitDriverRename	1440	1449	driverRenameName,driverRenameMessage,driverRenameSubmit		
+anonymous_L1451_287745	1451	1451			
+deleteDriverProfile	1450	1459			
+driverAutoRecognize	1460	1468			
+systemPollingAllowed	1469	1469			
+syncSystemPolling	1470	1470			
+pollSystemPage	1471	1471			
+startDashboardPolling	1472	1472			
+checkDashboardSession	1473	1473		/auth/status,/	
+anonymous_L1478_290533	1478	1478			
+anonymous_L1479_290607	1479	1479			
+anonymous_L1498_330162	1498	1498			
+ambientDefaults	1498	1498			
+ambientCurrentDriverId	1500	1500			
+anonymous_L1501_331005	1501	1501			
+speedTargetCurrentDriverId	1503	1503			
+anonymous_L1504_332188	1504	1504			
+speedTargetValidResponse	1504	1504			
+speedTargetEffectiveCustomEnabled	1505	1505			
+anonymous_L1506_332635	1506	1506			
+anonymous_L1506_332949	1506	1506			
+speedTargetPostBody	1506	1506			
+speedTargetCanApplyResponse	1507	1507			
+speedTargetSetStatus	1508	1508	speedTargetStatus,speedTargetRetrySave		
+anonymous_L1509_334114	1509	1509			
+anonymous_L1509_334151	1509	1509			
+anonymous_L1509_334228	1509	1509			
+anonymous_L1509_333967	1509	1509			
+speedTargetV13Conflicts	1509	1509			
+anonymous_L1510_334525	1510	1510			
+anonymous_L1510_334371	1510	1510			
+speedTargetExpandV13Template	1510	1510			
+anonymous_L1511_336056	1511	1511			
+speedTargetRender	1511	1511	customSpeedEnabled,speedTargetTemplate,v13LowSpeedOffsetRow,v13HighSpeedOffsetRow,stalkControlVersion,speedTargetSourceCustom,speedTargetSourceVehicle,v12TemplatePanel,v14TemplatePanel,speedTemplateQuickSetup,speedTargetStatus		
+anonymous_L1512_337068	1512	1512			
+speedTargetSetControlsDisabled	1512	1512			
+anonymous_L1513_337771	1513	1513			
+speedTargetLoadConfig	1513	1513	stalkControlVersion	/speed_target/config	
+speedTargetEnsureDriver	1514	1514			
+anonymous_L1515_339921	1515	1515			
+anonymous_L1515_340004	1515	1515			
+anonymous_L1515_340781	1515	1515			
+anonymous_L1515_341866	1515	1515			
+speedTargetSave	1515	1515	stalkControlVersion,customSpeedEnabled,speedTargetRetrySave	/speed_target/save	
+anonymous_L1516_342987	1516	1516			
+speedTargetScheduleSave	1516	1516			
+speedTargetChooseSource	1517	1517	customSpeedEnabled		
+anonymous_L1518_343511	1518	1518			
+speedTemplateQuickValues	1518	1518			
+report	1519	1519			
+anonymous_L1519_344574	1519	1519			
+anonymous_L1519_344613	1519	1519			
+anonymous_L1519_344663	1519	1519			
+anonymous_L1519_344736	1519	1519			
+speedTemplateQuickApply	1519	1519	speedTemplateQuickPct,speedTemplateQuickStatus,stalkControlVersion,hw3ManualStrategy		
+anonymous_L1520_345170	1520	1520			
+anonymous_L1520_345357	1520	1520			
+anonymous_L1520_345448	1520	1520			
+anonymous_L1520_345619	1520	1520			
+anonymous_L1520_345513	1520	1520			
+anonymous_L1520_346041	1520	1520			
+speedTargetBindControls	1520	1520	customSpeedEnabled,speedTargetSourceCustom,speedTargetSourceVehicle,speedTargetRetrySave,speedTemplateQuickApply		
+anonymous_L1521_346561	1521	1521			
+ambientApplyZoneToAll	1521	1521			
+anonymous_L1522_346753	1522	1522			
+ambientBlindSpotCapabilityPresent	1522	1522			
+ambientBlindSpotAreasValid	1523	1523			
+ambientBlindSpotDelayDraftValid	1524	1524			
+ambientBlindSpotDraftValid	1525	1525	blindSpotRestoreDelayMs		
+anonymous_L1526_347475	1526	1526			
+ambientTurnFollowCapabilityPresent	1526	1526			
+ambientTurnFollowAreasValid	1527	1527			
+anonymous_L1528_348212	1528	1528			
+ambientTurnFollowDraftValid	1528	1528	turnFollowColor		
+anonymous_L1535_350246	1535	1535			
+anonymous_L1535_349911	1535	1535			
+ambientPostBodyBase	1529	1538			welcomeEnabled,welcomeStyle,welcomeTriggerMode,welcomeBrightness,welcomeTempo,welcomeZoneMask,welcomeColor,blindSpotEnabled,blindSpotBrightness,blindSpotAreas,blindSpotRestoreDelayMs
+anonymous_L1539_351831	1539	1539			
+anonymous_L1539_352693	1539	1539			
+anonymous_L1539_353457	1539	1539			
+anonymous_L1539_353220	1539	1539			
+ambientValidResponseBase	1539	1539			
+anonymous_L1540_353763	1540	1540			
+ambientValidResponse	1540	1540			
+anonymous_L1541_354515	1541	1541			
+anonymous_L1541_354988	1541	1541			
+ambientPostBody	1541	1541			turnFollowEnabled,turnFollowHazards,turnFollowBrightness,turnFollowAreas,turnFollowColor
+anonymous_L1542_355246	1542	1542			
+ambientSetStatus	1542	1542	ambientStatus,blindSpotAmbientStatus,turnFollowAmbientStatus		
+anonymous_L1543_355600	1543	1543			
+anonymous_L1543_355651	1543	1543			
+anonymous_L1543_356033	1543	1543			
+anonymous_L1543_356603	1543	1543			
+ambientSetControlsDisabledBase	1543	1543	ambientFsdCueEnabled,fsdEnabled,blindSpotEnabled,blindSpotBrightness,blindSpotBrightnessValue,blindSpotRestoreDelayMs,blindSpotAmbientAvailabilityNote		
+anonymous_L1544_358420	1544	1544			
+anonymous_L1544_358578	1544	1544			
+anonymous_L1544_358919	1544	1544			
+ambientSetTurnFollowControlsDisabled	1544	1544	turnFollowEnabled,turnFollowColor,turnFollowBrightness,turnFollowBrightnessValue,turnFollowHazards,turnFollowAvailabilityNote		
+ambientSetControlsDisabled	1545	1545			
+anonymous_L1546_359895	1546	1546			
+ambientRenderEditor	1546	1546	ambientBrightness,ambientBrightnessValue,ambientColor,ambientColorPreview,ambientSelectedZoneLabel		
+anonymous_L1547_360083	1547	1547			
+anonymous_L1547_360476	1547	1547			
+anonymous_L1547_360320	1547	1547			
+ambientRenderZoneMap	1547	1547			
+ambientSelectZone	1548	1548			
+anonymous_L1549_361311	1549	1549			
+anonymous_L1549_361275	1549	1549			
+ambientBindZoneMap	1549	1549			
+anonymous_L1551_361942	1551	1551			
+anonymous_L1551_363254	1551	1551			
+ambientWelcomeSetControls	1551	1551	welcomeAvailabilityNote,welcomeEnabled,welcomeBrightness,welcomeBrightnessValue,welcomeTempo,welcomeColor,welcomeColorValue,welcomeColorPreview		
+anonymous_L1552_363588	1552	1552			
+ambientWelcomeRenderSettings	1552	1552	welcomeZoneSummary		
+ambientUpdateAvailabilityNote	1553	1553	ambientAvailabilityNote		
+anonymous_L1554_364444	1554	1554			
+ambientRender	1554	1554	ambientEnabled,ambientFsdCueEnabled		
+anonymous_L1555_365179	1555	1555			
+anonymous_L1555_366383	1555	1555			
+ambientNormalizeResponseBase	1555	1555			
+ambientNormalizeResponse	1556	1556			
+anonymous_L1557_367591	1557	1557			
+anonymous_L1557_367828	1557	1557			
+ambientLoadConfig	1557	1557		/ambient_config	
+ambientCancelEditTimers	1558	1558			
+ambientCancelForDriverChange	1559	1559	blindSpotRestoreDelayMs		
+anonymous_L1560_370289	1560	1560			
+ambientTurnFollowAreaChanged	1560	1560			
+anonymous_L1561_370941	1561	1561			
+update	1561	1561			
+anonymous_L1561_371556	1561	1561			
+anonymous_L1561_371460	1561	1561			
+anonymous_L1561_371654	1561	1561			
+anonymous_L1561_371828	1561	1561	turnFollowBrightnessValue		
+anonymous_L1561_372125	1561	1561			
+anonymous_L1561_372337	1561	1561			
+anonymous_L1561_372246	1561	1561			
+anonymous_L1561_372428	1561	1561			
+ambientBindTurnFollowControls	1561	1561	turnFollowEnabled,turnFollowDetails,turnFollowColor,turnFollowBrightness,turnFollowHazards		
+ambientEnsureDriver	1562	1562			
+ambientSaveBeforeDriverChange	1563	1563			
+ambientRecordEdit	1564	1564			
+anonymous_L1565_374131	1565	1565			
+ambientDesiredChanged	1565	1565			
+anonymous_L1566_375015	1566	1566			
+anonymous_L1566_375357	1566	1566			
+anonymous_L1566_376910	1566	1566			
+anonymous_L1566_376988	1566	1566			
+anonymous_L1566_377529	1566	1566			
+anonymous_L1566_377339	1566	1566			
+ambientPostSaveOnce	1566	1566		/ambient_config	
+anonymous_L1567_378596	1567	1567			
+anonymous_L1567_379139	1567	1567			
+ambientFlushSave	1567	1567			
+anonymous_L1568_379962	1568	1568			
+anonymous_L1568_380075	1568	1568			
+anonymous_L1568_380187	1568	1568			
+anonymous_L1568_380359	1568	1568			
+anonymous_L1568_380322	1568	1568			
+anonymous_L1568_380594	1568	1568	ambientBrightnessValue		
+anonymous_L1568_380900	1568	1568			
+anonymous_L1568_381433	1568	1568			
+anonymous_L1568_380976	1568	1568	ambientColorPreview		
+anonymous_L1568_381531	1568	1568			
+anonymous_L1568_381685	1568	1568			
+anonymous_L1568_381882	1568	1568			
+anonymous_L1568_382026	1568	1568	blindSpotBrightnessValue		
+anonymous_L1568_382330	1568	1568			
+anonymous_L1568_382625	1568	1568			
+anonymous_L1568_382539	1568	1568			
+anonymous_L1568_382448	1568	1568			
+anonymous_L1568_382918	1568	1568			
+anonymous_L1568_382975	1568	1568			
+ambientBindControls	1568	1568	ambientEnabled,ambientFsdCueEnabled,ambientBrightness,ambientColor,ambientApplyAll,fsdEnabled,blindSpotEnabled,blindSpotBrightness,blindSpotRestoreDelayMs		
+anonymous_L1578_385169	1578	1578			
+anonymous_L1579_385233	1579	1579			
+anonymous_L1582_386029	1582	1582			
+commercialSafetyState	1577	1583	blindSpotEnabled,fsdWarningLaneModes		
+anonymous_L1588_386363	1588	1588			
+anonymous_L1589_386447	1589	1589			
+commercialToggle	1584	1598	blindSpotEnabled		
+anonymous_L1602_387505	1602	1602			
+commercialVerifyPassword	1600	1603		/cloud/developer	password
+onboardingShowError	1604	1604	onboardingMessage		
+onboardingRender	1605	1605	onboardingDialog,onboardingWifiStep,onboardingRecoveryStep		
+anonymous_L1606_389331	1606	1606			
+onboardingStart	1606	1606	legalNotice	/onboarding/status	
+anonymous_L1607_390306	1607	1607			
+onboardingCompleteChoice	1607	1607	onboardingCompleteRetry,wifiOnboardingContinue	/onboarding/complete	choice
+onboardingShowRecovery	1608	1608			
+onboardingConnectWifi	1609	1609	wifiOnboardingContinue		
+onboardingResumeAfterWifi	1610	1610	wifiOnboardingContinue		
+onboardingOpenRestore	1611	1611			
+anonymous_L1612_393074	1612	1612			
+anonymous_L1612_393144	1612	1612			
+anonymous_L1612_393212	1612	1612			
+anonymous_L1612_393260	1612	1612			
+anonymous_L1612_393331	1612	1612			
+anonymous_L1612_393403	1612	1612			
+anonymous_L1612_393486	1612	1612			
+anonymous_L1612_393566	1612	1612			
+onboardingBind	1612	1612	onboardingConnectWifi,onboardingSkipWifi,onboardingContinue,onboardingRestore,onboardingLater,onboardingNew,onboardingRecheck,onboardingCopyUrl,onboardingCopyId,onboardingCompleteRetry,onboardingDialog,wifiOnboardingContinue		
+cloudRestoreIsComplete	1613	1613			
+cloudRestoreErrorText	1614	1614			
+cloudRestorePhaseText	1615	1615			
+anonymous_L1616_395131	1616	1616			
+anonymous_L1616_395273	1616	1616			
+cloudRestoreProgressText	1616	1616			
+name	1617	1617			
+cloudRestoreRenderTarget	1617	1617			
+cloudRenderRestoreProgress	1618	1618	cloudRestoreMessage		
+cloudRestoreStoreId	1619	1619			
+cloudRestoreSetUntracked	1620	1620			
+cloudRestoreLoadId	1621	1621			
+cloudRestoreAccountSummary	1622	1622	onboardingAccountState		
+cloudSafeError	1623	1623			
+anonymous_L1624_402227	1624	1624			
+cloudFetch	1624	1624			
+cloudConfigBody	1625	1625	cloudUrl,cloudToken,cloudInterval		url,token,intervalSec,clearToken
+cloudDeveloperHeaders	1626	1626			
+anonymous_L1627_403566	1627	1627			
+cloudRevokeDeveloperToken	1627	1627		/cloud/developer	lock
+cloudSetMessage	1628	1628			
+cloudRenderConfig	1629	1629	cloudUrl,cloudInterval,cloudEnabled,cloudConfigStored		
+cloudFormatAgo	1630	1630			
+cloudApplyStatus	1631	1631	cloudDeviceId,onboardingDeviceId		
+cloudBackendState	1632	1632			
+time	1633	1633			
+cloudRenderBackendStatus	1633	1633	settingsSyncBanner,settingsSyncLabel,settingsSyncMessage,cloudRealState,cloudSyncMessage,cloudLastSuccess,cloudLastBackup,cloudPendingUploads,cloudPendingCommands,cloudEnabled,cloudUploadButton		
+cloudOpenSettingsSync	1634	1634			
+cloudSetSettingsMessage	1635	1635	cloudSettingsMessage		
+anonymous_L1636_411135	1636	1636			
+anonymous_L1636_411381	1636	1636			
+cloudRenderSettingsConflicts	1636	1636	cloudSettingsConflicts		
+anonymous_L1637_411661	1637	1637			
+cloudLoadSettingsConflicts	1637	1637		/cloud/settings/conflicts	
+anonymous_L1638_412568	1638	1638			
+cloudResolveSettingsConflict	1638	1638		/cloud/settings/conflict	command_id,action
+cloudRestoreScopes	1639	1639	cloudRestoreScopeSettings,cloudRestoreScopeRecords		
+anonymous_L1640_413847	1640	1640			
+cloudRenderRestoreDialog	1640	1640	cloudSettingsRestoreConfirm,cloudRestoreConfirmButton,cloudRestoreCancelButton,cloudRestoreDialog		
+cloudRestoreFeedback	1641	1641	cloudRestoreMessage		
+cloudOpenRestoreDialog	1642	1642	cloudRestoreDialog,cloudSettingsRestoreConfirm,cloudRestoreMessage		
+anonymous_L1643_415456	1643	1643			
+anonymous_L1643_415541	1643	1643			
+anonymous_L1643_415689	1643	1643			
+anonymous_L1643_415917	1643	1643			
+anonymous_L1643_415976	1643	1643			
+cloudInstallSettingsUi	1643	1643	settingsSyncBanner,settingsSyncMessage,cloudSettingsRestoreButton,cloudRestoreCancelButton,cloudRestoreDialog,cloudRestoreConfirmButton,cloudCopyUrl		
+anonymous_L1644_417057	1644	1644			
+cloudRestoreSettings	1644	1644	cloudSettingsRestoreConfirm	/cloud/settings/restore	request_id,confirmation,scopes,backup_revision
+managementGuardNavigation	1646	1646			
+anonymous_L1647_418885	1647	1647			
+anonymous_L1647_419885	1647	1647			
+managementRenderState	1647	1647	canCommsEnabled,commercialSettings,managementNotice,wifiOnboardingContinue,legalNotice		
+managementApplyStatus	1648	1648	testResult,gearUssConfigStatus		
+managementLoadStatus	1649	1649		/management/status	
+cloudLoadStatus	1650	1650		/cloud/status	
+cloudSyncPolling	1651	1651			
+cloudLoadConfig	1652	1652		/cloud/config	
+anonymous_L1653_427923	1653	1653			
+cloudSaveConfig	1653	1653	cloudSaveButton,cloudToken,cloudClearToken,cloudConfigStored	/cloud/config	
+anonymous_L1654_429669	1654	1654			
+cloudTestConnection	1654	1654	cloudTestButton	/cloud/test	protocol
+anonymous_L1655_430379	1655	1655			
+anonymous_L1655_430388	1655	1655			
+copyTextFromField	1655	1655			
+cloudCopyDeviceId	1656	1656			
+cloudCopyWebsite	1657	1657			
+anonymous_L1658_432132	1658	1658			
+cloudSetEnabled	1658	1658	cloudEnabled	/cloud/enabled	enabled
+anonymous_L1659_432833	1659	1659			
+cloudUploadNow	1659	1659		/cloud/upload	
+commercialIcon	1660	1662			
+anonymous_L1671_434175	1671	1671			
+commercialRow	1663	1673			
+commercialShow	1674	1674			
+commercialDetailInfo	1675	1679	commercialIntro,commercialDetailTitle		
+commercialSelectCard	1680	1683			
+fsdNumber	1684	1684			
+fsdFormatMeters	1685	1685			
+fsdLongestDistance	1686	1686			
+fsdCoverageText	1687	1687			
+fsdRenderCoverage	1688	1688			
+fsdRecordDateParts	1689	1689			
+fsdRecordDate	1690	1690			
+fsdRecordRatio	1691	1691			
+fsdOtherMeters	1692	1692			
+fsdRenderRing	1693	1693			
+fsdRenderAggregate	1694	1694			
+fsdTripDurationText	1695	1695			
+fsdText	1696	1696			
+fsdRenderTripSummary	1697	1705	fsdRecordsCurrentTitle,fsdRecordsCurrentState		
+fsdRenderRecordDetail	1706	1715	fsdRecordsDetailTitle,fsdRecordsDetailBody		
+anonymous_L1718_444913	1718	1718			
+anonymous_L1720_445415	1720	1720			
+hasAggregate	1720	1720			
+anonymous_L1724_447265	1724	1724			
+anonymous_L1725_447450	1725	1725			
+anonymous_L1726_447762	1726	1726			
+renderFsdRecords	1716	1729	fsdRecordsStatus,fsdRecordsHistory,fsdRecordsListView,fsdRecordsDetail,fsdRecordsTripPanel,fsdRecordsSubtotalPanel,fsdRecordsCumulativePanel		
+mergeFsdRecordsLive	1730	1737			
+anonymous_L1742_449339	1742	1742			
+anonymous_L1742_449197	1742	1744	fsdRecordsStatus	/fsd_records,/fsd_records/live	
+loadFsdRecords	1738	1745	fsdRecordsRefresh		
+fsdReconcileRecords	1746	1746			
+resetFsdSubtotal	1747	1752	fsdRecordsSubtotalResetConfirm,fsdRecordsSubtotalResetStatus,fsdRecordsSubtotalResetDialog	/fsd_records/subtotal/reset	
+clearFsdRecords	1753	1758	fsdRecordsClearConfirm,fsdRecordsClearStatus,fsdRecordsClearDialog	/fsd_records/clear	
+anonymous_L1759_453102	1759	1759			
+fsdSetRange	1759	1759	fsdRecordsTripPanel,fsdRecordsSubtotalPanel,fsdRecordsCumulativePanel		
+anonymous_L1761_453606	1761	1761			
+anonymous_L1762_453974	1762	1762			
+anonymous_L1762_454062	1762	1762			
+anonymous_L1762_454132	1762	1762			
+anonymous_L1763_454414	1763	1763			
+anonymous_L1763_454470	1763	1763			
+anonymous_L1763_454516	1763	1763			
+anonymous_L1764_454621	1764	1764			
+anonymous_L1765_454745	1765	1765			
+anonymous_L1765_454722	1765	1765			
+bindFsdRecordsUi	1760	1766	fsdRecordsRefresh,fsdRecordsSubtotalReset,fsdRecordsSubtotalResetDialog,fsdRecordsSubtotalResetCancel,fsdRecordsSubtotalResetConfirm,fsdRecordsClear,fsdRecordsClearDialog,fsdRecordsClearCancel,fsdRecordsClearConfirm,fsdRecordsDetailBack		
+anonymous_L1773_455467	1773	1773			
+anonymous_L1779_456498	1779	1779			
+anonymous_L1780_456818	1780	1780			
+anonymous_L1772_455342	1772	1782		/fsd_records/clock	
+fsdPhoneClockSync	1767	1784			
+anonymous_L1788_457688	1788	1788			
+syncFsdRecordsPolling	1785	1790			
+anonymous_L1801_458883	1801	1801			
+anonymous_L1802_459097	1802	1802			
+anonymous_L1806_459577	1806	1806			
+anonymous_L1808_459800	1808	1808			
+anonymous_L1822_461512	1822	1822			
+anonymous_L1828_462263	1828	1828			
+commercialNavigate	1791	1834	commercialRecords,commercialDetailHeader,commercialIntro,commercialHeadingText,commercialAbout,commercialDeveloper,cloudSyncCard,cloudDeveloperCard,fsdRecordsListView,fsdRecordsDetail,commercialSettings,commercialHelp		
+commercialOpenUnlock	1835	1839	commercialUnlock,commercialPassword,commercialUnlockError		
+commercialCancelUnlock	1840	1842	commercialPassword,commercialUnlock		
+commercialUnlock	1843	1854	commercialPassword,commercialUnlockButton,commercialUnlockError,commercialUnlock		
+commercialLock	1855	1858	cloudToken,cloudClearToken		
+commercialRecordActivity	1859	1863			
+anonymous_L1865_465110	1865	1865			
+commercialHelp	1864	1866			
+anonymous_L1872_465577	1872	1872			
+commercialChildGroup	1869	1875			
+anonymous_L1877_465822	1877	1881			
+syncCommercialHierarchy	1876	1882			
+byId	1884	1884			
+row	1884	1884			
+anonymous_L1885_466456	1885	1885			
+wrap	1885	1885			
+afterMaster	1886	1886			
+anonymous_L1906_468408	1906	1906			
+initCommercialHierarchy	1883	1924			
+anonymous_L1927_469940	1927	1927			
+anonymous_L1930_470628	1930	1930			
+syncCommercialUi	1925	1938	commercialDriverName,internalVersionText,systemHealthText,commercialHealthWarning,hw3AutoSpeedOffsetRow		
+anonymous_L1943_472317	1943	1943			
+anonymous_L1945_472590	1945	1945			
+anonymous_L1947_473242	1947	1947			
+anonymous_L1950_473677	1950	1950			
+anonymous_L1951_473874	1951	1951			
+anonymous_L1952_474046	1952	1952			
+anonymous_L1953_474221	1953	1953			
+anonymous_L1954_474380	1954	1954			
+anonymous_L1958_474930	1958	1958			
+anonymous_L1964_475816	1964	1964			
+anonymous_L1964_475741	1964	1964			
+anonymous_L1965_476101	1965	1965			
+anonymous_L1965_476257	1965	1965			
+selectSegment	1965	1965			
+anonymous_L1966_476409	1966	1966			
+anonymous_L1966_476386	1966	1966			
+anonymous_L1968_476836	1968	1968			
+anonymous_L1968_476753	1968	1968			
+anonymous_L1970_477399	1970	1970			
+anonymous_L1970_477280	1970	1970	commercialDeveloperRows		
+anonymous_L1972_477883	1972	1972			
+anonymous_L1972_477699	1972	1972			
+anonymous_L1974_478174	1974	1974			
+anonymous_L1978_478658	1978	1978	commercialPassword		
+anonymous_L1980_478944	1980	1980	cloudConfigStored		
+anonymous_L1980_478870	1980	1980			
+anonymous_L1981_479215	1981	1981			
+anonymous_L1982_479498	1982	1982			
+anonymous_L1983_479771	1983	1983			
+anonymous_L1984_479865	1984	1984			
+anonymous_L1984_479961	1984	1984			
+anonymous_L1985_480056	1985	1985			
+anonymous_L1986_480271	1986	1986			
+anonymous_L1987_480338	1987	1987			
+anonymous_L1989_480719	1989	1989			
+initCommercialUi	1939	1990	systemHealthDot,systemHealthText,commercialOverview,commercialDetailHeader,commercialIntro,commercialSettings,commercialAbout,commercialDeveloper,commercialDriverShortcut,stalkControlVersion,commercialFeatureRows,commercialSettingsRows,commercialDeveloperEntry,commercialBack,commercialHelp,commercialUnlockForm,commercialUnlockCancel,commercialUnlock,commercialLock,cloudClearToken,cloudSaveButton,cloudTestButton,cloudCopyButton,cloudUploadButton,cloudSettingsConflictsRefresh,cloudEnabled		
+initCommercialUiWithFallback	1991	1991			
+anonymous_L1994_480983	1994	1994			
+anonymous_L1994_481588	1994	1994			
+anonymous_L1995_481921	1995	1995			
+anonymous_L1995_482125	1995	1995			
+anonymous_L1995_482338	1995	1995			
+anonymous_L1995_482476	1995	1995	welcomeBrightnessValue		
+anonymous_L1995_482764	1995	1995			
+anonymous_L1995_482840	1995	1995			
+update	1995	1995	welcomeColorValue,welcomeColorPreview		
+anonymous_L1995_483436	1995	1995			
+anonymous_L1995_483580	1995	1995			
+anonymous_L1995_483543	1995	1995			
+ambientBindWelcomeControls	1995	1995	welcomeEnabled,welcomeBrightness,welcomeTempo,welcomeColor		
