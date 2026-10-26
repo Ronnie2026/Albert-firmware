@@ -17,6 +17,7 @@ Albert ESP32-P4 三 CAN 固件的独立逆向研究与部分重建项目。
 | 目录 | 用途 |
 | --- | --- |
 | [docs/Albert-P4三CAN-功能架构与报文原理.html](docs/Albert-P4三CAN-功能架构与报文原理.html) | 可离线阅读的架构、功能、协议及145项搜索索引 |
+| [docs/CAN线解析研究.md](docs/CAN线解析研究.md) | 官方三路网络、X179/X181接口定义、注入原理与研究边界 |
 | [reverse/README.md](reverse/README.md) | 原逆向资料说明，保留原文 |
 | `reverse/analysis/` | 固件身份、路由、反汇编、证据及历史验证记录 |
 | `reverse/decompiled/` | 4,966个导出函数及调用/字符串索引，存在反编译缺口 |
