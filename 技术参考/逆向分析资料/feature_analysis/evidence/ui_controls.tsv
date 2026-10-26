@@ -1,0 +1,438 @@
+origin	line	js_owner	tag	id	label	context	events
+dashboard.html	414		button		我已阅读并理解		{"onclick": "closeLegalNotice()"}
+dashboard.html	423		button		稍后升级		{"onclick": "closeOnlineOtaUpdateModal()"}
+dashboard.html	423		button		立即升级		{"onclick": "installOnlineOtaFromPrompt()"}
+dashboard.html	434		button	uiModeBtn	UI·自动		{"onclick": "cycleUiMode()"}
+dashboard.html	435		button	themeBtn	日间		{"onclick": "toggleTheme()"}
+dashboard.html	436		form		退出		{}
+dashboard.html	436		button		退出		{}
+dashboard.html	437		button	rebootButton	重启		{"onclick": "rebootBoard()"}
+dashboard.html	450		input	canCommsEnabled			{}
+dashboard.html	471		button		添加驾驶员	驾驶员设置 > 驾驶员设置	{"onclick": "openDriverAddModal()"}
+dashboard.html	472		button	driverModeToggle	切换到手动选择	驾驶员设置 > 驾驶员设置	{"onclick": "driverAutoRecognize()"}
+dashboard.html	473		button		刷新	驾驶员设置 > 驾驶员设置	{"onclick": "loadDriverProfiles()"}
+dashboard.html	494		select	stalkControlVersion	FSD 车型协议V12 V13 V14	FSD 功能 > 驾驶员设置	{}
+dashboard.html	495		input	fsdEnabled	FSD 功能	FSD 功能 > 驾驶员设置	{}
+dashboard.html	496		input	ambientFsdCueEnabled	FSD 激活氛围灯	FSD 功能 > 驾驶员设置	{}
+dashboard.html	497		input	fsdSteadyModeEnabled	稳盘模式	FSD 功能 > 驾驶员设置	{}
+dashboard.html	499		input	fsdParkStartEnabled	P 挡启动 FSD	FSD 功能 > 驾驶员设置	{}
+dashboard.html	501		input	enhancedAutopilotEnabled	增强 AP / 智能召唤	FSD 功能 > 驾驶员设置	{}
+dashboard.html	502		input	v13SpaceToSpaceEnabled	自动激活泊车	FSD 功能 > 驾驶员设置	{}
+dashboard.html	503		input	v13ParkingDelayMs	退出 FSD 后开始泊车延迟（毫秒）	FSD 功能 > 驾驶员设置	{}
+dashboard.html	504		input	v13ParkingDurationMs	开始泊车请求持续时间（毫秒）	FSD 功能 > 驾驶员设置	{}
+dashboard.html	510		input	autoSpeedOffsetEnabled	自动速度偏移	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	515		input	stableSpeedOffsetEnabled	稳定模式	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	516		input	hw3ManualStrategyEnabled	手动选择驾驶策略	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	518		input	hw3ManualStrategy		FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	520		button		舒适 车距 3·4兼容	FSD 速度补偿 > 驾驶员设置	{"onclick": "selectHw3Strategy(0)"}
+dashboard.html	521		button		标准 车距 2	FSD 速度补偿 > 驾驶员设置	{"onclick": "selectHw3Strategy(1)"}
+dashboard.html	522		button		迅捷 车距 1	FSD 速度补偿 > 驾驶员设置	{"onclick": "selectHw3Strategy(2)"}
+dashboard.html	530		input	v14ManualDrivingProfileEnabled	手动选择驾驶模式	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	531		select	v14ManualDrivingProfile	驾驶模式Chill 悠缓 Normal 标准 Hurry 迅捷 Max 极致 Sloth 慵懒	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	536		button	speedTargetSourceCustom	自定义模板	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	537		button	speedTargetSourceVehicle	车机同步	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	538		button	speedTargetRetrySave	重试保存	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	538		input	customSpeedEnabled		FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	539		input	speedDownStepKph	缓降幅度 km/h / 500ms	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	541		input	v13LowSpeedOffsetPct	低速偏移（限速低于 50 km/h）%	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	542		input	speedOffsetMaxPctRaw	低速最大偏移 %	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	543		input	v14SpeedOffsetMaxPctRaw	低速最大偏移 %	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	546		input	speedTemplateQuickPct	模板快速设置	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	546		button	speedTemplateQuickApply	同步目标	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	556		input	speedTarget50	限速 50	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	557		input	speedTarget60	限速 60	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	558		input	speedTarget70	限速 70	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	559		input	speedTarget80	限速 80	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	560		input	speedTarget90	限速 90	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	561		input	speedTarget100	限速 100	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	562		input	speedTarget110	限速 110	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	563		input	speedTarget120	限速 120	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	567		input	v13HighSpeedOffsetPct	高速偏移（原车智能设速关闭时使用）%	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	576		input	hw3ComfortTargetBelow60	目标速度 50～59	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	577		input	hw3ComfortTarget60	目标速度 60..69	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	578		input	hw3ComfortTarget70	目标速度 70..79	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	579		input	hw3ComfortTarget80	目标速度 80..89	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	580		input	hw3ComfortTarget90	目标速度 90..99	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	581		input	hw3ComfortTarget100	目标速度 100..109	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	582		input	hw3ComfortTarget110	目标速度 110..119	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	583		input	hw3ComfortTarget120	目标速度 120..139	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	586		input	targetBelow60	目标速度 50～59	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	587		input	target60	目标速度 60..69	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	588		input	target70	目标速度 70..79	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	589		input	target80	目标速度 80..89	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	590		input	target90	目标速度 90..99	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	591		input	target100	目标速度 100..109	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	592		input	target110	目标速度 110..119	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	593		input	target120	目标速度 120..139	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	596		input	hw3HurryTargetBelow60	目标速度 50～59	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	597		input	hw3HurryTarget60	目标速度 60..69	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	598		input	hw3HurryTarget70	目标速度 70..79	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	599		input	hw3HurryTarget80	目标速度 80..89	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	600		input	hw3HurryTarget90	目标速度 90..99	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	601		input	hw3HurryTarget100	目标速度 100..109	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	602		input	hw3HurryTarget110	目标速度 110..119	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	603		input	hw3HurryTarget120	目标速度 120..139	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	620		input	v14TargetBelow60	目标速度 50～59	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	621		input	v14Target60	目标速度 60..69	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	622		input	v14Target70	目标速度 70..79	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	623		input	v14Target80	目标速度 80..89	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	624		input	v14Target90	目标速度 90..99	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	625		input	v14Target100	目标速度 100..109	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	626		input	v14Target110	目标速度 110..119	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	627		input	v14Target120	目标速度 120..139	FSD 速度补偿 > 驾驶员设置	{}
+dashboard.html	636		input	dndEnabled	免打扰总开关	免打扰 > 驾驶员设置	{}
+dashboard.html	638		input	cabinCameraDisableEnabled	关闭摄像头	免打扰 > 驾驶员设置	{}
+dashboard.html	639		input	v14CameraDisableDelaySec	V14 摄像头回退延时（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	641		input	isaChimeSuppressEnabled	ISA提示音抑制	免打扰 > 驾驶员设置	{}
+dashboard.html	642		input	dndTorqueEnabled	扭矩免打扰	免打扰 > 驾驶员设置	{}
+dashboard.html	648		input	torqueNagMaintenanceEnabled	持续预防扭矩	免打扰 > 驾驶员设置	{}
+dashboard.html	658		input	preventiveNegativeMinNm	最小	免打扰 > 驾驶员设置	{}
+dashboard.html	658		input	preventiveNegativeMaxNm	最大	免打扰 > 驾驶员设置	{}
+dashboard.html	659		input	preventivePositiveMinNm	最小	免打扰 > 驾驶员设置	{}
+dashboard.html	659		input	preventivePositiveMaxNm	最大	免打扰 > 驾驶员设置	{}
+dashboard.html	664		input	correctiveNegativeMinNm	最小	免打扰 > 驾驶员设置	{}
+dashboard.html	664		input	correctiveNegativeMaxNm	最大	免打扰 > 驾驶员设置	{}
+dashboard.html	665		input	correctivePositiveMinNm	最小	免打扰 > 驾驶员设置	{}
+dashboard.html	665		input	correctivePositiveMaxNm	最大	免打扰 > 驾驶员设置	{}
+dashboard.html	666		input	correctiveNegativeFrames	负向	免打扰 > 驾驶员设置	{}
+dashboard.html	666		input	correctivePositiveFrames	正向	免打扰 > 驾驶员设置	{}
+dashboard.html	668		input	correctiveSendMinSec	最短（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	668		input	correctiveSendMaxSec	最长（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	669		input	correctivePauseMinSec	最短（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	669		input	correctivePauseMaxSec	最长（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	674		input	activityMinSec	最短（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	674		input	activityMaxSec	最长（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	676		input	restMinSec	最短（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	676		input	restMaxSec	最长（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	679		input	h2PersistenceSec	H2升级等待（秒） H2 连续达到该时间后进入纠正前停发	免打扰 > 驾驶员设置	{}
+dashboard.html	680		input	preCorrectionPauseSec	纠正前停发（秒） 填 0 表示立即进入纠正	免打扰 > 驾驶员设置	{}
+dashboard.html	681		input	stabilityVerifySec	恢复稳定观察（秒） 观察期间仍发送预防扭矩	免打扰 > 驾驶员设置	{}
+dashboard.html	682		input	dasFreshTimeoutMs	HOS数据超时（ms） 0x39B 超时未更新即停止注入	免打扰 > 驾驶员设置	{}
+dashboard.html	690		input	dndScrollEnabled	滚轮免打扰	免打扰 > 驾驶员设置	{}
+dashboard.html	695		select	dndScrollMode	免打扰方式左滚轮音量 右滚轮速度	免打扰 > 驾驶员设置	{}
+dashboard.html	696		input	dndSpeedPeriodicEnabled	滚轮持续发送	免打扰 > 驾驶员设置	{}
+dashboard.html	698		input	dndSpeedPeriodMinMs	右滚轮后台随机最短间隔（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	699		input	dndSpeedPeriodMaxMs	右滚轮后台随机最长间隔（秒）	免打扰 > 驾驶员设置	{}
+dashboard.html	707		input	fsdAutoStartEnabled	启用 FSD 自动激活	FSD 自动激活 > 驾驶员设置	{}
+dashboard.html	709		input	fsdAutoStartAvailableConfirmFrames	AP 可用确认帧数	FSD 自动激活 > 驾驶员设置	{}
+dashboard.html	710		input	fsdAutoStartLongPressEnabled	右滚轮长按持续激活	FSD 自动激活 > 驾驶员设置	{}
+dashboard.html	711		input	fsdAutoStartFirstParkToDriveEnabled	P→D 自动激活	FSD 自动激活 > 驾驶员设置	{}
+dashboard.html	712		input	fsdAutoStartReverseToDriveSpeedKph	R→D 15秒内达到的车速（km/h）	FSD 自动激活 > 驾驶员设置	{}
+dashboard.html	713		input	fsdAutoStartGroundEnabled	右滚轮 R 档一键激活	FSD 自动激活 > 驾驶员设置	{}
+dashboard.html	714		input	fsdDriverOccupiedSpoofEnabled	驾驶位有人与安全带模拟	FSD 自动激活 > 驾驶员设置	{}
+dashboard.html	748		input	fsdWarningActivationEnabled	预警防撞激活 推荐 车道偏离或前撞提醒出现时激活	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	753		input	fsdWarningLaneStandard	标准 左侧与右侧	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	754		input	fsdWarningLaneSevere	严重 左侧与右侧	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	756		input	fsdWarningLaneModes		安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	759		input	fsdSideCollisionActivationEnabled	侧撞警告激活 侧方碰撞警告出现时激活	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	760		input	fsdDdawEnabled	疲倦检测 推荐 检测到疲倦提醒时激活	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	767		input	blindSpotEnabled	启用盲区氛围灯警报 默认关闭；警报解除后恢复原灯光	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	769		input	blindSpotBrightness	亮度 100%	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	771		input	blindSpotAreaFront	前门一对	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	772		input	blindSpotAreaRear	后门一对	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	773		input	blindSpotAreaDash	仪表台一对	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	775		input	blindSpotRestoreDelayMs	恢复延时 ms	安全驾驶功能 > 驾驶员设置	{}
+dashboard.html	794		input	gearAutomationEnabled	启动自动换挡	自动换挡 > 驾驶员设置	{}
+dashboard.html	795		input	gearSeatbeltSafetyEnabled	换挡前必须系安全带	自动换挡 > 驾驶员设置	{}
+dashboard.html	796		input	gearBrakeSafetyBypassEnabled	关闭刹车安全门	自动换挡 > 驾驶员设置	{}
+dashboard.html	800		input	gearShiftLimit	换挡次数（单次刹车周期；0 = 无限）	自动换挡 > 驾驶员设置	{}
+dashboard.html	801		input	gearAutoShiftMaxSpeedKph	允许自动换挡速度 km/h	自动换挡 > 驾驶员设置	{}
+dashboard.html	802		input	gearCooldownMs	动作冷却 ms	自动换挡 > 驾驶员设置	{}
+dashboard.html	804		button	gearSmoothPreset	应用智能流畅参数（1000 ms · P 30° · D/R 60° · 障碍物 30°）	自动换挡 > 驾驶员设置	{}
+dashboard.html	808		input	gearBrakeToggleEnabled	刹车＋方向盘确认	自动换挡 > 驾驶员设置	{}
+dashboard.html	810		input	gearDriveReverseSteeringThresholdDeciDeg	D/R 挡转向角度 °	自动换挡 > 驾驶员设置	{}
+dashboard.html	810		input	gearParkSteeringEnabled	P 挡方向盘确认	自动换挡 > 驾驶员设置	{}
+dashboard.html	810		input	gearParkSteeringThresholdDeciDeg	P 挡转向角度 °	自动换挡 > 驾驶员设置	{}
+dashboard.html	813		input	bleObstacleFeatureEnabled	障碍物自动换挡	自动换挡 > 驾驶员设置	{}
+dashboard.html	815		input	bleObstacleSteeringConfirmEnabled	方向盘角度确认	自动换挡 > 驾驶员设置	{}
+dashboard.html	815		input	bleObstacleSteeringThresholdDeciDeg	方向盘确认角度 °	自动换挡 > 驾驶员设置	{}
+dashboard.html	821		select	gearUssDistancePreset	雷达距离预设近 中（默认） 远 自定义	自动换挡 > 驾驶员设置	{}
+dashboard.html	822		input	gearUssSdiBlockMax	受阻阈值（原始值）	自动换挡 > 驾驶员设置	{}
+dashboard.html	822		input	gearUssSdiCautionMax	谨慎阈值（原始值）	自动换挡 > 驾驶员设置	{}
+dashboard.html	822		input	gearUssMinValidSdi	有效雷达数（个）	自动换挡 > 驾驶员设置	{}
+dashboard.html	822		input	gearUssRadarBlockMaxRaw	前向雷达受阻阈值（原始值）	自动换挡 > 驾驶员设置	{}
+dashboard.html	823		button	gearUssRetryLoad	重试读取	自动换挡 > 驾驶员设置	{}
+dashboard.html	823		button	gearUssRetrySave	重试保存	自动换挡 > 驾驶员设置	{}
+dashboard.html	836		input	gearScrollEnabled	滚轮换挡	自动换挡 > 驾驶员设置	{}
+dashboard.html	838		input	gearScrollBrakeAuthorizationEnabled	低速单次刹车授权	自动换挡 > 驾驶员设置	{}
+dashboard.html	841		select	gearLeftPositiveAction	正方向无动作 D R P D/R切换	自动换挡 > 驾驶员设置	{}
+dashboard.html	842		select	gearLeftNegativeAction	负方向无动作 D R P D/R切换	自动换挡 > 驾驶员设置	{}
+dashboard.html	845		select	gearRightPositiveAction	正方向无动作 D R P D/R切换	自动换挡 > 驾驶员设置	{}
+dashboard.html	846		select	gearRightNegativeAction	负方向无动作 D R P D/R切换	自动换挡 > 驾驶员设置	{}
+dashboard.html	873		input	seatMemoryEnabled	启用座椅记忆	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	875		input	seatControlBus		前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	885		button		向前	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	885		button		向后	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	886		button		前倾	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	886		button		后仰	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	887		button		升高	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	887		button		降低	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	888		button		抬高	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	888		button		降低	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	889		button		向上	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	889		button		向下	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	890		button		向内	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	890		button		向外	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	894		input			前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	894		button		保存	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('save',0)"}
+dashboard.html	894		button		调用	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('recall',0)"}
+dashboard.html	895		input			前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	895		button		保存	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('save',1)"}
+dashboard.html	895		button		调用	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('recall',1)"}
+dashboard.html	896		input			前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	896		button		保存	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('save',2)"}
+dashboard.html	896		button		调用	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('recall',2)"}
+dashboard.html	897		input			前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	897		button		保存	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('save',3)"}
+dashboard.html	897		button		调用	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('recall',3)"}
+dashboard.html	898		input			前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	898		button		保存	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('save',4)"}
+dashboard.html	898		button		调用	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('recall',4)"}
+dashboard.html	907		button		向前	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	907		button		向后	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	908		button		前倾	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	908		button		后仰	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	909		button		升高	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	909		button		降低	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	910		button		抬高	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	910		button		降低	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	911		button		向上	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	911		button		向下	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	912		button		向内	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	912		button		向外	前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	916		input			前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	916		button		保存	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('save',5)"}
+dashboard.html	916		button		调用	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('recall',5)"}
+dashboard.html	917		input			前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	917		button		保存	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('save',6)"}
+dashboard.html	917		button		调用	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('recall',6)"}
+dashboard.html	918		input			前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	918		button		保存	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('save',7)"}
+dashboard.html	918		button		调用	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('recall',7)"}
+dashboard.html	919		input			前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	919		button		保存	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('save',8)"}
+dashboard.html	919		button		调用	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('recall',8)"}
+dashboard.html	920		input			前排座椅记忆 > 驾驶员设置	{}
+dashboard.html	920		button		保存	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('save',9)"}
+dashboard.html	920		button		调用	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('recall',9)"}
+dashboard.html	924		button	seatStopButton	停止全部座椅动作	前排座椅记忆 > 驾驶员设置	{"onclick": "triggerSeatAction('cancel')"}
+dashboard.html	924		button		刷新状态	前排座椅记忆 > 驾驶员设置	{"onclick": "pollStatus()"}
+dashboard.html	938		input	fsdForceHighPhysicalEnabled	FSD 强制远光	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	940		input	longPressHighBeamStrobeEnabled	第二次长按0.5秒远光爆闪	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	942		input	highBeamStrobeIntervalMs	爆闪间隔（1～100 毫秒）	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	943		input	highBeamStrobeCount	爆闪次数（0～20，0=不限）	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	958		input	turnFollowEnabled	氛围灯跟随转向灯 默认关闭；左转仅影响左侧，右转仅影响右侧	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	960		input	turnFollowColor	跟随颜色	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	961		input	turnFollowBrightness	亮度 80%	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	963		input	turnFollowAreaFront	前车门	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	964		input	turnFollowAreaRear	后车门	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	965		input	turnFollowAreaDash	仪表台	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	967		input	turnFollowHazards	跟随双闪 关闭时双闪不会触发氛围灯	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	975		input	rear-fog-strobe-tgl	自动减速后雾灯	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	976		input	reverse-warning-tgl	倒车警示（双闪 + 8 次后雾灯）	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	977		input	reverse-rear-fog-steady-tgl	倒车后雾灯常亮	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	978		input	rear-fog-pilot-tgl	后雾灯领航许可	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	979		button	rear-fog-pilot-run-btn	启动后雾灯领航	远光与提醒灯光 > 驾驶员设置	{"onclick": "toggleRearFogRuntime()"}
+dashboard.html	981		input	rear-fog-mild-threshold	轻度减速度阈值（0.01 m/s²）	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	982		input	rear-fog-hard-threshold	重度减速度阈值（0.01 m/s²）	远光与提醒灯光 > 驾驶员设置	{}
+dashboard.html	992		input	canbServiceModeEnabled	启用维修模式	维修模式 > 驾驶员设置	{}
+dashboard.html	998		input	batteryPreheatEnabled	启用电池预热请求	电池预热 > 驾驶员设置	{}
+dashboard.html	999		select	batteryPreheatDurationMin	允许时间15 分钟 30 分钟 45 分钟 60 分钟	电池预热 > 驾驶员设置	{}
+dashboard.html	1001		button	batteryPreheatRetryStop	重试关闭	电池预热 > 驾驶员设置	{"onclick": "retryBatteryPreheatStop()"}
+dashboard.html	1026		select	canPinLayoutSelect	线序自动（默认：先检测 A，A 三路无有效帧再检测 B） 固定 A · CH TX2/RX3、VEH TX4/RX5、PARTY TX26/RX27 固定 B · CH TX3/RX2、VEH TX50/RX49、PARTY TX31/RX30	高级通讯 > 驾驶员设置	{}
+dashboard.html	1027		button	canPinLayoutSave	保存线序	高级通讯 > 驾驶员设置	{"onclick": "saveCanPinLayout()"}
+dashboard.html	1029		input	can0TxEnabled	CAN0 发送	高级通讯 > 驾驶员设置	{}
+dashboard.html	1030		input	can1TxEnabled	CAN1 发送	高级通讯 > 驾驶员设置	{}
+dashboard.html	1031		input	can2TxEnabled	CAN2 发送	高级通讯 > 驾驶员设置	{}
+dashboard.html	1038		input	recInclude	包含ID	CAN 抓包 > 驾驶员设置	{}
+dashboard.html	1039		input	recExclude	排除ID	CAN 抓包 > 驾驶员设置	{}
+dashboard.html	1042		input	recBus1Enabled	bus=0	CAN 抓包 > 驾驶员设置	{}
+dashboard.html	1043		input	recBus2Enabled	bus=1	CAN 抓包 > 驾驶员设置	{}
+dashboard.html	1044		input	recBus3Enabled	bus=2	CAN 抓包 > 驾驶员设置	{}
+dashboard.html	1045		input	recRxEnabled	RX	CAN 抓包 > 驾驶员设置	{}
+dashboard.html	1046		input	recTxEnabled	TX	CAN 抓包 > 驾驶员设置	{}
+dashboard.html	1047		input	recDurationSec	时长秒	CAN 抓包 > 驾驶员设置	{}
+dashboard.html	1051		button		开始抓包	CAN 抓包 > 驾驶员设置	{"onclick": "startRec()"}
+dashboard.html	1052		button		停止	CAN 抓包 > 驾驶员设置	{"onclick": "stopRec()"}
+dashboard.html	1053		button		清空	CAN 抓包 > 驾驶员设置	{"onclick": "clearRec()"}
+dashboard.html	1054		a	recDownloadCsv	下载 CSV	CAN 抓包 > 驾驶员设置	{"onclick": "downloadRecorderFile('csv');return false"}
+dashboard.html	1055		a	recDownloadBin	高速下载 BIN	CAN 抓包 > 驾驶员设置	{"onclick": "downloadRecorderFile('bin');return false"}
+dashboard.html	1082		button	onlineOtaCheck	检测更新	固件升级 > 驾驶员设置	{"onclick": "checkOnlineOta()"}
+dashboard.html	1082		button	onlineOtaInstall	立即升级	固件升级 > 驾驶员设置	{"onclick": "installOnlineOta()"}
+dashboard.html	1087		input	otaFile		固件升级 > 驾驶员设置	{}
+dashboard.html	1088		button	otaStart	开始升级	固件升级 > 驾驶员设置	{"onclick": "startOta()"}
+dashboard.html	1100		input	ambientEnabled	常亮氛围灯	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1106		button		仪表台左 配置开 · 60%	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1107		button		仪表台右 配置开 · 60%	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1109		button		左前门 配置开 · 60%	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1111		button		右前门 配置开 · 60%	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1112		button		左后门 配置开 · 60%	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1113		button		右后门 配置开 · 60%	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1116		input	ambientZone4Enabled	仪表台左	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1117		input	ambientZone5Enabled	仪表台右	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1118		input	ambientZone0Enabled	左前门	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1119		input	ambientZone1Enabled	右前门	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1120		input	ambientZone2Enabled	左后门	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1121		input	ambientZone3Enabled	右后门	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1126		input	ambientBrightness	亮度 60%	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1127		input	ambientColor		常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1128		button	ambientApplyAll	应用到全部区域	常亮氛围灯 > 常亮氛围灯	{}
+dashboard.html	1134		input	welcomeEnabled	启用迎宾灯效 与常亮氛围灯独立；默认关闭	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1137		input	welcomeStyle0	柔光环抱 灯光沿既有路径平滑渐亮，柔和收尾	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1138		input	welcomeStyle1	冰蓝流光 光束沿路径移动，并留下低亮尾迹	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1139		input	welcomeStyle2	暖金礼序 灯光沿既有路径依次展开	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1140		input	welcomeStyle3	黑幕启幕 先进入暗场，再按既有路径渐亮	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1141		input	welcomeStyle4	光迹回环 暗场后逐点巡游，仪表台汇聚再渐亮	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1144		input	welcomeTriggerMode0	座椅确认无人后触发	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1145		input	welcomeTriggerMode1	任何有效开门都触发	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1149		input	welcomeBrightness	迎宾亮度 40%	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1150		select	welcomeTempo	灯效节奏舒缓 标准 利落	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1152		input	welcomeColor	迎宾颜色	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1154		input		仪表台左	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1154		input		仪表台右	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1155		input		左前门	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1155		input		右前门	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1156		input		左后门	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1156		input		右后门	迎宾灯效 > 常亮氛围灯	{}
+dashboard.html	1172		input	wifiApPassword	热点密码	设备热点 AP > 设备热点 AP	{}
+dashboard.html	1173		button	wifiApSave	保存并重启热点	设备热点 AP > 设备热点 AP	{"onclick": "saveWifiAp()"}
+dashboard.html	1173		button	wifiOnboardingContinue	继续引导	设备热点 AP > 设备热点 AP	{}
+dashboard.html	1183		input	wifiExternalEnabled	启用外部 Wi-Fi	外部 Wi-Fi > 设备热点 AP	{"onchange": "toggleExternalWifi(this.checked)"}
+dashboard.html	1184		input	wifiApAutoOff	外部 Wi-Fi 连接成功 5 分钟后自动关闭 AP（手机连接时保持开启）	外部 Wi-Fi > 设备热点 AP	{"onchange": "setWifiApAutoOff(this.checked)"}
+dashboard.html	1185		select	wifiNetworkList	手动扫描结果 点击“扫描附近网络”	外部 Wi-Fi > 设备热点 AP	{"onchange": "selectScannedWifi()"}
+dashboard.html	1186		input	wifiSsid	SSID	外部 Wi-Fi > 设备热点 AP	{}
+dashboard.html	1187		input	wifiPassword	密码	外部 Wi-Fi > 设备热点 AP	{}
+dashboard.html	1188		button	wifiScan	扫描附近网络	外部 Wi-Fi > 设备热点 AP	{"onclick": "scanWifi()"}
+dashboard.html	1188		button	wifiConnect	保存并连接	外部 Wi-Fi > 设备热点 AP	{"onclick": "connectWifi()"}
+dashboard.html	1188		button	wifiDisconnect	断开	外部 Wi-Fi > 设备热点 AP	{"onclick": "disconnectWifi()"}
+dashboard.html	1188		button	wifiForget	忘记网络	外部 Wi-Fi > 设备热点 AP	{"onclick": "forgetWifi()"}
+dashboard.html	1197		input	poll	轮询	诊断结论 轮询 > 诊断结论 轮询	{"onchange": "setPolling(this.checked)"}
+dashboard.html	1201		button		刷新	诊断结论 轮询 > 诊断结论 轮询	{"onclick": "pollCanDiagnostics()"}
+dashboard.html	1201		button		导出完整诊断JSON	诊断结论 轮询 > 诊断结论 轮询	{"onclick": "downloadCanDiagnostics()"}
+dashboard.html	1201		button	coreDumpDownloadButton	下载崩溃转储	诊断结论 轮询 > 诊断结论 轮询	{"onclick": "downloadCoreDump()"}
+dashboard.html	1239		input	driverAddName	驾驶员名称		{}
+dashboard.html	1241		button		取消		{"onclick": "closeDriverModal('driverAddModal')"}
+dashboard.html	1241		button	driverAddSubmit	保存		{"onclick": "submitDriverAdd()"}
+dashboard.html	1252		input	driverRebindConfirm	我已核对上方位置，并确认用当前驾驶位覆盖原保存位置。		{"onchange": "updateDriverRebindConfirm()"}
+dashboard.html	1254		button		取消		{"onclick": "closeDriverModal('driverRebindModal')"}
+dashboard.html	1254		button	driverRebindSubmit	确认覆盖		{"onclick": "submitDriverRebind()"}
+dashboard.html	1260		input	driverRenameName	驾驶员名称		{}
+dashboard.html	1262		button		取消		{"onclick": "closeDriverModal('driverRenameModal')"}
+dashboard.html	1262		button	driverRenameSubmit	保存		{"onclick": "submitDriverRename()"}
+dashboard.html	1266		button		✦ 智驾		{}
+dashboard.html	1267		button		⇄ 换挡		{}
+dashboard.html	1268		button		◇ 车身		{}
+dashboard.html	1269		button		⌁ 诊断		{}
+dashboard.html	1270		button		⚙ 系统		{}
+login.html	34		form		热点密码 登录		{}
+login.html	35		input	password	热点密码		{}
+login.html	36		button		登录		{}
+javascript_markup	65	createCanExperimentCard	button	canExperimentHeaderStop	立即停止		{"onclick": "event.stopPropagation();canExperimentStop()"}
+javascript_markup	65	createCanExperimentCard	button		＋ 添加规则		{"onclick": "canExperimentAddRule()"}
+javascript_markup	65	createCanExperimentCard	button		1. 开始监听		{"onclick": "canExperimentListen()"}
+javascript_markup	65	createCanExperimentCard	button		2. 确认修改内容		{"onclick": "canExperimentValidate()"}
+javascript_markup	65	createCanExperimentCard	button	canExperimentStartButton	开启测试		{"onclick": "canExperimentStart()"}
+javascript_markup	65	createCanExperimentCard	button		立即停止		{"onclick": "canExperimentStop()"}
+javascript_markup	65	createCanExperimentCard	select	canExperimentPresetSlot			{}
+javascript_markup	65	createCanExperimentCard	input	canExperimentPresetName			{}
+javascript_markup	65	createCanExperimentCard	button		载入		{"onclick": "canExperimentPresetAction('load')"}
+javascript_markup	65	createCanExperimentCard	button		保存		{"onclick": "canExperimentPresetAction('save')"}
+javascript_markup	65	createCanExperimentCard	button		重命名		{"onclick": "canExperimentPresetAction('rename')"}
+javascript_markup	65	createCanExperimentCard	button		删除		{"onclick": "canExperimentPresetDelete()"}
+javascript_markup	71	canExperimentRuleMarkup	button		确认帧来源		{"onclick": "canExperimentConfirmSource(this)"}
+javascript_markup	71	canExperimentRuleMarkup	button		删除		{"onclick": "canExperimentRemoveRule(this)"}
+javascript_markup	71	canExperimentRuleMarkup	input		标准 CAN ID（HEX）		{}
+javascript_markup	71	canExperimentRuleMarkup	input		线路CAN0 13/14 CAN1 9/10 CAN2 2/3		{}
+javascript_markup	71	canExperimentRuleMarkup	input		线路CAN0 13/14 CAN1 9/10 CAN2 2/3		{}
+javascript_markup	71	canExperimentRuleMarkup	input		线路CAN0 13/14 CAN1 9/10 CAN2 2/3		{}
+javascript_markup	71	canExperimentRuleMarkup	input		已确认 DLC		{}
+javascript_markup	71	canExperimentRuleMarkup	select		发送方式单次 跟随原始帧 固定周期		{}
+javascript_markup	71	canExperimentRuleMarkup	input		周期 ms		{}
+javascript_markup	71	canExperimentRuleMarkup	input		模板有效 ms（0自动）		{}
+javascript_markup	71	canExperimentRuleMarkup	input		要求所选线路同时就绪		{}
+javascript_markup	71	canExperimentRuleMarkup	input		接管对应内置发送		{}
+javascript_markup	71	canExperimentRuleMarkup	select		发送等级继承原报文等级 新增报文 P1 新增报文 P2 新增报文 P3		{}
+javascript_markup	71	canExperimentRuleMarkup	input		跟随延迟 μs（0立即）		{}
+javascript_markup	71	canExperimentRuleMarkup	select		计数器不处理 原值偏移 独立自增		{}
+javascript_markup	71	canExperimentRuleMarkup	input		字节		{}
+javascript_markup	71	canExperimentRuleMarkup	input		起始 bit		{}
+javascript_markup	71	canExperimentRuleMarkup	input		宽度		{}
+javascript_markup	71	canExperimentRuleMarkup	input		步长		{}
+javascript_markup	71	canExperimentRuleMarkup	input		初值		{}
+javascript_markup	71	canExperimentRuleMarkup	input		最小 / 最大		{}
+javascript_markup	71	canExperimentRuleMarkup	input		最小 / 最大		{}
+javascript_markup	71	canExperimentRuleMarkup	input		原值偏移		{}
+javascript_markup	71	canExperimentRuleMarkup	select		校验不处理 SUM XOR CRC8		{}
+javascript_markup	71	canExperimentRuleMarkup	input		输出字节		{}
+javascript_markup	71	canExperimentRuleMarkup	input		加值 HEX		{}
+javascript_markup	71	canExperimentRuleMarkup	input		最终 XOR HEX		{}
+javascript_markup	71	canExperimentRuleMarkup	input		CRC 多项式 HEX		{}
+javascript_markup	71	canExperimentRuleMarkup	input		CRC 初值 HEX		{}
+javascript_markup	71	canExperimentRuleMarkup	input		CRC 输入反射		{}
+javascript_markup	71	canExperimentRuleMarkup	input		CRC 输出反射		{}
+javascript_markup	71	canExperimentRuleMarkup	input		CRC 包含 CAN ID		{}
+javascript_markup	156	initAppPages	button		展开 / 收起任务明细		{"onclick": "toggleBoardTasks()"}
+javascript_markup	1481	(global)	button		智驾		{}
+javascript_markup	1481	(global)	button		换挡与车身		{}
+javascript_markup	1481	(global)	button		行程		{}
+javascript_markup	1481	(global)	button		小计		{}
+javascript_markup	1481	(global)	button		累计		{}
+javascript_markup	1481	(global)	button	fsdRecordsRefresh	刷新		{}
+javascript_markup	1481	(global)	button	fsdRecordsDetailBack	返回行程		{}
+javascript_markup	1481	(global)	button	fsdRecordsSubtotalReset	重置小计		{}
+javascript_markup	1481	(global)	button	fsdRecordsClear	清空累计与行程历史		{}
+javascript_markup	1481	(global)	form		重置小计？ 仅重置小计，当前驾驶、历史与累计里程保留。 确认重置 取消		{}
+javascript_markup	1481	(global)	button	fsdRecordsSubtotalResetConfirm	确认重置		{}
+javascript_markup	1481	(global)	button	fsdRecordsSubtotalResetCancel	取消		{}
+javascript_markup	1481	(global)	form		清空累计与行程历史？ 将清空当前驾驶、小计、累计和历史记录，此操作不可撤销。 确认清空 取消		{}
+javascript_markup	1481	(global)	button	fsdRecordsClearConfirm	确认清空		{}
+javascript_markup	1481	(global)	button	fsdRecordsClearCancel	取消		{}
+javascript_markup	1481	(global)	input	cloudEnabled	自动同步 关闭后保留设备本地数据与连接状态		{}
+javascript_markup	1481	(global)	textarea	cloudDeviceId			{}
+javascript_markup	1481	(global)	button	cloudCopyButton	复制 ID		{}
+javascript_markup	1481	(global)	a		打开云端网页		{}
+javascript_markup	1481	(global)	input	cloudWebUrl			{}
+javascript_markup	1481	(global)	button	cloudCopyUrl	复制网址		{}
+javascript_markup	1481	(global)	button	cloudUploadButton	立即同步		{}
+javascript_markup	1481	(global)	button	cloudSettingsRestoreButton	从云端恢复		{}
+javascript_markup	1481	(global)	button	cloudSettingsConflictsRefresh	查看冲突		{}
+javascript_markup	1481	(global)	form		恢复云端备份 恢复范围 设置与驾驶员 已选择 FSD 驾驶记录 已选择 我已确认恢复所选数据 取消 确认恢复		{}
+javascript_markup	1481	(global)	input	cloudRestoreScopeSettings	设置与驾驶员 已选择		{}
+javascript_markup	1481	(global)	input	cloudRestoreScopeRecords	FSD 驾驶记录 已选择		{}
+javascript_markup	1481	(global)	input	cloudSettingsRestoreConfirm	我已确认恢复所选数据		{}
+javascript_markup	1481	(global)	button	cloudRestoreCancelButton	取消		{}
+javascript_markup	1481	(global)	button	cloudRestoreConfirmButton	确认恢复		{}
+javascript_markup	1481	(global)	input	cloudUrl	服务 URL		{}
+javascript_markup	1481	(global)	input	cloudToken	产品根 Token		{}
+javascript_markup	1481	(global)	input	cloudInterval	同步间隔（15–300 秒）		{}
+javascript_markup	1481	(global)	input	cloudClearToken	清除已保存的产品根 Token		{}
+javascript_markup	1481	(global)	button	cloudTestButton	测试 v2 连接		{}
+javascript_markup	1481	(global)	button	cloudSaveButton	保存连接设置		{}
+javascript_markup	1481	(global)	form		连接 Wi-Fi 连接网络后，可登录云端网站绑定设备，使用云同步功能。 连接 Wi-Fi 跳过，开始使用 云端数据恢复 已有账户可以恢复原设备的数据，也可以稍后恢复或作为新用户开始使用。 账户状态暂不可确认 设备 ID 复制 ID 打开云端网页 复制网址 重新检查 恢复云端数据 稍后恢复 我是新用户 重试完成		{}
+javascript_markup	1481	(global)	button	onboardingConnectWifi	连接 Wi-Fi		{}
+javascript_markup	1481	(global)	button	onboardingSkipWifi	跳过，开始使用		{}
+javascript_markup	1481	(global)	textarea	onboardingDeviceId	设备 ID		{}
+javascript_markup	1481	(global)	button	onboardingCopyId	复制 ID		{}
+javascript_markup	1481	(global)	a		打开云端网页		{}
+javascript_markup	1481	(global)	input	onboardingWebUrl			{}
+javascript_markup	1481	(global)	button	onboardingCopyUrl	复制网址		{}
+javascript_markup	1481	(global)	button	onboardingRecheck	重新检查		{}
+javascript_markup	1481	(global)	button	onboardingRestore	恢复云端数据		{}
+javascript_markup	1481	(global)	button	onboardingLater	稍后恢复		{}
+javascript_markup	1481	(global)	button	onboardingNew	我是新用户		{}
+javascript_markup	1481	(global)	button	onboardingCompleteRetry	重试完成		{}
+javascript_markup	1481	(global)	button	commercialBack	返回		{}
+javascript_markup	1481	(global)	button	commercialHelp	说明		{}
+javascript_markup	1481	(global)	button	commercialLock	退出并锁定		{}
+javascript_markup	1481	(global)	button		功能		{}
+javascript_markup	1481	(global)	button		FSD记录		{}
+javascript_markup	1481	(global)	button		设置		{}
+javascript_markup	1481	(global)	form	commercialUnlockForm	开发者模式 输入开发者密码，显示诊断、日志与高级工具。 开发者密码 解锁 取消		{}
+javascript_markup	1481	(global)	input	commercialPassword	开发者密码		{}
+javascript_markup	1481	(global)	button	commercialUnlockButton	解锁		{}
+javascript_markup	1481	(global)	button	commercialUnlockCancel	取消		{}
+javascript_markup	1665	commercialRow	button				{}
+javascript_markup	1665	commercialRow	input				{}
+javascript_markup	1665	commercialRow	button				{}
+javascript_markup	1905	initCommercialHierarchy	input				{}
+javascript_markup	1941	initCommercialUi	button	settingsSyncBanner	☁ 云同步 读取同步状态		{}

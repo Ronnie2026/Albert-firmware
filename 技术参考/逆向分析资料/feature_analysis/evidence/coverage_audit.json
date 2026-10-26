@@ -1,0 +1,25 @@
+{
+  "modules": 18,
+  "semantic_features": 145,
+  "routes": 87,
+  "controls": 437,
+  "dashboard_static_controls": 325,
+  "login_static_controls": 3,
+  "js_fragment_controls": 109,
+  "frontend_function_nodes": 1065,
+  "unmapped_controls": [],
+  "unmapped_routes": [],
+  "unknown_js": [],
+  "unknown_backend": [],
+  "source_hashes": {
+    "recovered_web/dashboard.html": "021f5459f9822c3128b43858a8f4666f8e39d441c01703213ac09072232db1dd",
+    "recovered_web/dashboard.script0.js": "5bc300990f5006a22c480e851eeb71a8de95f026390827cee4c709955f22a3c8",
+    "recovered_web/login.html": "1a93b1102a9418435ec2cc9b03e27d261eafc94594a00e8c3ed28d7946bc843b"
+  },
+  "limitations": [
+    "统计为语法提取，不是唯一运行DOM控件数",
+    "语义区域归属不是C调用链证明",
+    "间接调用缺失不能据此断言功能未使用",
+    "每项伪代码均为解释性重建，具体未确认点见各模块"
+  ]
+}

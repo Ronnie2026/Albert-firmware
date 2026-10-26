@@ -1,0 +1,326 @@
+{
+  "stalkControlVersion": {
+    "parser": "48036236",
+    "line": 1247
+  },
+  "fsdAutoStartEnabled": {
+    "parser": "48036a9a",
+    "line": 1251
+  },
+  "batteryPreheatEnabled": {
+    "parser": "48036a9a",
+    "line": 933
+  },
+  "batteryPreheatDurationMin": {
+    "parser": "48036236",
+    "line": 953
+  },
+  "batteryPreheatRetryStop": {
+    "parser": "48036a9a",
+    "line": 958
+  },
+  "canCommsEnabled": {
+    "parser": "48036a9a",
+    "line": 1221
+  },
+  "can1TxEnabled": {
+    "parser": "48036a9a",
+    "line": 1420
+  },
+  "fsdEnabled": {
+    "parser": "48036a9a",
+    "line": 1222
+  },
+  "fsdWarningActivationEnabled": {
+    "parser": "48036a9a",
+    "line": 1252
+  },
+  "fsdSideCollisionActivationEnabled": {
+    "parser": "48036a9a",
+    "line": 1253
+  },
+  "fsdSteadyModeEnabled": {
+    "parser": "48036a9a",
+    "line": 1254
+  },
+  "fsdDdawEnabled": {
+    "parser": "48036a9a",
+    "line": 1255
+  },
+  "fsdWarningLaneModes": {
+    "parser": "48036236",
+    "line": 1256
+  },
+  "fsdAutoStartLongPressEnabled": {
+    "parser": "48036a9a",
+    "line": 1261
+  },
+  "fsdAutoStartFirstParkToDriveEnabled": {
+    "parser": "48036a9a",
+    "line": 1262
+  },
+  "fsdAutoStartReverseToDriveSpeedKph": {
+    "parser": "48036236",
+    "line": 1263
+  },
+  "fsdAutoStartGroundEnabled": {
+    "parser": "48036a9a",
+    "line": 1264
+  },
+  "fsdDriverOccupiedSpoofEnabled": {
+    "parser": "48036a9a",
+    "line": 1265
+  },
+  "fsdAutoStartAvailableConfirmFrames": {
+    "parser": "48036236",
+    "line": 1266
+  },
+  "fsdParkStartEnabled": {
+    "parser": "48036a9a",
+    "line": 1270
+  },
+  "v13SpaceToSpaceEnabled": {
+    "parser": "48036a9a",
+    "line": 1271
+  },
+  "v13ParkingDelayMs": {
+    "parser": "48036236",
+    "line": 1272
+  },
+  "v13ParkingDurationMs": {
+    "parser": "48036236",
+    "line": 1273
+  },
+  "autoSpeedOffsetEnabled": {
+    "parser": "48036a9a",
+    "line": 1274
+  },
+  "stableSpeedOffsetEnabled": {
+    "parser": "48036a9a",
+    "line": 1275
+  },
+  "stableSpeedDownIntervalMs": {
+    "parser": "48036236",
+    "line": 1276
+  },
+  "speedDownStepKph": {
+    "parser": "48036236",
+    "line": 1277
+  },
+  "speedOffsetDownSlewPctPerSec": {
+    "parser": "48036236",
+    "line": 1281
+  },
+  "speedOffsetMaxPctRaw": {
+    "parser": "48036236",
+    "line": 1285
+  },
+  "v13LowSpeedOffsetPct": {
+    "parser": "48036236",
+    "line": 1289
+  },
+  "v13HighSpeedOffsetPct": {
+    "parser": "48036236",
+    "line": 1294
+  },
+  "hw3ManualStrategyEnabled": {
+    "parser": "48036a9a",
+    "line": 1299
+  },
+  "hw3ManualStrategy": {
+    "parser": "48036236",
+    "line": 1300
+  },
+  "v14SpeedOffsetMaxPctRaw": {
+    "parser": "48036236",
+    "line": 1304
+  },
+  "v14ManualDrivingProfileEnabled": {
+    "parser": "48036a9a",
+    "line": 1309
+  },
+  "v14ManualDrivingProfile": {
+    "parser": "48036236",
+    "line": 1310
+  },
+  "enhancedAutopilotEnabled": {
+    "parser": "48036a9a",
+    "line": 1315
+  },
+  "dndEnabled": {
+    "parser": "48036a9a",
+    "line": 1316
+  },
+  "cabinCameraDisableEnabled": {
+    "parser": "48036a9a",
+    "line": 1317
+  },
+  "v14CameraDisableDelaySec": {
+    "parser": "48036236",
+    "line": 1318
+  },
+  "dndHandsOnDowngradeEnabled": {
+    "parser": "48036a9a",
+    "line": 1323
+  },
+  "dndHandsOn24To1Enabled": {
+    "parser": "48036a9a",
+    "line": 1324
+  },
+  "dndHandsOn124To0Enabled": {
+    "parser": "48036a9a",
+    "line": 1325
+  },
+  "isaChimeSuppressEnabled": {
+    "parser": "48036a9a",
+    "line": 1330
+  },
+  "dndScrollEnabled": {
+    "parser": "48036a9a",
+    "line": 1331
+  },
+  "dndScrollMode": {
+    "parser": "48036236",
+    "line": 1332
+  },
+  "dndSpeedPeriodicEnabled": {
+    "parser": "48036a9a",
+    "line": 1337
+  },
+  "dndSpeedPeriodMinMs": {
+    "parser": "48036236",
+    "line": 1338
+  },
+  "dndSpeedPeriodMaxMs": {
+    "parser": "48036236",
+    "line": 1339
+  },
+  "hw3ComfortTarget110": {
+    "parser": "48036236",
+    "line": 1366
+  },
+  "target110": {
+    "parser": "48036236",
+    "line": 1367
+  },
+  "hw3HurryTarget110": {
+    "parser": "48036236",
+    "line": 1368
+  },
+  "v14Target110": {
+    "parser": "48036236",
+    "line": 1369
+  },
+  "gearAutomationEnabled": {
+    "parser": "48036a9a",
+    "line": 1370
+  },
+  "gearSeatbeltSafetyEnabled": {
+    "parser": "48036a9a",
+    "line": 1371
+  },
+  "gearBrakeSafetyBypassEnabled": {
+    "parser": "48036a9a",
+    "line": 1372
+  },
+  "gearBrakeToggleEnabled": {
+    "parser": "48036a9a",
+    "line": 1373
+  },
+  "gearParkSteeringEnabled": {
+    "parser": "48036a9a",
+    "line": 1374
+  },
+  "bleObstacleFeatureEnabled": {
+    "parser": "48036a9a",
+    "line": 1375
+  },
+  "gearScrollEnabled": {
+    "parser": "48036a9a",
+    "line": 1376
+  },
+  "gearAutoShiftMaxSpeedKph": {
+    "parser": "48036236",
+    "line": 1377
+  },
+  "gearScrollBrakeAuthorizationEnabled": {
+    "parser": "48036a9a",
+    "line": 1382
+  },
+  "bleObstacleSteeringConfirmEnabled": {
+    "parser": "48036a9a",
+    "line": 1383
+  },
+  "gearShiftLimit": {
+    "parser": "48036236",
+    "line": 1384
+  },
+  "gearLeftPositiveAction": {
+    "parser": "48036236",
+    "line": 1389
+  },
+  "gearLeftNegativeAction": {
+    "parser": "48036236",
+    "line": 1394
+  },
+  "gearRightPositiveAction": {
+    "parser": "48036236",
+    "line": 1399
+  },
+  "gearRightNegativeAction": {
+    "parser": "48036236",
+    "line": 1404
+  },
+  "gearCooldownMs": {
+    "parser": "48036236",
+    "line": 1409
+  },
+  "gearParkSteeringThresholdDeciDeg": {
+    "parser": "48036236",
+    "line": 1410
+  },
+  "gearDriveReverseSteeringThresholdDeciDeg": {
+    "parser": "48036236",
+    "line": 1411
+  },
+  "bleObstacleSteeringThresholdDeciDeg": {
+    "parser": "48036236",
+    "line": 1412
+  },
+  "seatMemoryEnabled": {
+    "parser": "48036a9a",
+    "line": 1413
+  },
+  "seatControlBus": {
+    "parser": "48036236",
+    "line": 1414
+  },
+  "can0TxEnabled": {
+    "parser": "48036a9a",
+    "line": 1419
+  },
+  "can2TxEnabled": {
+    "parser": "48036a9a",
+    "line": 1421
+  },
+  "canbServiceModeEnabled": {
+    "parser": "48036a9a",
+    "line": 1422
+  },
+  "fsdForceHighPhysicalEnabled": {
+    "parser": "48036a9a",
+    "line": 1423
+  },
+  "longPressHighBeamStrobeEnabled": {
+    "parser": "48036a9a",
+    "line": 1424
+  },
+  "highBeamStrobeIntervalMs": {
+    "parser": "48036236",
+    "line": 1425
+  },
+  "highBeamStrobeCount": {
+    "parser": "48036236",
+    "line": 1426
+  }
+}

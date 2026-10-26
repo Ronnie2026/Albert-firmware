@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CAN 分析仪</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ID 隐藏功能的轻量样式，独立于 style.css */
+    .sel-col { width: 1.8em; text-align: center; }
+    #hidden-list { display: inline-flex; flex-wrap: wrap; gap: 2px; vertical-align: middle; }
+    .hidden-chip { margin: 1px; padding: 1px 6px; cursor: pointer; font: inherit; }
+  </style>
+</head>
+<body>
+  <!-- 网络/电源面板：只做 WiFi 配置、状态刷新、重启与深睡，不包含任何 CAN 发送控制。 -->
+  <section class="network-panel">
+    <h2>网络与电源</h2>
+    <div class="panel-summary">配置 WiFi 后设备会优先连接路由器；连接失败会自动回到 AP：tsl_can / 1234567890。关机为深度睡眠，需要按复位或重新上电恢复。</div>
+    <div class="network-grid">
+      <label>当前模式 <input id="wifi-mode" type="text" readonly/></label>
+      <label>当前 IP <input id="wifi-ip" type="text" readonly/></label>
+      <label>WiFi 名称 <input id="wifi-ssid" type="text" placeholder="输入 SSID"/></label>
+      <label>WiFi 密码 <input id="wifi-pass" type="text" placeholder="输入密码"/></label>
+      <button id="wifi-connect-btn">连接 WiFi</button>
+      <button id="wifi-refresh-btn">刷新状态</button>
+      <button id="device-restart-btn">重启设备</button>
+      <button id="device-shutdown-btn">关机（深度睡眠）</button>
+      <span id="wifi-status">网络状态：未知</span>
+    </div>
+  </section>
+  <section class="network-panel">
+    <h2>CAN 数据上传</h2>
+    <div class="panel-summary">将逐帧 CAN 数据批量发送到 can_batch_server.py。HTTP 为明文传输，仅应在可信网络使用；网络上传不会启用 CAN TX。</div>
+    <div class="network-grid">
+      <label>服务器地址 <input id="upload-url" type="text" placeholder="http://192.168.1.20:48601"/></label>
+      <label>帧过滤
+        <select id="upload-mode">
+          <option value="all">发送全部 CAN 消息</option>
+          <option value="critical">仅发送关键消息（69 ID）</option>
+        </select>
+      </label>
+      <label>上传总线
+        <select id="upload-buses"><option value="both">CAN_A + CAN_B</option><option value="a">仅 CAN_A</option><option value="b">仅 CAN_B</option></select>
+      </label>
+      <button id="upload-save-btn">保存配置（不会启动）</button>
+      <button id="upload-start-btn">开始上传</button>
+      <button id="upload-stop-btn" disabled>停止上传</button>
+      <button id="upload-refresh-btn">刷新上传状态</button>
+      <span id="upload-status">上传状态：未知</span>
+    </div>
+  </section>
+  <!-- 本地筛选控件：后端持续推送 dirty ID，浏览器按这些条件决定显示哪些行。 -->
+  <div class="controls">
+    <span id="bus-health">CAN_A: ? · CAN_B: ?</span>
+    <label>通道 <select id="channel-filter"><option value="all">A+B</option><option value="A">A</option><option value="B">B</option></select></label>
+    <label>ID <input id="id-filter" type="text" placeholder="0x123"/></label>
+    <label>起始 <input id="range-from" type="text" placeholder="0x000"/></label>
+    <label>结束 <input id="range-to" type="text" placeholder="0x7FF"/></label>
+    <label>搜索 <input id="search-box" type="text" placeholder="ID"/></label>
+    <button id="id-apply-btn">确认</button>
+  </div>
+  <!-- 显示选项：只影响浏览器渲染，不回传设备。 -->
+  <div class="controls">
+    <label>进制 <select id="base-select"><option value="hex">HEX</option><option value="dec">DEC</option><option value="bin">BIN</option><option value="ascii">ASCII</option></select></label>
+    <label>过滤 <select id="metric-select"><option value="count">计数</option><option value="activity">活跃度</option></select></label>
+    <label>最小 <input id="metric-min" type="number" min="0" placeholder="不限"/></label>
+    <label>最大 <input id="metric-max" type="number" min="0" placeholder="不限"/></label>
+    <button id="filter-apply-btn">确认</button>
+    <label><input id="freeze-view" type="checkbox"/> 冻结</label>
+    <label>排序 <select id="sort-select"><option value="id">ID</option><option value="activity">活跃度</option><option value="count">计数↑</option><option value="cand">候选位</option></select></label>
+    <span id="bus-stats">A: 0 帧/秒 0.0% · B: 0 帧/秒 0.0% · 丢弃=0</span>
+  </div>
+  <!-- 信号定位：先"学习静止噪音"几秒，再"开始抓取"后触发车内操作，只看静止时稳定、触发后才变的 bit。 -->
+  <div class="controls">
+    <button id="learn-btn">① 学习静止噪音</button>
+    <button id="capture-btn">② 开始抓取</button>
+    <button id="analysis-reset-btn">清除</button>
+    <label><input id="cand-only" type="checkbox"/> 只看候选</label>
+    <span id="analysis-status">分析：关闭</span>
+  </div>
+  <div id="status">WS：连接中…</div>
+  <!-- ID 隐藏：勾选行末复选框（或表头全选）后点"隐藏所选"，把选中 ID 从列表移除；可逐个或全部取消。 -->
+  <div class="controls">
+    <button id="hide-selected-btn">隐藏所选 ID</button>
+    <button id="unhide-all-btn">取消全部隐藏</button>
+    <span id="hidden-info">未隐藏任何 ID</span>
+    <span id="hidden-list"></span>
+  </div>
+  <!-- A/B 两张表的 tbody 由 app.js 懒创建行节点并增量更新。 -->
+  <div class="grid">
+    <section><h2>CAN_A 实时表</h2><div class="panel-summary">显示 A 通道每个 ID 的最新数据、接收次数、周期估计和变化活跃度。</div><table id="tbl-a"><thead><tr><th>ID</th><th>DLC</th><th>数据</th><th>报文 / 解析</th><th>计数</th><th>Δt</th><th>周期</th><th>抖动</th><th>活跃</th><th class="sel-col"><input id="select-all-a" type="checkbox" title="全选/全不选本表可见行"/></th></tr></thead><tbody></tbody></table></section>
+    <section><h2>CAN_B 实时表</h2><div class="panel-summary">显示 B 通道每个 ID 的最新数据、接收次数、周期估计和变化活跃度。</div><table id="tbl-b"><thead><tr><th>ID</th><th>DLC</th><th>数据</th><th>报文 / 解析</th><th>计数</th><th>Δt</th><th>周期</th><th>抖动</th><th>活跃</th><th class="sel-col"><input id="select-all-b" type="checkbox" title="全选/全不选本表可见行"/></th></tr></thead><tbody></tbody></table></section>
+  </div>
+   <!-- 设备日志：把固件 Serial 诊断(含每秒 [diag] 行)透传到网页，车上无需连 USB 串口。 -->
+   <div class="controls">
+    <span>设备日志（串口透传）</span>
+    <button id="log-refresh-btn">刷新</button>
+    <label><input id="log-auto" type="checkbox" checked/> 自动刷新</label>
+  </div>
+  <pre id="log-view" class="log-view"></pre>
+  <script>globalThis.ANALYZER_HTTP_ONLY = true;</script>
+  <script src="can_catalog.js"></script>
+  <script src="can_decoder.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

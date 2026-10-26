@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "modules": 18,
+  "semantic_features": 145,
+  "routes": 87,
+  "control_rows": 437,
+  "local_document_links_checked": 2210,
+  "viewer_records": 145,
+  "viewer_js_syntax_ok": true,
+  "original_frontend_hashes_unchanged": true,
+  "errors": [],
+  "checks_are_documentary_only": true
+}

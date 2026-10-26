@@ -1,0 +1,54 @@
+/* 最小化分析仪 UI：深色、等宽、信息密度优先；样式只覆盖实时表与网络/电源面板。 */
+* { box-sizing: border-box; font-family: ui-monospace, monospace; }
+body { margin: 0; background: #111; color: #ddd; }
+/* 顶部控制条可换行，适配窄屏时不挤压表格。 */
+.controls { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 8px 10px; background: #181818; border-bottom: 1px solid #333; }
+button, select, input { border: 1px solid #555; background: #222; color: #ddd; padding: 5px 8px; }
+button { cursor: pointer; }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+input[type="number"] { width: 56px; }
+#id-filter, #range-from, #range-to { width: 76px; }
+#search-box { width: 130px; }
+#bus-health, #bus-stats { color: #aaa; }
+#status { padding: 6px 10px; color: #888; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px; }
+section { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 980px; }
+th, td { border: 1px solid #333; padding: 2px 5px; text-align: left; }
+h2 { margin: 4px 0; }
+/* 行背景按 change_score 分级，帮助快速定位变化活跃的 ID。 */
+tr.activity-low { background: #131d13; }
+tr.activity-med { background: #2b260d; }
+tr.activity-high { background: #331414; }
+/* 字节热度由 byte_age_ms 决定：刚变化=hot，近期变化=warm。 */
+.byte { display: inline-block; margin-right: 4px; padding: 1px 3px; border-radius: 2px; }
+.byte.hot { background: #b91c1c; color: #fff; }
+.byte.warm { background: #7c2d12; color: #fff; }
+.bit-view td { color: #aaa; background: #0b0b0b; }
+.bit { display: inline-block; width: 1.3em; text-align: center; margin-right: 2px; border: 1px solid #333; }
+.bit.one { color: #fff; background: #1d4ed8; }
+.hidden { display: none; }
+.panel-summary { color: #aaa; margin: 2px 0 6px; }
+.network-panel { margin: 8px; padding: 10px; border: 1px solid #333; background: #151515; }
+.network-panel h2 { margin: 0 0 6px; }
+.network-grid { display: grid; grid-template-columns: repeat(4, minmax(150px, 1fr)); gap: 8px; align-items: end; }
+.network-grid label { display: flex; flex-direction: column; gap: 3px; color: #aaa; }
+.network-grid input { width: 100%; }
+#wifi-status, #upload-status { color: #aaa; grid-column: span 4; }
+#upload-url { min-width: 280px; }
+.decode-cell { min-width: 260px; max-width: 460px; white-space: normal; color: #b7d7ff; }
+.decode-detail { margin-bottom: 5px; color: #b7d7ff; white-space: normal; }
+.decode-note { color: #999; }
+@media (max-width: 900px) {
+  .grid, .network-grid { grid-template-columns: 1fr; }
+  #wifi-status, #upload-status { grid-column: span 1; }
+}
+/* 信号定位：噪音位灰掉，候选位（静止稳定、触发后才变）高亮绿。 */
+.bit.noise { opacity: 0.18; }
+.bit.cand { background: #16a34a; color: #fff; box-shadow: 0 0 0 2px #22c55e; }
+.byte.cand { box-shadow: 0 0 0 2px #22c55e; }
+.cand-bit-list { color: #22c55e; margin-left: 4px; font-size: 11px; }
+tr.new-id .id-text { color: #22c55e; font-weight: bold; }
+button.active { border-color: #22c55e; color: #22c55e; }
+/* 设备日志面板：等宽、深底、可滚动，自动贴底显示最新诊断。 */
+.log-view { margin: 8px; padding: 8px; max-height: 220px; overflow-y: auto; background: #0b0b0b; border: 1px solid #333; color: #9fce9f; font-size: 12px; white-space: pre-wrap; word-break: break-all; }

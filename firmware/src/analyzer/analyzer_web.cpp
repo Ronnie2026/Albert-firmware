@@ -1,0 +1,722 @@
+#include "analyzer/analyzer_web.h"
+#include "analyzer/analyzer_control.h"
+#include "analyzer/analyzer_wifi.h"
+#include "analyzer/analyzer_upload_config.h"
+#include "analyzer/ws_protocol.h"
+#include "can_batch_uploader.h"
+#include "can_helpers.h"
+
+#include <Arduino.h>
+#include <ArduinoJson.h>
+#include <ESPAsyncWebServer.h>
+#include <LittleFS.h>
+#include <WiFi.h>
+#include <cstring>
+#include <esp_sleep.h>
+#include <esp_timer.h>
+#include <freertos/FreeRTOS.h>
+#include <freertos/semphr.h>
+#include <cstdarg>
+
+// ============================================================================
+// 最小 Web/WS 层：
+// - HTTP：静态文件、WiFi 配置、设备重启/深睡、通道在线状态；
+// - WS：只向浏览器推送帧增量和总线统计，不接收任何控制命令。
+// 本文件运行在 Arduino 主循环任务中；高优先级 rx_task 负责采集并写 FrameQueue。
+// AsyncWebServer 的回调可能来自网络任务，因此 WiFi/电源动作只入 pending 状态，
+// 真正执行放到 analyzerWebLoop()，避免在回调里做重启/深睡等不可重入动作。
+// ============================================================================
+
+namespace
+{
+AsyncWebServer server(80);
+AsyncWebSocket ws("/ws");
+
+// 这些对象由 can_analyzer.cpp 创建并通过 analyzerWebSetContext() 注入；Web 层不拥有其生命周期。
+FrameQueue *g_queue = nullptr;
+IdTable *g_table = nullptr;
+BusStatsTracker *g_stats = nullptr;
+CanBatchUploader *g_uploader = nullptr;
+
+// ---- 设备日志环形缓冲：把诊断/串口消息透传到网页(/api/log) ----
+// 设备在车上接 CAN 时通常无法同时连 USB 读串口，故把日志存这里供浏览器查看。
+// 写者=loop/setup(loopTask)，读者=/api/log 回调(AsyncTCP 任务)，用 mutex 保护——
+// 注意是 mutex 而非 portMUX，故可在持锁时安全构建 String。
+constexpr size_t kLogLines = 60;
+constexpr size_t kLogLineLen = 160;  // 容纳含中文(UTF-8)的较长诊断行，避免截断成半个字符
+char g_logLines[kLogLines][kLogLineLen];
+size_t g_logHead = 0;   // 下一个写入槽
+size_t g_logCount = 0;
+SemaphoreHandle_t g_logMutex = nullptr;
+
+// 按时间顺序把环形缓冲拼成多行文本(每行末补 '\n')。
+void webLogText(String &out)
+{
+    out = "";
+    out.reserve(kLogLines * (kLogLineLen + 1));
+    if (!g_logMutex || xSemaphoreTake(g_logMutex, pdMS_TO_TICKS(20)) != pdTRUE)
+        return;
+    size_t idx = (g_logHead + kLogLines - g_logCount) % kLogLines;
+    for (size_t i = 0; i < g_logCount; ++i)
+    {
+        out += g_logLines[idx];
+        out += '\n';
+        idx = (idx + 1) % kLogLines;
+    }
+    xSemaphoreGive(g_logMutex);
+}
+
+// 每个 (channel,id) 对应一个 dirty bit。消费侧更新 IdTable 后置位，pushDelta() 发送后清位。
+constexpr uint32_t kDirtyKeys = static_cast<uint32_t>(kChannelCount) * kStdIdCount;
+uint8_t g_dirty[kDirtyKeys / 8] = {};
+
+// 1400 字节以内可避开常见 MTU 分片；单包最多 255 条记录（协议 count 为 uint8_t）。
+constexpr size_t kPushBufBytes = 1400;
+constexpr size_t kMaxWsBatchRecords = 255;
+constexpr size_t wsBatchCapacity(size_t byteCapacity)
+{
+    return byteCapacity < kMaxWsBatchRecords ? byteCapacity : kMaxWsBatchRecords;
+}
+constexpr size_t kFrameDeltaBatchCapacity = wsBatchCapacity((kPushBufBytes - 2) / sizeof(WsFrameRecord));
+static_assert(kFrameDeltaBatchCapacity >= 1, "frame delta batch capacity must be non-zero");
+uint32_t g_lastPushMs = 0;
+uint32_t g_lastStatsMs = 0;
+// 约 15Hz 刷新实时表，既足够顺滑，又避免浏览器 DOM 过载；统计每秒刷新一次。
+constexpr uint32_t kPushIntervalMs = 66;
+constexpr uint32_t kStatsIntervalMs = 1000;
+// 单轮 pushDelta 最多发送的 WS 帧数。即便大量 ID 同时 dirty（如首个客户端刚连上，
+// 此前积累的 dirty 位会一次性全部待发），也不会一口气塞爆 AsyncWebSocket 的发送队列
+// （ESP32Async 默认 WS_MAX_QUEUED_MESSAGES=32）；超出的 dirty 位保留，下一轮继续发。
+constexpr size_t kMaxFlushesPerPush = 6;
+constexpr uint32_t kMaxDirtyScanPerPush = 1024;
+constexpr uint16_t kMaxDrainFramesPerLoop = 128;
+constexpr uint32_t kMaxDrainUsPerLoop = 2000;
+uint32_t g_dirtyScanCursor = 0;
+uint32_t g_wsBackpressureSkips = 0;
+uint32_t g_wsFlushes = 0;
+uint32_t g_webDrainBudgetHits = 0;
+uint32_t g_webLoopMaxUs = 0;
+
+// WiFi POST 只接收 ssid/pass，256 字节足够；超限直接 400，防止 Async 回调里堆分配。
+constexpr size_t kMaxWifiJsonBytes = 256;
+constexpr size_t kMaxUploadJsonBytes = 320;
+constexpr uint32_t kPowerActionDelayMs = 200;
+constexpr uint32_t kShutdownSleepDelayMs = 100;
+char g_wifiBody[kMaxWifiJsonBytes + 1] = {};
+portMUX_TYPE g_wifiMux = portMUX_INITIALIZER_UNLOCKED;
+portMUX_TYPE g_powerMux = portMUX_INITIALIZER_UNLOCKED;
+AnalyzerWifiCredentials g_pendingWifi;
+volatile bool g_pendingWifiValid = false;
+portMUX_TYPE g_uploadMux = portMUX_INITIALIZER_UNLOCKED;
+enum class PendingUploadAction : uint8_t { None, Save, Start, Stop };
+AnalyzerUploadConfig g_pendingUpload;
+volatile PendingUploadAction g_pendingUploadAction = PendingUploadAction::None;
+bool g_uploadApplyFailed = false;
+char g_uploadApplyError[48] = {};
+
+// 电源动作分两阶段延迟执行：HTTP 回调只设置状态，主循环到点后执行。
+// ShutdownPrepare 先关闭 TX，再延迟进入深睡，让 JSON 响应有机会发回浏览器。
+enum class PendingPowerAction : uint8_t
+{
+    None,
+    Restart,
+    ShutdownPrepare,
+    ShutdownSleep
+};
+
+volatile PendingPowerAction g_pendingPowerAction = PendingPowerAction::None;
+volatile uint32_t g_pendingPowerExecuteAfterMs = 0;
+
+// 设备网络状态 JSON。字段名与 data/analyzer/app.js 保持一一对应。
+String wifiStatusJson()
+{
+    const AnalyzerWifiStatus st = analyzerWifiStatus();
+    JsonDocument doc;
+    doc["ok"] = true;
+    doc["mode"] = st.sta ? "sta" : (st.ap ? "ap" : "off");
+    doc["ip"] = st.ip;
+    doc["ssid"] = st.ssid;
+    doc["pass"] = st.pass;
+    String out;
+    serializeJson(doc, out);
+    return out;
+}
+
+String uploadStatusJson()
+{
+    const CanUploadStatusSnapshot st = g_uploader ? g_uploader->snapshot() : CanUploadStatusSnapshot{};
+    JsonDocument doc;
+    doc["ok"] = g_uploader != nullptr && g_uploader->taskReady();
+    JsonObject config = doc["config"].to<JsonObject>();
+    config["filter"] = analyzerUploadModeName(st.mode);
+    config["buses"] = analyzerUploadBusesName(st.busMask);
+    config["url"] = st.url;
+    config["transport"] = "bin-v1";
+    JsonObject session = doc["session"].to<JsonObject>();
+    session["state"] = st.sessionState == CanUploadSessionState::Active ? "active" :
+                       st.sessionState == CanUploadSessionState::Stopping ? "stopping" : "inactive";
+    session["active"] = st.sessionState != CanUploadSessionState::Inactive;
+    session["session_seq"] = st.sessionSeq;
+    JsonObject apply = doc["apply"].to<JsonObject>();
+    apply["pending"] = g_pendingUploadAction != PendingUploadAction::None;
+    apply["failed"] = g_uploadApplyFailed;
+    apply["last_error"] = g_uploadApplyError;
+    JsonObject runtime = doc["runtime"].to<JsonObject>();
+    runtime["wifi_ready"] = WiFi.status() == WL_CONNECTED;
+    runtime["in_flight"] = st.uploadInProgress;
+    runtime["pending_frames"] = st.pending;
+    runtime["batch_seq"] = st.batchSeq;
+    runtime["sent_batches"] = st.sentBatches;
+    runtime["failed_batches"] = st.failedBatches;
+    runtime["upload_dropped_frames"] = st.uploadDropped;
+    runtime["config_discarded_frames"] = st.configDiscarded;
+    runtime["filtered_frames"] = st.filteredFrames;
+    runtime["bus_filtered_frames"] = st.busFilteredFrames;
+    runtime["stop_discarded_frames"] = st.stopDiscardedFrames;
+    runtime["last_http"] = st.lastHttpCode;
+    runtime["pending_high_water"] = st.pendingHighWater;
+    runtime["overload_events"] = st.overloadEvents;
+    runtime["admission_paused"] = st.admissionPaused;
+    runtime["queue_depth"] = g_queue ? g_queue->size() : 0;
+    runtime["queue_high_water"] = g_queue ? g_queue->highWater() : 0;
+    runtime["web_drain_budget_hits"] = g_webDrainBudgetHits;
+    runtime["web_loop_max_us"] = g_webLoopMaxUs;
+    runtime["ws_backpressure_skips"] = g_wsBackpressureSkips;
+    String out;
+    serializeJson(doc, out);
+    return out;
+}
+
+// Async HTTP 回调里只保存待切换的 WiFi 凭据；实际保存/重连在主循环执行。
+void enqueuePendingWifi(const AnalyzerWifiCredentials &credentials)
+{
+    portENTER_CRITICAL(&g_wifiMux);
+    g_pendingWifi = credentials;
+    g_pendingWifiValid = true;
+    portEXIT_CRITICAL(&g_wifiMux);
+}
+
+bool takePendingWifi(AnalyzerWifiCredentials &credentials)
+{
+    bool found = false;
+    portENTER_CRITICAL(&g_wifiMux);
+    if (g_pendingWifiValid)
+    {
+        credentials = g_pendingWifi;
+        g_pendingWifiValid = false;
+        found = true;
+    }
+    portEXIT_CRITICAL(&g_wifiMux);
+    return found;
+}
+
+// 电源动作的共享状态由 HTTP 回调写、主循环读，必须用临界区保护。
+void enqueuePendingPowerAction(PendingPowerAction action, uint32_t executeAfterMs)
+{
+    portENTER_CRITICAL(&g_powerMux);
+    g_pendingPowerAction = action;
+    g_pendingPowerExecuteAfterMs = executeAfterMs;
+    portEXIT_CRITICAL(&g_powerMux);
+}
+
+PendingPowerAction peekPendingPowerAction(uint32_t &executeAfterMs)
+{
+    portENTER_CRITICAL(&g_powerMux);
+    const PendingPowerAction action = g_pendingPowerAction;
+    executeAfterMs = g_pendingPowerExecuteAfterMs;
+    portEXIT_CRITICAL(&g_powerMux);
+    return action;
+}
+
+void clearPendingPowerAction(PendingPowerAction action)
+{
+    portENTER_CRITICAL(&g_powerMux);
+    if (g_pendingPowerAction == action)
+    {
+        g_pendingPowerAction = PendingPowerAction::None;
+        g_pendingPowerExecuteAfterMs = 0;
+    }
+    portEXIT_CRITICAL(&g_powerMux);
+}
+
+void processPendingWifi()
+{
+    AnalyzerWifiCredentials credentials;
+    if (takePendingWifi(credentials))
+        analyzerWifiSaveAndConnect(credentials.ssid, credentials.pass);
+}
+
+bool enqueuePendingUpload(PendingUploadAction action, const AnalyzerUploadConfig *config = nullptr)
+{
+    bool accepted = false;
+    portENTER_CRITICAL(&g_uploadMux);
+    if (g_pendingUploadAction == PendingUploadAction::None)
+    {
+        if (config) g_pendingUpload = *config;
+        g_pendingUploadAction = action;
+        accepted = true;
+    }
+    portEXIT_CRITICAL(&g_uploadMux);
+    return accepted;
+}
+
+PendingUploadAction takePendingUpload(AnalyzerUploadConfig &config)
+{
+    portENTER_CRITICAL(&g_uploadMux);
+    const PendingUploadAction action = g_pendingUploadAction;
+    if (action == PendingUploadAction::Save) config = g_pendingUpload;
+    g_pendingUploadAction = PendingUploadAction::None;
+    portEXIT_CRITICAL(&g_uploadMux);
+    return action;
+}
+
+void processPendingUpload()
+{
+    AnalyzerUploadConfig config;
+    const PendingUploadAction action = takePendingUpload(config);
+    if (action == PendingUploadAction::None) return;
+    g_uploadApplyFailed = false;
+    g_uploadApplyError[0] = '\0';
+    if (!g_uploader || !g_uploader->taskReady())
+    {
+        g_uploadApplyFailed = true;
+        strlcpy(g_uploadApplyError, "uploader_unavailable", sizeof(g_uploadApplyError));
+        return;
+    }
+    if (action == PendingUploadAction::Start)
+    {
+        memset(g_dirty, 0, sizeof(g_dirty));
+        if (!g_uploader->startSession())
+        {
+            g_uploadApplyFailed = true;
+            strlcpy(g_uploadApplyError, "session_stopping", sizeof(g_uploadApplyError));
+        }
+        return;
+    }
+    if (action == PendingUploadAction::Stop)
+    {
+        g_uploader->stopSession();
+        return;
+    }
+    if (!analyzerUploadSave(config) ||
+        !g_uploader->configure(config.mode, config.url, 1000,
+                               CanUploadTransport::BinaryV1, config.busMask))
+    {
+        g_uploadApplyFailed = true;
+        strlcpy(g_uploadApplyError, "config_apply_failed", sizeof(g_uploadApplyError));
+    }
+}
+
+// 主循环中的电源状态机。所有真正会断网/重启/深睡的操作都集中在这里执行。
+void processPendingPowerAction()
+{
+    uint32_t executeAfterMs = 0;
+    const PendingPowerAction action = peekPendingPowerAction(executeAfterMs);
+    if (action == PendingPowerAction::None || static_cast<int32_t>(millis() - executeAfterMs) < 0)
+        return;
+
+    switch (action)
+    {
+    case PendingPowerAction::Restart:
+        clearPendingPowerAction(action);
+        ESP.restart();
+        break;
+    case PendingPowerAction::ShutdownPrepare:
+        setCanTxEnabled(false);  // 深睡前再次确保全局 TX 关闭，保持只监听设备的安全边界。
+        enqueuePendingPowerAction(PendingPowerAction::ShutdownSleep, millis() + kShutdownSleepDelayMs);
+        break;
+    case PendingPowerAction::ShutdownSleep:
+        clearPendingPowerAction(action);
+        WiFi.disconnect(true);
+        WiFi.mode(WIFI_OFF);
+        esp_deep_sleep_start();
+        break;
+    case PendingPowerAction::None:
+        break;
+    }
+}
+
+// 标记某个 ID 需要推送。dirty 位只在消费侧使用，不需要跨任务同步。
+void markDirty(uint8_t channel, uint32_t id)
+{
+    const uint32_t key = static_cast<uint32_t>(channel) * kStdIdCount + id;
+    if (key < kDirtyKeys)
+        g_dirty[key >> 3] |= static_cast<uint8_t>(1u << (key & 7));
+}
+
+// 把 rx_task 入队的原始帧全部消费到 IdTable/BusStats。
+// 这是 FrameQueue 的唯一消费者；队列被 drain 后，dirty bit 记录哪些行需要推给浏览器。
+void drainQueueIntoTable()
+{
+    if (!g_queue)
+        return;
+
+    CapturedFrame cap;
+    uint16_t processed = 0;
+    const uint64_t startedUs = static_cast<uint64_t>(esp_timer_get_time());
+    while (processed < kMaxDrainFramesPerLoop &&
+           static_cast<uint64_t>(esp_timer_get_time()) - startedUs < kMaxDrainUsPerLoop &&
+           g_queue->pop(cap))
+    {
+        ++processed;
+        if (cap.id >= kStdIdCount || cap.channel >= kChannelCount)
+            continue;
+        if (g_uploader)
+        {
+            const CanBusId bus = cap.channel == 0 ? CanBusId::A : CanBusId::B;
+            g_uploader->noteCaptured(bus, static_cast<uint32_t>(cap.ts_us / 1000),
+                                     cap.id, cap.dlc, cap.data);
+        }
+        if (g_stats)
+            g_stats->noteRx(cap);
+        if (g_table)
+        {
+            g_table->update(cap);
+            if (!g_uploader || !g_uploader->sessionActive())
+                markDirty(cap.channel, cap.id);
+        }
+    }
+    if (g_queue->size() > 0 && (processed >= kMaxDrainFramesPerLoop ||
+        static_cast<uint64_t>(esp_timer_get_time()) - startedUs >= kMaxDrainUsPerLoop))
+        ++g_webDrainBudgetHits;
+}
+
+// 把内部 IdRecord 转成紧凑的 WS 二进制记录。
+// 内部以微秒保存时间，线上协议用毫秒/16-bit 表示，超出范围时饱和到 65535。
+WsFrameRecord toWire(uint8_t channel, uint32_t id, const IdRecord &record, uint64_t nowUs)
+{
+    WsFrameRecord wire = {};
+    wire.channel = channel;
+    wire.id = static_cast<uint16_t>(id);
+    wire.dlc = record.dlc;
+    for (uint8_t i = 0; i < 8; ++i)
+        wire.data[i] = record.data[i];
+    wire.last_rx_ms = static_cast<uint32_t>(record.last_rx_ts / 1000);
+    for (uint8_t i = 0; i < 8; ++i)
+    {
+        const uint64_t ageUs = nowUs > record.byte_change_ts[i] ? nowUs - record.byte_change_ts[i] : 0;
+        const uint64_t ageMs = ageUs / 1000;
+        wire.byte_age_ms[i] = ageMs > 65535 ? 65535 : static_cast<uint16_t>(ageMs);
+    }
+    wire.rx_count = record.rx_count;
+    wire.last_delta_ms = record.last_delta_us > 65535000 ? 65535 : static_cast<uint16_t>(record.last_delta_us / 1000);
+    wire.period_ms = record.period_est_us > 65535000 ? 65535 : static_cast<uint16_t>(record.period_est_us / 1000);
+    wire.jitter_ms = record.jitter_us > 65535000 ? 65535 : static_cast<uint16_t>(record.jitter_us / 1000);
+    wire.change_score = record.change_score;
+    wire.flags = record.flags;
+    return wire;
+}
+
+// 扫描 dirty 位并批量推送帧增量。
+// 只推有变化/新到达的 ID，浏览器端按 ID 覆盖更新，避免每次发送完整 4096 行表。
+void pushDelta()
+{
+    if (!g_table || ws.count() == 0 || (g_uploader && g_uploader->sessionActive()))
+        return;
+    // 背压保护：任一客户端的发送队列已满时整轮跳过，且不触碰 dirty 位。
+    // delta 是"最新值覆盖"语义，丢掉中间一轮无害；dirty 位保留到客户端追上后再发，
+    // 避免在拥塞客户端上无限堆积 WS 消息、耗尽堆内存。
+    if (!ws.availableForWriteAll())
+    {
+        ++g_wsBackpressureSkips;
+        return;
+    }
+
+    static uint8_t buf[kPushBufBytes];
+    static WsFrameRecord batch[kFrameDeltaBatchCapacity];
+    static uint32_t batchKeys[kFrameDeltaBatchCapacity];
+    size_t batchN = 0;
+    size_t flushes = 0;
+    uint32_t scanned = 0;
+    const uint64_t nowUs = static_cast<uint64_t>(esp_timer_get_time());
+
+    auto flush = [&]() -> bool {
+        if (batchN == 0)
+            return true;
+        if (!ws.availableForWriteAll())
+        {
+            ++g_wsBackpressureSkips;
+            return false;
+        }
+        const size_t n = wsBuildFrameDelta(buf, sizeof(buf), batch, static_cast<uint8_t>(batchN));
+        if (n == 0)
+            return false;
+        ws.binaryAll(buf, n);
+        for (size_t i = 0; i < batchN; ++i)
+        {
+            const uint32_t key = batchKeys[i];
+            g_dirty[key >> 3] &= static_cast<uint8_t>(~(1u << (key & 7)));
+        }
+        ++flushes;
+        ++g_wsFlushes;
+        batchN = 0;
+        return true;
+    };
+
+    while (scanned < kMaxDirtyScanPerPush && flushes < kMaxFlushesPerPush)
+    {
+        const uint32_t key = g_dirtyScanCursor;
+        g_dirtyScanCursor = (g_dirtyScanCursor + 1) % kDirtyKeys;
+        ++scanned;
+        if ((g_dirty[key >> 3] & (1u << (key & 7))) == 0)
+            continue;
+
+        const uint8_t channel = static_cast<uint8_t>(key / kStdIdCount);
+        const uint32_t id = key % kStdIdCount;
+        batchKeys[batchN] = key;
+        batch[batchN++] = toWire(channel, id, g_table->record(channel, id), nowUs);
+        if (batchN >= kFrameDeltaBatchCapacity && !flush())
+            return;
+    }
+    (void)flush();
+}
+
+// 每秒推送一次总线统计。rx_err_a/b 现承载驱动层的硬件级丢帧（CAN_A 溢出事件、CAN_B rx_missed），
+// 让前端能看见 FrameQueue 之外、被芯片/驱动队列丢掉的帧；bus_off 仍保留为 0。
+void pushBusStats()
+{
+    if (!g_stats || ws.count() == 0 || !ws.availableForWriteAll())
+        return;
+
+    const BusStatsSnapshot snapshot = g_stats->snapshot();
+    WsBusStats stats = {};
+    stats.fps_a = snapshot.fps[0];
+    stats.fps_b = snapshot.fps[1];
+    stats.load_a_x10 = snapshot.load_x10[0];
+    stats.load_b_x10 = snapshot.load_x10[1];
+    stats.rx_err_a = snapshot.hw_drops[0];
+    stats.rx_err_b = snapshot.hw_drops[1];
+    stats.dropped = snapshot.dropped;
+
+    uint8_t buf[1 + sizeof(WsBusStats)];
+    const size_t n = wsBuildBusStats(buf, sizeof(buf), stats);
+    if (n > 0)
+        ws.binaryAll(buf, n);
+}
+}  // namespace
+
+// 初始化日志缓冲的互斥量；应在产生任何日志前(setup 早期)调用一次。
+void analyzerWebLogInit()
+{
+    if (!g_logMutex)
+        g_logMutex = xSemaphoreCreateMutex();
+}
+
+// 格式化一行日志：tee 到 Serial(USB 在场时仍可看)，并存入环形缓冲供网页 /api/log 读取。
+void analyzerWebLogPrintf(const char *fmt, ...)
+{
+    char line[kLogLineLen];
+    va_list ap;
+    va_start(ap, fmt);
+    vsnprintf(line, sizeof(line), fmt, ap);
+    va_end(ap);
+
+    // 去掉尾部换行：存储统一为"一行一条"，输出时再补 '\n'。
+    size_t n = strlen(line);
+    while (n > 0 && (line[n - 1] == '\n' || line[n - 1] == '\r'))
+        line[--n] = '\0';
+
+    Serial.println(line);
+
+    if (!g_logMutex || xSemaphoreTake(g_logMutex, pdMS_TO_TICKS(20)) != pdTRUE)
+        return;
+    strlcpy(g_logLines[g_logHead], line, kLogLineLen);
+    g_logHead = (g_logHead + 1) % kLogLines;
+    if (g_logCount < kLogLines)
+        ++g_logCount;
+    xSemaphoreGive(g_logMutex);
+}
+
+// 注入由组装点创建的核心对象；Web 层仅保存裸指针，不负责释放。
+void analyzerWebSetContext(FrameQueue *queue, IdTable *table, BusStatsTracker *stats,
+                           CanBatchUploader *uploader)
+{
+    g_queue = queue;
+    g_table = table;
+    g_stats = stats;
+    g_uploader = uploader;
+}
+
+// 注册所有 HTTP/WS 路由。当前没有任何入站 WS 命令，WebSocket 只做服务器推送。
+void analyzerWebBegin()
+{
+#if !ANALYZER_HTTP_ONLY
+    server.addHandler(&ws);
+#endif
+
+    // 轻量状态端点：前端仅用它显示 CAN_A/CAN_B 是否初始化成功。
+    server.on("/api/status", HTTP_GET, [](AsyncWebServerRequest *request) {
+        String out = "{";
+        out += "\"can_a_online\":" + String(isAnalyzerChannelOnline(0) ? "true" : "false");
+        out += ",\"can_b_online\":" + String(isAnalyzerChannelOnline(1) ? "true" : "false");
+        out += "}";
+        request->send(200, "application/json", out);
+    });
+
+        // 设备日志透传：纯文本，前端定时拉取后显示在"设备日志"面板。
+    server.on("/api/log", HTTP_GET, [](AsyncWebServerRequest *request) {
+        String out;
+        webLogText(out);
+        request->send(200, "text/plain; charset=utf-8", out);
+    });
+
+
+    server.on("/api/wifi", HTTP_GET, [](AsyncWebServerRequest *request) {
+        request->send(200, "application/json", wifiStatusJson());
+    });
+
+    server.on("/api/upload", HTTP_GET, [](AsyncWebServerRequest *request) {
+        request->send(200, "application/json", uploadStatusJson());
+    });
+
+    server.on("/api/upload", HTTP_POST,
+              [](AsyncWebServerRequest *) {},
+              nullptr,
+              [](AsyncWebServerRequest *request, uint8_t *data, size_t len, size_t index, size_t total) {
+                  if (!analyzerWebBodyChunkIsValid(index, len, total, kMaxUploadJsonBytes))
+                  {
+                      request->send(400, "application/json", "{\"ok\":false,\"error\":\"body_too_large\"}");
+                      return;
+                  }
+                  if (g_pendingUploadAction != PendingUploadAction::None || (g_uploader && g_uploader->sessionActive()))
+                  {
+                      request->send(409, "application/json", "{\"ok\":false,\"error\":\"pending_busy\"}");
+                      return;
+                  }
+                  if (index == 0)
+                  {
+                      char *body = static_cast<char *>(malloc(total + 1));
+                      if (!body)
+                      {
+                          request->send(500, "application/json", "{\"ok\":false,\"error\":\"no_memory\"}");
+                          return;
+                      }
+                      body[total] = '\0';
+                      request->_tempObject = body;
+                  }
+                  char *body = static_cast<char *>(request->_tempObject);
+                  if (!body)
+                      return;
+                  if (len > 0)
+                      memcpy(body + index, data, len);
+                  if (!analyzerWebBodyChunkCompletes(index, len, total))
+                      return;
+
+                  JsonDocument doc;
+                  const DeserializationError error = deserializeJson(doc, body, total);
+                  free(body);
+                  request->_tempObject = nullptr;
+                  if (error)
+                  {
+                      request->send(400, "application/json", "{\"ok\":false,\"error\":\"invalid_json\"}");
+                      return;
+                  }
+                  AnalyzerUploadConfig config;
+                  if (!analyzerUploadSanitizeConfig(doc["filter"] | "", doc["buses"] | "", doc["url"] | "", config))
+                  {
+                      request->send(400, "application/json", "{\"ok\":false,\"error\":\"invalid_config\"}");
+                      return;
+                  }
+                  if (!enqueuePendingUpload(PendingUploadAction::Save, &config))
+                  {
+                      request->send(409, "application/json", "{\"ok\":false,\"error\":\"pending_busy\"}");
+                      return;
+                  }
+                  request->send(200, "application/json", "{\"ok\":true,\"pending\":true}");
+              });
+
+    server.on("/api/upload/start", HTTP_POST, [](AsyncWebServerRequest *request) {
+        if (!enqueuePendingUpload(PendingUploadAction::Start))
+            request->send(409, "application/json", "{\"ok\":false,\"error\":\"pending_busy\"}");
+        else
+            request->send(200, "application/json", "{\"ok\":true,\"pending\":true}");
+    });
+    server.on("/api/upload/stop", HTTP_POST, [](AsyncWebServerRequest *request) {
+        if (!enqueuePendingUpload(PendingUploadAction::Stop))
+            request->send(409, "application/json", "{\"ok\":false,\"error\":\"pending_busy\"}");
+        else
+            request->send(200, "application/json", "{\"ok\":true,\"pending\":true}");
+    });
+
+    // AsyncWebServer 以分片方式交付 POST body；这里手动聚合到固定缓冲，避免动态分配。
+    server.on("/api/wifi", HTTP_POST,
+              [](AsyncWebServerRequest *) {},
+              nullptr,
+              [](AsyncWebServerRequest *request, uint8_t *data, size_t len, size_t index, size_t total) {
+                  if (!analyzerWebBodyChunkIsValid(index, len, total, kMaxWifiJsonBytes))
+                  {
+                      request->send(400, "application/json", "{\"ok\":false}");
+                      return;
+                  }
+                  if (index == 0)
+                      memset(g_wifiBody, 0, sizeof(g_wifiBody));
+                  if (len > 0)
+                      memcpy(g_wifiBody + index, data, len);
+                  if (!analyzerWebBodyChunkCompletes(index, len, total))
+                      return;
+                  g_wifiBody[total] = '\0';
+
+                  JsonDocument doc;
+                  if (deserializeJson(doc, g_wifiBody, total))
+                  {
+                      request->send(400, "application/json", "{\"ok\":false}");
+                      return;
+                  }
+                  AnalyzerWifiCredentials credentials;
+                  if (!analyzerWifiSanitizeCredentials(doc["ssid"] | "", doc["pass"] | "", credentials))
+                  {
+                      request->send(400, "application/json", "{\"ok\":false}");
+                      return;
+                  }
+                  enqueuePendingWifi(credentials);
+                  // 返回 pending：真正的保存/重连在主循环执行，响应先完成，避免连接切换打断 HTTP。
+                  request->send(200, "application/json", "{\"ok\":true,\"pending\":true}");
+              });
+
+    server.on("/api/restart", HTTP_POST, [](AsyncWebServerRequest *request) {
+        enqueuePendingPowerAction(PendingPowerAction::Restart, millis() + kPowerActionDelayMs);
+        request->send(200, "application/json", "{\"ok\":true,\"pending\":true}");
+    });
+
+    server.on("/api/shutdown", HTTP_POST, [](AsyncWebServerRequest *request) {
+        enqueuePendingPowerAction(PendingPowerAction::ShutdownPrepare, millis() + kPowerActionDelayMs);
+        request->send(200, "application/json", "{\"ok\":true,\"pending\":true}");
+    });
+
+    server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
+    server.begin();
+}
+
+// Arduino 主循环每轮调用。顺序很重要：先 drain 队列再推送，这样浏览器看到的是最新状态。
+void analyzerWebLoop()
+{
+    const uint64_t loopStartedUs = static_cast<uint64_t>(esp_timer_get_time());
+    drainQueueIntoTable();
+    processPendingUpload();
+    if (g_uploader)
+        g_uploader->loop();
+    processPendingWifi();
+    processPendingPowerAction();
+    const uint32_t now = millis();
+    ws.cleanupClients();
+
+    if (g_stats)
+        g_stats->update(now, g_queue ? g_queue->dropped() : 0);
+
+#if !ANALYZER_HTTP_ONLY
+    if (now - g_lastPushMs >= kPushIntervalMs)
+    {
+        g_lastPushMs = now;
+        pushDelta();
+    }
+
+    if (now - g_lastStatsMs >= kStatsIntervalMs)
+    {
+        g_lastStatsMs = now;
+        pushBusStats();
+    }
+#endif
+    const uint32_t elapsedUs = static_cast<uint32_t>(static_cast<uint64_t>(esp_timer_get_time()) - loopStartedUs);
+    if (elapsedUs > g_webLoopMaxUs)
+        g_webLoopMaxUs = elapsedUs;
+}

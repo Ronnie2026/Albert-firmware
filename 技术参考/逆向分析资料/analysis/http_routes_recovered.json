@@ -1,0 +1,872 @@
+[
+  {
+    "registration_order_offset": 3175,
+    "path": "/",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4808b134",
+    "handler_file": "functions/4808b134_recovered_http_get_root_4808b134.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 4243,
+    "path": "/management/status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480b2722",
+    "handler_file": "functions/480b2722_recovered_http_get_management_status_480b2722.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 5387,
+    "path": "/auth/login",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4808a8c2",
+    "handler_file": "functions/4808a8c2_recovered_http_post_auth_login_4808a8c2.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 6578,
+    "path": "/auth/logout",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4808adc8",
+    "handler_file": "functions/4808adc8_recovered_http_post_auth_logout_4808adc8.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 7831,
+    "path": "/auth/status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480677f4",
+    "handler_file": "functions/480677f4_recovered_http_get_auth_status_480677f4.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 8908,
+    "path": "/generate_204",
+    "method_code": 255,
+    "method": "ANY",
+    "handler_address": "0x48067692",
+    "handler_file": "functions/48067692_recovered_http_any_generate_204_48067692.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 9387,
+    "path": "/gen_204",
+    "method_code": 255,
+    "method": "ANY",
+    "handler_address": "0x48067692",
+    "handler_file": "functions/48067692_recovered_http_any_generate_204_48067692.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 9485,
+    "path": "/hotspot-detect.html",
+    "method_code": 255,
+    "method": "ANY",
+    "handler_address": "0x48067692",
+    "handler_file": "functions/48067692_recovered_http_any_generate_204_48067692.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 9615,
+    "path": "/health",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480c2bda",
+    "handler_file": "functions/480c2bda_recovered_http_get_health_480c2bda.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 9703,
+    "path": "/web_metrics",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806f630",
+    "handler_file": "functions/4806f630_recovered_http_get_web_metrics_4806f630.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 9801,
+    "path": "/status_fast",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806eb88",
+    "handler_file": "functions/4806eb88_recovered_http_get_status_fast_4806eb88.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 9899,
+    "path": "/torque_nag/status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806e388",
+    "handler_file": "functions/4806e388_recovered_http_get_torque_nag_status_4806e388.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 10029,
+    "path": "/status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480c0178",
+    "handler_file": "functions/480c0178_recovered_http_get_status_480c0178.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 10117,
+    "path": "/runtime_status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806851c",
+    "handler_file": "functions/4806851c_recovered_http_get_runtime_status_4806851c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 10241,
+    "path": "/system_status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4808334c",
+    "handler_file": "functions/4808334c_recovered_http_get_system_status_4808334c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 10346,
+    "path": "/can_diag",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4807fa5c",
+    "handler_file": "functions/4807fa5c_recovered_http_get_can_diag_4807fa5c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 10438,
+    "path": "/can_hot_ids",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480c037a",
+    "handler_file": "functions/480c037a_recovered_http_get_can_hot_ids_480c037a.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 10536,
+    "path": "/coredump/info",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806cbde",
+    "handler_file": "functions/4806cbde_recovered_http_get_coredump_info_4806cbde.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 10641,
+    "path": "/coredump.bin",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806d406",
+    "handler_file": "functions/4806d406_recovered_http_get_coredump_bin_4806d406.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 10741,
+    "path": "/config",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480bd450",
+    "handler_file": "functions/480bd450_recovered_http_get_config_480bd450.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 10829,
+    "path": "/config",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x48101f34",
+    "handler_file": "functions/48101f34_recovered_http_post_config_48101f34.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 10918,
+    "path": "/config/uss_radar",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806afe2",
+    "handler_file": "functions/4806afe2_recovered_http_get_config_uss_radar_4806afe2.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 11046,
+    "path": "/config/uss_radar",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f43a8",
+    "handler_file": "functions/480f43a8_recovered_http_post_config_uss_radar_480f43a8.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 11175,
+    "path": "/ambient_config",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806adda",
+    "handler_file": "functions/4806adda_recovered_http_get_ambient_config_4806adda.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 11299,
+    "path": "/ambient_config",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f584c",
+    "handler_file": "functions/480f584c_recovered_http_post_ambient_config_480f584c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 11424,
+    "path": "/speed_target/config",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480f99bc",
+    "handler_file": "functions/480f99bc_recovered_http_get_speed_target_config_480f99bc.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 11558,
+    "path": "/speed_target/save",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f9322",
+    "handler_file": "functions/480f9322_recovered_http_post_speed_target_save_480f9322.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 11689,
+    "path": "/can_pin_layout",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480681de",
+    "handler_file": "functions/480681de_recovered_http_get_can_pin_layout_480681de.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 11813,
+    "path": "/can_pin_layout",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480ff1e4",
+    "handler_file": "functions/480ff1e4_recovered_http_post_can_pin_layout_480ff1e4.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 11938,
+    "path": "/rear_fog/config",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x48066e12",
+    "handler_file": "functions/48066e12_recovered_http_get_rear_fog_config_48066e12.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 12064,
+    "path": "/rear_fog/config",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f4dda",
+    "handler_file": "functions/480f4dda_recovered_http_post_rear_fog_config_480f4dda.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 12191,
+    "path": "/rear_fog/runtime",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x481015a6",
+    "handler_file": "functions/481015a6_recovered_http_post_rear_fog_runtime_481015a6.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 12320,
+    "path": "/config/ble_obstacle",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f1e34",
+    "handler_file": "functions/480f1e34_recovered_http_post_config_ble_obstacle_480f1e34.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 12455,
+    "path": "/fsd_auto_start/master",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f2fc2",
+    "handler_file": "functions/480f2fc2_recovered_http_post_fsd_auto_start_master_480f2fc2.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 12594,
+    "path": "/save",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f34ec",
+    "handler_file": "functions/480f34ec_recovered_http_post_save_480f34ec.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 12679,
+    "path": "/seat_action",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x48100e14",
+    "handler_file": "functions/48100e14_recovered_http_post_seat_action_48100e14.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 12778,
+    "path": "/driver_profiles",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806d76e",
+    "handler_file": "functions/4806d76e_recovered_http_get_driver_profiles_4806d76e.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 12904,
+    "path": "/driver_profiles",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480fa85c",
+    "handler_file": "functions/480fa85c_recovered_http_post_driver_profiles_480fa85c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 13031,
+    "path": "/fsd_records",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480b4abe",
+    "handler_file": "functions/480b4abe_recovered_http_get_fsd_records_480b4abe.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 13129,
+    "path": "/fsd_records/clock",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806c0d4",
+    "handler_file": "functions/4806c0d4_recovered_http_get_fsd_records_clock_4806c0d4.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 13259,
+    "path": "/fsd_records/clock",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4806ef66",
+    "handler_file": "functions/4806ef66_recovered_http_post_fsd_records_clock_4806ef66.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 13390,
+    "path": "/fsd_records/clear",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480d338a",
+    "handler_file": "functions/480d338a_recovered_http_post_fsd_records_clear_480d338a.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 13521,
+    "path": "/fsd_records/subtotal/reset",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480d2a5e",
+    "handler_file": "functions/480d2a5e_recovered_http_post_fsd_records_subtotal_reset_480d2a5e.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 13670,
+    "path": "/cloud/status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480d0b14",
+    "handler_file": "functions/480d0b14_recovered_http_get_cloud_status_480d0b14.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 13770,
+    "path": "/onboarding/status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4808d6c6",
+    "handler_file": "functions/4808d6c6_recovered_http_get_onboarding_status_4808d6c6.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 13900,
+    "path": "/onboarding/complete",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4808e07e",
+    "handler_file": "functions/4808e07e_recovered_http_post_onboarding_complete_4808e07e.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 14035,
+    "path": "/cloud/agent/config",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4808eb2e",
+    "handler_file": "functions/4808eb2e_recovered_http_get_cloud_agent_config_4808eb2e.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 14167,
+    "path": "/cloud/agent/config",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4808cf44",
+    "handler_file": "functions/4808cf44_recovered_http_post_cloud_agent_config_4808cf44.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 14300,
+    "path": "/cloud/settings/restore",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480b6d24",
+    "handler_file": "functions/480b6d24_recovered_http_post_cloud_settings_restore_480b6d24.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 14441,
+    "path": "/cloud/settings/conflicts",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480b31d8",
+    "handler_file": "functions/480b31d8_recovered_http_get_cloud_settings_conflicts_480b31d8.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 14585,
+    "path": "/cloud/settings/conflict",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480d103e",
+    "handler_file": "functions/480d103e_recovered_http_post_cloud_settings_conflict_480d103e.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 14728,
+    "path": "/cloud/developer",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4808d958",
+    "handler_file": "functions/4808d958_recovered_http_post_cloud_developer_4808d958.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 14855,
+    "path": "/cloud/config",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480b4fa4",
+    "handler_file": "functions/480b4fa4_recovered_http_get_cloud_config_480b4fa4.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 14955,
+    "path": "/cloud/config",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480b3e2c",
+    "handler_file": "functions/480b3e2c_recovered_http_post_cloud_config_480b3e2c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 15056,
+    "path": "/cloud/test",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4811e15c",
+    "handler_file": "functions/4811e15c_recovered_http_post_cloud_test_4811e15c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 15153,
+    "path": "/cloud/enabled",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480b3e6c",
+    "handler_file": "functions/480b3e6c_recovered_http_post_cloud_enabled_480b3e6c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 15275,
+    "path": "/cloud/upload",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4808cf68",
+    "handler_file": "functions/4808cf68_recovered_http_post_cloud_upload_4808cf68.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 15376,
+    "path": "/rec_start",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480fd584",
+    "handler_file": "functions/480fd584_recovered_http_post_rec_start_480fd584.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 15471,
+    "path": "/rec_stop",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480fd45c",
+    "handler_file": "functions/480fd45c_recovered_http_post_rec_stop_480fd45c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 15564,
+    "path": "/rec_clear",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4806e04e",
+    "handler_file": "functions/4806e04e_recovered_http_post_rec_clear_4806e04e.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 15659,
+    "path": "/rec_status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806c4e8",
+    "handler_file": "functions/4806c4e8_recovered_http_get_rec_status_4806c4e8.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 15755,
+    "path": "/rec_download",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806fee2",
+    "handler_file": "functions/4806fee2_recovered_http_get_rec_download_4806fee2.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 15855,
+    "path": "/wifi/status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x48066f4c",
+    "handler_file": "functions/48066f4c_recovered_http_get_wifi_status_48066f4c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 15953,
+    "path": "/wifi/scan",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4806b7e4",
+    "handler_file": "functions/4806b7e4_recovered_http_post_wifi_scan_4806b7e4.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 16048,
+    "path": "/wifi/connect",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f38e4",
+    "handler_file": "functions/480f38e4_recovered_http_post_wifi_connect_480f38e4.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 16149,
+    "path": "/wifi/disconnect",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f2624",
+    "handler_file": "functions/480f2624_recovered_http_post_wifi_disconnect_480f2624.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 16276,
+    "path": "/wifi/forget",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f2918",
+    "handler_file": "functions/480f2918_recovered_http_post_wifi_forget_480f2918.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 16375,
+    "path": "/wifi/ap-config",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f3d2c",
+    "handler_file": "functions/480f3d2c_recovered_http_post_wifi_ap_config_480f3d2c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 16500,
+    "path": "/wifi/ap-auto-off",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480f2c14",
+    "handler_file": "functions/480f2c14_recovered_http_post_wifi_ap_auto_off_480f2c14.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 16629,
+    "path": "/ota/status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806bbf8",
+    "handler_file": "functions/4806bbf8_recovered_http_get_ota_status_4806bbf8.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 16725,
+    "path": "/ota/start",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480ffd82",
+    "handler_file": "functions/480ffd82_recovered_http_post_ota_start_480ffd82.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 16820,
+    "path": "/ota/cancel",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480ff590",
+    "handler_file": "functions/480ff590_recovered_http_post_ota_cancel_480ff590.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 16917,
+    "path": "/ota/upload",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480ff860",
+    "handler_file": "functions/480ff860_recovered_http_post_ota_upload_480ff860.c",
+    "upload_handler": "FUN_ram_48064780",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 17049,
+    "path": "/ota/online/status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480bdfce",
+    "handler_file": "functions/480bdfce_recovered_http_get_ota_online_status_480bdfce.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 17179,
+    "path": "/ota/online/check",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4806b9ae",
+    "handler_file": "functions/4806b9ae_recovered_http_post_ota_online_check_4806b9ae.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 17308,
+    "path": "/ota/online/install",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x4807be92",
+    "handler_file": "functions/4807be92_recovered_http_post_ota_online_install_4807be92.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 17441,
+    "path": "/reboot",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480ffb40",
+    "handler_file": "functions/480ffb40_recovered_http_post_reboot_480ffb40.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 18523,
+    "path": "/api/can-experiment/listen",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480ed598",
+    "handler_file": "functions/480ed598_recovered_http_post_api_can_experiment_listen_480ed598.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 19533,
+    "path": "/api/can-experiment/listen/stop",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480ecf86",
+    "handler_file": "functions/480ecf86_recovered_http_post_api_can_experiment_listen_stop_480ecf86.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 20553,
+    "path": "/api/can-experiment/source/confirm",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480ab7ba",
+    "handler_file": "functions/480ab7ba_recovered_http_post_api_can_experiment_source_confirm_480ab7ba.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 21579,
+    "path": "/api/can-experiment/validate",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480ec3f8",
+    "handler_file": "functions/480ec3f8_recovered_http_post_api_can_experiment_validate_480ec3f8.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 22593,
+    "path": "/api/can-experiment/start",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480eb56e",
+    "handler_file": "functions/480eb56e_recovered_http_post_api_can_experiment_start_480eb56e.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 23601,
+    "path": "/api/can-experiment/stop",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480eab84",
+    "handler_file": "functions/480eab84_recovered_http_post_api_can_experiment_stop_480eab84.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 24607,
+    "path": "/api/can-experiment/status",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x480acf1c",
+    "handler_file": "functions/480acf1c_recovered_http_get_api_can_experiment_status_480acf1c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 25616,
+    "path": "/api/can-experiment/presets",
+    "method_code": 1,
+    "method": "GET",
+    "handler_address": "0x4806da0c",
+    "handler_file": "functions/4806da0c_recovered_http_get_api_can_experiment_presets_4806da0c.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 26627,
+    "path": "/api/can-experiment/presets",
+    "method_code": 3,
+    "method": "POST",
+    "handler_address": "0x480ac732",
+    "handler_file": "functions/480ac732_recovered_http_post_api_can_experiment_presets_480ac732.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  },
+  {
+    "registration_order_offset": 27473,
+    "path": "/api/can-experiment/presets",
+    "method_code": 0,
+    "method": "DELETE",
+    "handler_address": "0x4808a37e",
+    "handler_file": "functions/4808a37e_recovered_http_delete_api_can_experiment_presets_4808a37e.c",
+    "upload_handler": "0",
+    "evidence_function": "0x480868b2"
+  }
+]

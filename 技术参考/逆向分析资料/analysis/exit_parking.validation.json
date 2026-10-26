@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "sha256": {
+    "bootstrap": "11cd02e1d0bcda1cd894a249e963ac54eb67f6cd29ab6d40bcaf85fff8711343",
+    "application": "4948504e382ff56fb3cb05ae53688fb5261b96984e17877c83ed1596b5ffd9fa",
+    "ota": "4948504e382ff56fb3cb05ae53688fb5261b96984e17877c83ed1596b5ffd9fa"
+  },
+  "ota_matches_application": true,
+  "ranges": [
+    {
+      "label": "293 builder gates and output",
+      "start": "0x480c773e",
+      "end": "0x480c7922",
+      "instruction_count": 165
+    },
+    {
+      "label": "stream19 dispatch",
+      "start": "0x480c645a",
+      "end": "0x480c645c",
+      "instruction_count": 2
+    },
+    {
+      "label": "stream19 final validation",
+      "start": "0x480c6698",
+      "end": "0x480c676a",
+      "instruction_count": 69
+    },
+    {
+      "label": "399 invalid source branch",
+      "start": "0x480d8ff8",
+      "end": "0x480d903c",
+      "instruction_count": 22
+    },
+    {
+      "label": "399 invalid branch and edge continuity",
+      "start": "0x480d9348",
+      "end": "0x480d93da",
+      "instruction_count": 42
+    },
+    {
+      "label": "399 checksum branch",
+      "start": "0x480d9530",
+      "end": "0x480d9554",
+      "instruction_count": 12
+    },
+    {
+      "label": "399 state edge",
+      "start": "0x480d98ca",
+      "end": "0x480d98f0",
+      "instruction_count": 12
+    },
+    {
+      "label": "257 standstill observation",
+      "start": "0x480dabe8",
+      "end": "0x480dac80",
+      "instruction_count": 51
+    },
+    {
+      "label": "257 cancel stream19",
+      "start": "0x480da8d4",
+      "end": "0x480da8ea",
+      "instruction_count": 12
+    },
+    {
+      "label": "30A source checksum and fields",
+      "start": "0x480cbc62",
+      "end": "0x480cbca2",
+      "instruction_count": 20
+    },
+    {
+      "label": "30A output and deadline",
+      "start": "0x480cbb6a",
+      "end": "0x480cbbf0",
+      "instruction_count": 51
+    },
+    {
+      "label": "published spoof active gates",
+      "start": "0x4805b53c",
+      "end": "0x4805b5be",
+      "instruction_count": 38
+    },
+    {
+      "label": "published active disabled fallback",
+      "start": "0x4805c1dc",
+      "end": "0x4805c1f6",
+      "instruction_count": 9
+    },
+    {
+      "label": "published active no TX timestamp fallback",
+      "start": "0x4805c296",
+      "end": "0x4805c2a4",
+      "instruction_count": 5
+    },
+    {
+      "label": "published spoof snapshot copy",
+      "start": "0x4805ba7c",
+      "end": "0x4805babc",
+      "instruction_count": 17
+    },
+    {
+      "label": "device base for snapshot update",
+      "start": "0x4810d02e",
+      "end": "0x4810d036",
+      "instruction_count": 3
+    },
+    {
+      "label": "door edge confirmation",
+      "start": "0x4804220c",
+      "end": "0x480422d6",
+      "instruction_count": 60
+    },
+    {
+      "label": "door packed field decode",
+      "start": "0x48042430",
+      "end": "0x4804247a",
+      "instruction_count": 27
+    },
+    {
+      "label": "P launch new399 state6 branch",
+      "start": "0x48106534",
+      "end": "0x48106546",
+      "instruction_count": 7
+    },
+    {
+      "label": "P launch complete counter",
+      "start": "0x481071d8",
+      "end": "0x48107218",
+      "instruction_count": 22
+    },
+    {
+      "label": "enhanced AP field edits",
+      "start": "0x4ff23708",
+      "end": "0x4ff23724",
+      "instruction_count": 9
+    }
+  ],
+  "total_instruction_count": 655,
+  "mapping": "application_offset + segment.image_offset + (VA - segment.address)",
+  "errors": [],
+  "checks_are_static_provenance_only": true,
+  "hardware_tested": false
+}

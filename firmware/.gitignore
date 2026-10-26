@@ -1,0 +1,12 @@
+._*
+.pio/build
+.pio/build_cache
+.pio/build_flags.*
+.pio/libdeps/analyzer/
+.pio/libdeps/native/
+.pio/libdeps/can_gateway/
+*.bin
+*.pyc
+__pycache__/
+.worktrees/
+.claude/worktrees/

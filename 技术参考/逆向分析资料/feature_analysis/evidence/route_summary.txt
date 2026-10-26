@@ -1,0 +1,435 @@
+
+GET / 0x4808b134
+JS: anonymous_L109_33476@109, renderCanDiagnosticCard@776, renderP0Observation@784, fetchStatusJson@966, checkDashboardSession@1473
+C strings: ["Cache-Control", "no-store, no-cache, must-revalidate", "Content-Encoding", "text/html", "no-store"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:48066484, ram:480667a8, ram:4808acac
+
+GET /management/status 0x480b2722
+JS: managementLoadStatus@1649
+C strings: ["Cache-Control", "no-store", "application/json", "management_status_capacity"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:480667a8, ram:4808cb66, ram:480b24ba, ram:4fc00268, ram:4ff206d8, ram:4ff45158
+
+POST /auth/login 0x4808a8c2
+JS: 
+C strings: ["password", "plain", "Cache-Control", "no-store", "P4SID=", "; Max-Age=604800; Path=/; HttpOnly; SameSite=Strict", "Set-Cookie", "Location", "text/plain", "/?error=locked", "/?error=wrong"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802af2c, ram:4802b18e, ram:48065e9c, ram:48066484, ram:48066698, ram:480667a8, ram:4808a6b8, ram:48132f46, ram:4ff206d8, ram:4ff45158
+
+POST /auth/logout 0x4808adc8
+JS: 
+C strings: ["Cache-Control", "no-store", "Set-Cookie", "P4SID=; Max-Age=0; Path=/; HttpOnly; SameSite=Strict", "Location", "text/plain"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:480667a8, ram:4808acac, ram:4ff206d8, ram:4ff45158
+
+GET /auth/status 0x480677f4
+JS: checkDashboardSession@1473
+C strings: ["Cache-Control", "no-store", "{\\\"ok\\\":true}", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:480667a8, ram:4ff206d8, ram:4ff45158
+
+ANY /generate_204 0x48067692
+JS: 
+C strings: ["Location", "http://100.100.1.1/", "text/plain"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:480667a8, ram:4ff206d8, ram:4ff45158
+
+ANY /gen_204 0x48067692
+JS: 
+C strings: ["Location", "http://100.100.1.1/", "text/plain"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:480667a8, ram:4ff206d8, ram:4ff45158
+
+ANY /hotspot-detect.html 0x48067692
+JS: 
+C strings: ["Location", "http://100.100.1.1/", "text/plain"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:480667a8, ram:4ff206d8, ram:4ff45158
+
+GET /health 0x480c2bda
+JS: pollHealth@760
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"health_buffer_unavailable\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"health_body_overflow\\\"}"]
+Direct calls: ram:48065e9c, ram:48066484, ram:48066698, ram:480c0f3c, ram:4ff206d8, ram:4ff45158
+
+GET /web_metrics 0x4806f630
+JS: captureWebTransportEvidence@823
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"web_metrics_buffer_unavailable\\\"}", "schemaVersion", "capturedAtMs", "historyCapacity", "historySize", "lastSequence", "webLastHandleUs", "webMaxHandleUs", "freeHeap", "externalWifiEnabled", "false", "true", "externalWifiConnected", "apRunning", "wifiRssi", "records", "sequence", "startedAtMs", "system_status", "status", "runtime_status", "status_fast", "can_diag", "can_hot_ids", "unknown", "endpoint", "full_body", "standard", "writer", "statusCode", "buildUs", "sendUs", "totalUs", "bodyBytes", "bytesWritten", "writeCalls", "zeroWriteCalls", "partialWriteCalls", "writeObserved", "complete", "timedOut", "disconnected", "Cache-Control", "no-store"]
+Direct calls: ram:480069b2, ram:48006bca, ram:48025ba6, ram:480295a2, ram:4802a59e, ram:4802a79a, ram:4802a8a8, ram:4802a970, ram:4802aa44, ram:4802ad46, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802b80a, ram:4802f022, ram:4802f236, ram:4802f278, ram:4802f2aa, ram:48065e9c, ram:48066484, ram:48066698, ram:480667a8, ram:481249ba, ram:48124a7a, ram:481974a0, ram:4ff206d8, ram:4ff45158
+
+GET /status_fast 0x4806eb88
+JS: pollFast@980
+C strings: ["Cache-Control", "no-store", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"status_fast_buffer_unavailable\\\"}"]
+Direct calls: ram:480069b2, ram:48006bca, ram:48025ba6, ram:4802a59e, ram:4802a79a, ram:4802a8a8, ram:48039cfc, ram:48065e9c, ram:48066484, ram:480667a8, ram:481974a0, ram:4ff206d8, ram:4ff21a0a, ram:4ff45158
+
+GET /torque_nag/status 0x4806e388
+JS: pollTorqueNagStatus@659
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"torque_status_buffer_unavailable\\\"}", "configuredEnabled", "false", "true", "effectiveEnabled", "pending", "verify", "maintenance", "wait-das", "arming", "rest", "corrective", "pre-corrective-pause", "fault-hold", "monitor-only", "stability-verify", "disabled", "phase", "no-direction", "das-stale", "none", "das-missing", "maintenance-disabled", "das-state", "steering-angle-limit", "corrective-disabled", "blockReason", "corrective-sweep", "angle", "hold", "corrective-fixed", "corrective-transition", "directionSource", "dasSeen", "dasValid", "dasFresh", "dasHos", "dasAgeMs", "steeringAngleDeciDeg", "observedTorqueCentiNm", "targetTorqueCentiNm", "lastTransmittedTorqueCentiNm", "lastSourceAgeUs", "oemFrameCount", "dasFrameCount", "txAccepted", "txSuccess", "txFailure", "submitRejected", "terminalTimeout", "dropStale", "dropPending", "dropOwnEcho", "checksumReject", "invalidTorqueReject", "counterCollisions", "lastCounterCollisionGapUs", "lateReceipt", "lastErrorFlags", "Cache-Control", "no-store"]
+Direct calls: ram:4802a59e, ram:4802a79a, ram:4802a8a8, ram:4802a970, ram:4802ad46, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802f022, ram:4802f07e, ram:4802f236, ram:4802f278, ram:48065e9c, ram:48066484, ram:48066698, ram:480667a8, ram:4ff206d8, ram:4ff3ec14, ram:4ff3ee10, ram:4ff45158
+
+GET /status 0x480c0178
+JS: waitSeatActionResult@290, triggerSeatAction@291, downloadCanDiagnostics@837, pollStatus@981
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"status_buffer_unavailable\\\"}"]
+Direct calls: ram:48025ba6, ram:48065e9c, ram:48066484, ram:48066698, ram:48068356, ram:480be2be, ram:4ff206d8, ram:4ff21a0a, ram:4ff45158
+
+GET /runtime_status 0x4806851c
+JS: loadRuntimeStatus@817, downloadCanDiagnostics@837
+C strings: ["liveSubmitOk", "liveSubmitFail", "lastSourceAgeMs", "fastSubmitOk", "fastSubmitFail", "fastTerminalOk", "fastTerminalFail", "ambiguousRetryMux0", "ambiguousRetryMux1", "ambiguousRetryMux2", "fastSubmitLastUs", "fastSubmitMaxUs", "fastTerminalLastUs", "fastTerminalMaxUs", "latency", "{\\\"available\\\":false,\\\"reason\\\":\\\"fast_path_diagnostics_disabled\\\"}", "muxes", "fastSourceExpired", "fastLastSourceUs", "fastLastSubmitUs", "fastLastAcceptedUs", "fastLastTerminalUs", "camera", "enabled", "driverOccupiedSpoofEnabled", "driverOccupiedSpoofActive", "driverOccupiedSpoofPending", "driverOccupiedSourceCounter", "driverOccupiedSpoofCounter", "driverOccupiedSpoofSubmitCount", "phase", "stopReason", "attempts", "successCount", "runPhase", "continuousLatched", "vehicleApState", "handsOnState", "terminalOk", "terminalFail", "lastTerminalAgeMs", "fusedLimitKph", "vehicleOffsetSeen", "vehicleOffsetUsable", "vehicleOffsetPercentageMode", "vehicleOffsetPercent", "vehicleHighTargetPct", "originalSmartSetSpeedKnown", "originalSmartSetSpeedEnabled", "highTargetSource", "targetSpeedKph", "offsetRaw", "offsetKph", "downSlewActive", "outputConfirmed", "downSlewRatePctPerSec", "finalRaw", "confirmedRaw", "recoveryPhase", "slewStepCount", "slewLastStepMs", "v14AutomaticDrivingProfile", "v14EffectiveDrivingProfile", "v14DrivingProfileSource", "mux2SubmitOk", "mux2SubmitFail", "mux2LastTxAgeMs", "seatbeltSafetyEnabled", "current", "lastAction", "lastBlock", "blockedCount", "submitCount", "requestPending", "brakeConfirmed", "driverSeatbeltConfirmed", "driverSeatStatusAgeMs", "templateAgeMs", "scrollEnabled", "active", "triggerCount", "failureCancelCount", "isaChimeConditionActive", "isaObservedHandsOnState", "isaSourceBitSet", "isaChimeSuppressApplyCount", "isaChimeSuppressSubmitOk", "isaChimeSuppressSubmitFail", "isaChimeSuppressLastSubmitAgeMs", "sourceFollowTerminalOk", "sourceFollowTerminalFail", "sourceFollowTerminalAgeMs", "owner", "actionState", "lastFailure", "feedbackAgeMs", "terminalTimeout", "vcleftTxOwner", "vcleftTxPending", "vcleftSourceGeneration", "vcleftAcceptedGeneration", "vcleftMergeCount", "vcleftTerminalFailCount", "vcleftBusyDeferrals", "vcleftLocalEchoDrops", "vcleftLightingMerges", "forceHighPeriodicQueued", "forceHighPeriodicFailed", "autoEnabled", "reverseWarningEnabled", "pilotEnabled", "reverseSteadyEnabled", "fogOn", "trigger", "pulsesRemaining", "cacheFresh", "feedbackFresh", "actualFogOn", "pilotActive", "safetyLatched", "txCount", "txFail", "blocked", "recallActive", "manualActive", "physicalRequest", "leftInputAgeMs", "rightInputAgeMs", "submitOk", "submitFail", "input255AgeMs", "input12BAgeMs", "generation", "linkGeneration", "target", "suggestedGear", "torqueDirection", "sourceReady", "paused", "state", "reject", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"runtime_status_buffer_unavailable\\\"}", "schemaVersion", "capturedAtMs", "uptimeSec", "p0Profile", "{\\\"unit\\\":\\\"cycles\\\"", "cyclesPerUs", "p0TaskWallTime", "scope", "spansOverlap", "completedOnly", "publicationMode", "liveCurrentAvailable", "false", "latestRejectedElseWorstLatency", "worstFrameSelection", "available", "fastPathDiagnostics", "{\\\"enabled\\\":", "mode", "profileAvailable", "transitionTraceAvailable", "latencyHistogramAvailable", "captureAvailable", "fsdFastPath", "1", "txDetails", "ambientTx", "welcomeStage", "welcomeReason", "welcomeOpenMask", "welcomeOrigin", "welcomeTriggered", "welcomeFiltered", "welcomeCompleted", "sourceGeneration", "configGeneration", "sourceAtUs", "accepted", "clean", "recoveredWithError", "failed", "missingTerminal", "invalidated", "windowExpired", "persistentFaults", "partialSourceSweeps", "requestGeneration", "outstandingMask", "fault", "true", "pending", "transportBlocked", "waitingForSource", "requestExhausted", "terminals", "lastProblem", "txStreams", "activation", "stream", "sourceFollow", "rxObservationWindowUs", "rxResponseTargetUs", "consumer-action-deadline", "consumer-state-validity", "fixed-window", "rxResponsePolicy", "sourceSubmitWindowUs", "requestSubmitWindowUs", "fsdAutoStart", "speedOffset", "lighting", "durationMin", "runtimeAllowed", "requestActive", "stopState", "stopError", "stopAccepted", "stopCompleted", "deferredEnable", "commandBlocked", "heatingSeen", "heatingSeenSinceEnable", "heatingFresh", "heatingActive", "heatingAgeMs", "thermalFresh", "thermalAgeMs", "targetCx100", "minTempCx100", "maxTempCx100", "socFresh", "socAgeMs", "socPermille", "electricalFresh", "electricalAgeMs", "packVoltageCx100", "packCurrentCx10", "packPowerW", "timerStarted", "timedOut", "elapsedMs", "remainingMs", "runState", "offFramesPending", "terminalSeen", "terminalPending", "lastTerminalSuccess", "lastTerminalCommand", "lastTerminalError", "shutdownAttempts", "shutdownFailures", "batteryPreheat", "rearFog", "party"]
+Direct calls: ram:480069b2, ram:48006bca, ram:48025ba6, ram:4802a59e, ram:4802a79a, ram:4802a8a8, ram:4802a928, ram:4802a970, ram:4802aa00, ram:4802aa44, ram:4802ad46, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802b18e, ram:4802b80a, ram:4802f022, ram:4802f07e, ram:4802f0b0, ram:4802f0e2, ram:4802f114, ram:4802f236, ram:4802f278, ram:4803678e, ram:48039320, ram:4803a418, ram:4803d63e, ram:48040862, ram:48044bb6, ram:4806562c, ram:48067954, ram:48068356, ram:481974a0, ram:4ff21a0a, ram:4ff3ec14, ram:4ff3ee10
+
+GET /system_status 0x4808334c
+JS: refreshFirmwareTheme@44, loadSystemStatus@818, downloadCanDiagnostics@837
+C strings: ["tasks", "1", "history", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"system_status_buffer_unavailable\\\"}", "code", "reason", "rawCpu0", "rawCpu0Reason", "rawCpu1", "rawCpu1Reason", "chipId", "chipModel", "chipRevision", "appElfSha256", "P1.6.4", "firmwareVersion", "4d97f369e1a32f126b7121a66a70a53fca628dfa", "sourceCommit", "sourceDirty", "bootSessionId", "waveshare-p4-wifi6-sn65hvd230-x3", "boardProfile", "valid", "error", "currentCx10", "minCx10", "maxCx10", "monitor_session", "rangeScope", "warmingUp", "activeCoreCount", "sampleWindowMs", "core0Tenths", "core1Tenths", "frequencyMhz", "taskCount", "total", "minimum", "largest", "dmaFree", "dmaMinimum", "dmaLargest", "present", "internal", "psram", "taskOnlyBytesInPsram", "sdioStreamBufferBytes", "sdioStreamAllocationRetries", "pending", "streamDegraded", "streamFailures", "streamFirstFailureMs", "streamLastFailureMs", "streamRequestedBytes", "faultsMerged", "schema", "requestedBytes", "firstAtMs", "previous", "current", "drops", "networkFault", "merged", "previousValid", "detail", "generation", "requestedAtMs", "ownerStopped", "emergency", "faultCoordinator", "phase", "heartbeatMs", "absoluteDeadlineMs", "lastProgressMs", "terminalIntent", "owner", "http0", "http1", "ota", "webControl", "hzTenths", "periodAvgUs", "periodMaxUs", "lastSeenAgeMs", "fsdP0LastSeenAgeMs", "fullBatchCount", "forcedYieldCount", "lastHandleUs", "maxHandleUs", "canRt", "schemaVersion", "latencyPolicyVersion", "latencyBenchmarkUs", "switchResponseTargetUs", "consumer-action-deadline", "switchResponsePolicy", "snapshotSeq", "capturedAtMs", "uptimeSec", "selectedProtocol", "V13", "V14", "V12", "unknown", "selectedProtocolName", "device", "reset", "health", "temperature", "cpu", "memory", "loops", "initialized", "initializationOk", "pendingMask", "pendingCount", "writeCount", "failureCount", "persistedGeneration", "canExperimentPersistence", "flashSafeLease", "fsdP0SettlementFault", "configurationPersistence", "B40P101", "namespace", "config", "key", "expectedVersion", "expectedBlobBytes", "expectedConfigBytes", "loadAttempted", "false", "true", "namespaceOpened", "blobLength", "bytesRead", "headerAvailable", "storedMagic", "storedVersion", "storedConfigSize", "currentFormatValid", "migrated", "migratedFromVersion", "defaultsApplied", "blob_too_large", "namespace_open_failed", "missing", "not_attempted", "read_failed", "current_format_valid", "current_blob_size_mismatch", "unsupported_version", "config_size_mismatch", "invalid_magic", "checksum_mismatch", "legacy_rejected", "loadReason", "lastWriteAttempted", "lastWriteNamespaceOpened", "lastWriteSuccess", "lastWriteExpectedBytes", "lastWriteBytes", "deferredCount", "maxWriteDurationUs", "recentWrites", "requestMask", "startedAtMs", "durationUs", "success", "bootstrapNvsEraseHistoryAvailable", "usedEntries", "freeEntries", "availableEntries", "totalEntries", "p4_data", "partition", "bytes", "ready", "stage", "lastError", "fsdReady", "cloudReady", "cleanupPending", "fsdError", "cloudError", "fsdNvsError", "cloudNvsError", "p160DataStorage", "canRuntime", "runtimeReady", "canActive", "canQuiescing", "driverPresent", "driverEnabled", "emergencyDisableLatched", "p0SettlementFault", "p0ObservationQueueDepth", "p0ObservationQueueDropCount", "otaQuiet", "otaSessionActive", "controlledStopActive", "driverStoppedForOta", "healthObservations", "ram_current_boot", "retention", "capacity", "sampleIntervalMs", "count", "samples", "tasksTruncated", "taskScanUs", "name", "number", "core", "blocked", "running", "suspended", "deleted", "invalid", "state", "priority", "basePriority", "stackHighWater", "runtime"]
+Direct calls: ram:480018de, ram:48001f52, ram:48001f84, ram:48001fda, ram:480020c6, ram:480069b2, ram:48006bca, ram:48025b94, ram:48025ba6, ram:4802a59e, ram:4802a79a, ram:4802a8a8, ram:4802a970, ram:4802a9b8, ram:4802aa00, ram:4802aa44, ram:4802ad02, ram:4802ad46, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802b18e, ram:4802b80a, ram:4802c25c, ram:4802c306, ram:4802eeb4, ram:4802f022, ram:4802f07e, ram:4802f0b0, ram:4802f0e2, ram:4802f114, ram:4802f236, ram:4802f278, ram:4802f2aa, ram:48030646, ram:48032c66, ram:4803840a, ram:48039a3e, ram:4803b2ec, ram:4803e89c, ram:4803fda2, ram:4804019e, ram:48064bd0, ram:4806562c, ram:48067954, ram:48068356, ram:4807f928, ram:48082b62, ram:4811f3c4, ram:4812033c, ram:48120678, ram:481208b8, ram:481208c4, ram:48120b36, ram:48120eac, ram:4815a566, ram:481974a0, ram:481a759a, ram:4fc00268, ram:4fc00838, ram:4ff20c3c, ram:4ff21a0a, ram:4ff3c608, ram:4ff3d886, ram:4ff3e824, ram:4ff3ec14, ram:4ff3ee10
+
+GET /can_diag 0x4807fa5c
+JS: pollCanDiagnostics@820, downloadCanDiagnostics@837
+C strings: ["details", "1", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_diag_buffer_unavailable\\\"}", "schemaVersion", "snapshotSeq", "latencyPolicyVersion", "latencyBenchmarkUs", "switchResponseTargetUs", "consumer-action-deadline", "switchResponsePolicy", "capturedAtMs", "waveshare-p4-wifi6-sn65hvd230-x3", "profile", "twai_node", "driver", "channelCount", "ram_until_reboot", "historyScope", "rtc_noinit_previous_boot", "breadcrumbScope", "selectedProtocol", "V13", "V14", "V12", "unknown", "selectedProtocolName", "detailsIncluded", "detailWindowMs", "detailsReady", "queueDepth", "queueHighWater", "queueDropCount", "p0StaleDropCount", "observationStaleDropCount", "coalescedCount", "p0Observation", "snapshotOnly", "transportAllowed", "activationAllowed", "mux2Allowed", "speedOffsetEnabled", "speedOffsetRaw", "speedPlanSequence", "v14Protocol", "activationV13Fallback", "cameraDisableEnabled", "enhancedAutopilotEnabled", "startFsdFromParkEnabled", "mux0InP1", "fast3fdContext", "runtimeEnabled", "false", "disabledReason", "\\\"retired_2026_09_17\\\"", "disabledNote", "gateAllowed", "can1Allowed", "cameraDisableSwitch", "enhancedAutopilotSwitch", "mux2Switch", "sourceCount", "changedCount", "sourceExpiredCount", "submitQueuedCount", "submitFailedCount", "terminalSuccessCount", "terminalFailedCount", "ambiguousRetryCount", "sourceToSubmitLastUs", "sourceToSubmitMaxUs", "sourceToTerminalLastUs", "sourceToTerminalMaxUs", "lastSourceAgeMs", "conservationSourceCount", "conservationTerminalCount", "sourceNoTerminalCount", "lastMissingSourceUs", "lastMissingAtMs", "lastMissingMux", "lastMissingStage", "latency", "{\\\"available\\\":false,\\\"reason\\\":\\\"fast_path_diagnostics_disabled\\\"}", "can1Activation", "buses", "latestDepth", "edgeDepth", "latestOverwrite", "edgeReject", "expired", "hardwareAccepted", "ownershipReject", "controllerEpoch", "txArbiter", "logicalName", "bus", "controller", "txGpio", "rxGpio", "vehicleTxPin", "vehicleRxPin", "nominalBitrate", "available", "running", "recovering", "busOff", "listenOnly", "userDisabled", "driverState", "runtimeInputAgeMs", "rxCount", "lastRawRxAgeMs", "txCount", "txDoneCount", "txSuccessAlertCount", "txErrorCount", "txFailedCount", "rxMissedCount", "rxOverrunCount", "busErrorCount", "twaiErrorCallbackCount", "twaiZeroFlagErrorCount", "verifiedTxBusErrorCount", "automaticRetryAbortCount", "ambiguousTxDoneCount", "ambiguousRetryAttemptCount", "ambiguousRetryAcceptedCount", "ambiguousRetryFinalFailCount", "arbitrationLostCount", "busOffCount", "recoveryCount", "softwareFilteredCount", "invalidFrameCount", "rxQueueDepth", "txQueueDepth", "maxRxQueueDepth", "maxTxQueueDepth", "activationRxMissedCount", "activationRxQueueDepth", "maxActivationRxQueueDepth", "criticalRxMissedCount", "forceHighP0Active", "forceHighP0AcceptedCount", "forceHighP1AcceptedCount", "criticalRxQueueDepth", "maxCriticalRxQueueDepth", "realtimeRxMissedCount", "realtimeRxQueueDepth", "maxRealtimeRxQueueDepth", "realtimeRxLastLatencyUs", "realtimeRxMaxLatencyUs", "realtimeRxOverTargetCount", "latencyWarningCount", "realtimeRxStaleDropCount", "realtimeRxCoalescedCount", "controlRxMissedCount", "controlRxQueueDepth", "maxControlRxQueueDepth", "controlRxStaleDropCount", "controlRxCoalescedCount", "lowPriorityQueuedCount", "lowPriorityCoalescedCount", "lowPriorityDroppedCount", "deferredTxHookDropCount", "deferredRawDropCount", "txTerminalDropCount", "p1RealtimeTxLockBusyCount", "p1ControlTxLockBusyCount", "apControl", "speedOffset", "torqueNag", "p1TxSubmit", "lastAlerts", "txErrorCounter", "rxErrorCounter", "txErrorPassive", "p1LatencyEventDroppedCount", "lastRxError", "lastTxError", "lastControlError", "lastRxId", "lastTxId", "lastTxFailId", "lastInvalidId", "lastErrorAgeMs", "lastArbitrationAgeMs", "lastArbitrationTxId", "hardwareAcceptAll", "hardwareDualFilter", "hardwareFilterCode", "hardwareFilterMask", "hardwareFilterCode2", "hardwareFilterMask2", "softwareFilterCount", "softwareFilterIds", "filteredIds", "id", "count", "invalidIds", "rtrCount", "extendedCount", "dlcCount", "txFailIds", "errorEvents", "alerts", "rawErrorFlags", "lastTxFeatureOwner", "direction", "rx", "tx_and_rx", "tx", "directionName", "candidatePresent", "true", "candidateHeuristic", "candidateTxId", "candidateTxMux", "candidateTxFeatureOwner", "candidateChanged", "candidateSourceAgeUs", "candidateSourceGapUs", "candidatePendingTxCount", "candidateAutomaticRetryCount", "candidateTxOutcome", "deferredSnapshot", "p1LatencyEvents", "latencyUs", "stage", "p1WorstLatencyEvent", "valid", "runtimeFilterMode", "filterDesiredGeneration", "filterAppliedGeneration", "filterLastError", "runtimeIncidents", "cycleHz", "tickHz", "lossCount", "lossOverwrites", "taskEvents", "taskHookMaxCycles", "captureMaxCycles", "taskHookMaskedBodyMaxCycles", "waitMaskedBodyMaxCycles", "captureMaskedBodyMaxCycles", "exportMaskedBodyMaxCycles", "exportMaxCycles", "events", "first", "latest", "latencyCount", "latencyCaptureCount", "latencyCaptureIntervalUs", "latencyFirst", "latencyLatestCaptured", "flashStall", "windowActive", "windowCount", "maxWindowUs", "exemptCount"]
+Direct calls: ram:480069b2, ram:48006bca, ram:48025b94, ram:48025ba6, ram:4802a59e, ram:4802a79a, ram:4802a8a8, ram:4802a970, ram:4802a9b8, ram:4802aa00, ram:4802aa44, ram:4802ad46, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802b18e, ram:4802b80a, ram:4802f022, ram:4802f07e, ram:4802f0b0, ram:4802f0e2, ram:4802f114, ram:4802f236, ram:4802f278, ram:48032c66, ram:48037e9c, ram:4803957e, ram:480397e6, ram:4803a418, ram:4803ae1a, ram:4803e89c, ram:4804019e, ram:48044bb6, ram:4806562c, ram:48067954, ram:48068356, ram:4807f928, ram:4812044c, ram:48120678, ram:481974a0, ram:4fc00268, ram:4ff21a0a, ram:4ff3ec14, ram:4ff3ee10
+
+GET /can_hot_ids 0x480c037a
+JS: pollCanHotIds@766, downloadCanDiagnostics@837
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_hot_ids_download_busy\\\"}", "controller", "0", "1", "2", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_can_controller\\\"}", "", "\\x01", "\\x02", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_driver_unavailable\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_id_counters_unavailable\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_hot_ids_buffer_unavailable\\\"}", "schemaVersion", "capturedAtMs", "windowMs", "warmingUp", "source", "logicalName", "bus", "totalFrames", "totalRateTenths", "activeIdCount", "countsBeforeSoftwareFilter", "ids", "id", "frames", "rateTenths", "sharePermille", "softwareAccepted", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_hot_ids_body_overflow\\\"}", "Cache-Control", "no-store"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:4802b18e, ram:4802b91c, ram:48035bd0, ram:4806562c, ram:48066484, ram:48066698, ram:480667a8, ram:48067954, ram:4808c168, ram:4808c1ae, ram:4808c244, ram:4808c290, ram:4808c2dc, ram:4808c64a, ram:4808c832, ram:4808c96e, ram:4808cb32, ram:480b2068, ram:480b407c, ram:480b4e36, ram:480b967a, ram:480bb6fa, ram:4fc00288, ram:4fc00764, ram:4fc00838, ram:4ff21a0a, ram:4ff3ec14, ram:4ff3ee10, ram:4ff4522c
+
+GET /coredump/info 0x4806cbde
+JS: captureCoreDumpEvidence@831, loadCoreDumpInfo@834
+C strings: ["available", "true", "false", "address", "size", "P1.6.4", "firmwareVersion", "appElfSha256", "bootSessionId", "result", "downloadRequiresOtaToken", "sha256", "imageCheckResult", "summaryAvailable", "crashIdentitySource", "summaryResult", "panicReason", "panicReasonResult", "crashedAppElfSha256", "crashedAppElfSha256Prefix", "crashedTask", "exceptionPc", "mcause", "mtval", "ra", "mstatus", "mtvec", "a", "registers", "stackDumpBase64", "memorySummaryAuthorized", "latest_successful_flash_coredump", "retention", "originBootSessionKnown", "Cache-Control", "no-store", "application/json"]
+Direct calls: ram:480018de, ram:4802a59e, ram:4802a8a8, ram:4802a9b8, ram:4802aa44, ram:4802ad2c, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802f022, ram:4802f236, ram:4802f278, ram:48035faa, ram:48065e9c, ram:48066484, ram:480667a8, ram:4812123e, ram:4ff206d8, ram:4ff45158
+
+GET /coredump.bin 0x4806d406
+JS: fetchVerifiedCoreDump@828
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"token\\\"}", "attachment; filename=\\\"Albert-P4-", "P1.6.4", "-", "-coredump.bin\\\"", "Content-Disposition", "X-Firmware-Version", "X-App-ELF-SHA256", "X-Core-Dump-SHA256", "X-Diagnostic-Boot-Session", "Cache-Control", "no-store", "Connection", "close", "application/octet-stream", "{\\\"ok\\\":false,\\\"error\\\":\\\"coredump_unavailable\\\"}"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4802ae48, ram:4802af2c, ram:48035faa, ram:48065e9c, ram:48066484, ram:48066698, ram:480667a8, ram:4ff206d8, ram:4ff45158
+
+GET /config 0x480bd450
+JS: setFsdAutoStartMaster@269, saveTorqueNagEnabled@662, retryBatteryPreheatStop@729, loadConfig@890, saveConfig@999, driverFeatureRequest@1226
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"config_buffer_unavailable\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"config_body_overflow\\\"}"]
+Direct calls: ram:48065e9c, ram:48066484, ram:48066698, ram:480bb868, ram:4ff206d8, ram:4ff45158
+
+POST /config 0x48101f34
+JS: setFsdAutoStartMaster@269, saveTorqueNagEnabled@662, retryBatteryPreheatStop@729, loadConfig@890, saveConfig@999, driverFeatureRequest@1226
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "0123456789abcdef", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_v13_speed_offset_pct\\\",\\\"field\\\":\\\"", "\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_stable_speed_offset\\\",\\\"field\\\":\\\"", "stalkControlVersion", "fsdAutoStartEnabled", "{\\\"ok\\\":false,\\\"error\\\":\\\"fsd_master_required\\\"}", "dndTorqueEnabled", "false", "off", "torqueNagMaintenanceEnabled", "preventiveNegativeMinNm", "preventiveNegativeMaxNm", "preventivePositiveMinNm", "preventivePositiveMaxNm", "correctiveNegativeMinNm", "correctiveNegativeMaxNm", "correctivePositiveMinNm", "correctivePositiveMaxNm", "activityMinSec", "activityMaxSec", "restMinSec", "restMaxSec", "h2PersistenceSec", "preCorrectionPauseSec", "correctiveSendMinSec", "correctiveSendMaxSec", "correctivePauseMinSec", "correctivePauseMaxSec", "stabilityVerifySec", "correctiveNegativeFrames", "correctivePositiveFrames", "dasFreshTimeoutMs", "batteryPreheatEnabled", "batteryPreheatDurationMin", "batteryPreheatRetryStop", "plain", "canCommsEnabled", "can1TxEnabled", "{\\\"ok\\\":false,\\\"error\\\":\\\"control_version_busy\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_torque_config\\\",\\\"field\\\":\\\"", "1", "{\\\"ok\\\":false,\\\"error\\\":\\\"battery_preheat_retry_invalid\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"battery_preheat_recovery_required\\\"}", "fsdEnabled", "fsdSteadyModeEnabled", "fsdWarningActivationEnabled", "fsdSideCollisionActivationEnabled", "fsdDdawEnabled", "fsdWarningLaneModes", "fsdAutoStartLongPressEnabled", "fsdAutoStartFirstParkToDriveEnabled", "fsdAutoStartReverseToDriveSpeedKph", "fsdAutoStartGroundEnabled", "fsdDriverOccupiedSpoofEnabled", "fsdAutoStartAvailableConfirmFrames", "fsdParkStartEnabled", "v13SpaceToSpaceEnabled", "v13ParkingDelayMs", "v13ParkingDurationMs", "autoSpeedOffsetEnabled", "stableSpeedOffsetEnabled", "stableSpeedDownIntervalMs", "speedDownStepKph", "speedOffsetDownSlewPctPerSec", "speedOffsetMaxPctRaw", "v13LowSpeedOffsetPct", "v13HighSpeedOffsetPct", "hw3ManualStrategyEnabled", "hw3ManualStrategy", "v14SpeedOffsetMaxPctRaw", "v14ManualDrivingProfileEnabled", "v14ManualDrivingProfile", "enhancedAutopilotEnabled", "dndEnabled", "cabinCameraDisableEnabled", "v14CameraDisableDelaySec", "dndHandsOnDowngradeEnabled", "dndHandsOn24To1Enabled", "dndHandsOn124To0Enabled", "isaChimeSuppressEnabled", "dndScrollEnabled", "dndScrollMode", "dndSpeedPeriodicEnabled", "dndSpeedPeriodMinMs", "dndSpeedPeriodMaxMs", "hw3ComfortTarget110", "target110", "hw3HurryTarget110", "v14Target110", "gearAutomationEnabled", "gearSeatbeltSafetyEnabled", "gearBrakeSafetyBypassEnabled", "gearBrakeToggleEnabled", "gearParkSteeringEnabled", "bleObstacleFeatureEnabled", "gearScrollEnabled", "gearAutoShiftMaxSpeedKph", "gearScrollBrakeAuthorizationEnabled", "bleObstacleSteeringConfirmEnabled", "gearShiftLimit", "gearLeftPositiveAction", "gearLeftNegativeAction", "gearRightPositiveAction", "gearRightNegativeAction", "gearCooldownMs", "gearParkSteeringThresholdDeciDeg", "gearDriveReverseSteeringThresholdDeciDeg", "bleObstacleSteeringThresholdDeciDeg", "seatMemoryEnabled", "seatControlBus", "can0TxEnabled", "can2TxEnabled", "canbServiceModeEnabled", "fsdForceHighPhysicalEnabled", "longPressHighBeamStrobeEnabled", "highBeamStrobeIntervalMs", "highBeamStrobeCount", "{\\\"ok\\\":false,\\\"error\\\":\\\"experiment_filter_capacity\\\"}", "driverFeature", "{\\\"ok\\\":true}", "{\\\"ok\\\":false,\\\"error\\\":\\\"battery_preheat_restore_failed\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_quiesce\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"battery_preheat_command_blocked\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"battery_preheat_retry_blocked\\\"}"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802ad46, ram:4802ae48, ram:4802af2c, ram:4802b18e, ram:4802f152, ram:48030d52, ram:48036236, ram:48036a9a, ram:4803a078, ram:4803cb08, ram:4804db5e, ram:4804de50, ram:4804e0bc, ram:4804e2a8, ram:4804f34c, ram:48051e92, ram:48052b10, ram:4806562c, ram:48066698, ram:48067954, ram:48067a66, ram:4806acb0, ram:4806c250, ram:480edbbe, ram:480f34ec, ram:480f47ac, ram:480f50d2, ram:480fe78a, ram:48101910, ram:48101c1c, ram:4ff3ec14, ram:4ff3ee10, ram:4ff453ae
+
+GET /config/uss_radar 0x4806afe2
+JS: loadUssRadarConfig@676, saveUssRadarConfig@678
+C strings: ["Cache-Control", "no-store", "pending", "settings_unavailable", "stored", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48037d22, ram:48065e9c, ram:48066484, ram:480667a8, ram:4ff206d8, ram:4ff45158
+
+POST /config/uss_radar 0x480f43a8
+JS: loadUssRadarConfig@676, saveUssRadarConfig@678
+C strings: ["pending", "settings_unavailable", "application/json", "revision", "gearUssDistancePreset", "gearUssSdiBlockMax", "gearUssSdiCautionMax", "gearUssMinValidSdi", "gearUssRadarBlockMaxRaw", "stored", "invalid_radar_config", "radar_busy", "flash_write", "stale_revision", "ota_busy"]
+Direct calls: ram:4802a59e, ram:4802d0de, ram:4802e260, ram:4803153a, ram:480371ce, ram:48037d22, ram:48065e9c, ram:48066484, ram:4806acb0, ram:480ee046, ram:480f40a6, ram:4ff206d8, ram:4ff45158
+
+GET /ambient_config 0x4806adda
+JS: ambientLoadConfig@1557, ambientPostSaveOnce@1566
+C strings: ["Cache-Control", "no-store", "pending", "settings_unavailable", "stored", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4803c556, ram:48065e9c, ram:48066484, ram:480667a8, ram:4ff206d8, ram:4ff45158
+
+POST /ambient_config 0x480f584c
+JS: ambientLoadConfig@1557, ambientPostSaveOnce@1566
+C strings: ["pending", "stored", "ota_busy", "application/json", "settings_unavailable", "driverId", "revision", "invalid_ambient_config", "stale_driver", "stale_revision", "ambientEnabled", "fsdCueEnabled", "blindSpotEnabled", "blindSpotBrightness", "blindSpotAreas", "blindSpotRestoreDelayMs", "turnFollowEnabled", "turnFollowHazards", "turnFollowBrightness", "turnFollowAreas", "turnFollowColor", "plain", "welcomeEnabled", "welcomeStyle", "welcomeTriggerMode", "welcomeBrightness", "welcomeTempo", "welcomeZoneMask", "welcomeColor", "z%uEnabled", "z%uBrightness", "z%uColor", "ambient_busy", "flash_write"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802b18e, ram:4802cf24, ram:48030d52, ram:480371ce, ram:480373c0, ram:4803c556, ram:4804162c, ram:480416da, ram:4806acb0, ram:480f245a, ram:480f536a, ram:4819ad74, ram:4fc00288
+
+GET /speed_target/config 0x480f99bc
+JS: speedTargetLoadConfig@1513
+C strings: ["Cache-Control", "no-store", "driverId", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_driver\\\"}", "settings_unavailable", "{\\\"ok\\\":false,\\\"error\\\":\\\"stale_driver\\\"}"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:480377ea, ram:480381cc, ram:48065e9c, ram:48066484, ram:48066698, ram:480667a8, ram:4806acb0, ram:480f6a02, ram:4ff206d8, ram:4ff3ec14, ram:4ff3ee10, ram:4ff45158
+
+POST /speed_target/save 0x480f9322
+JS: speedTargetSave@1515
+C strings: ["ota_busy", "application/json", "settings_unavailable", "driverId", "revision", "invalid_speed_target", "stale_driver", "customSpeedEnabled", "target%u", "runtime_rejected", "Cache-Control", "no-store", "flash_write", "stale_revision"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:480377ea, ram:480381cc, ram:4805883a, ram:48065e9c, ram:48066484, ram:480667a8, ram:4806acb0, ram:4807df90, ram:480f66c0, ram:480f6a02, ram:4819ad74, ram:4fc00268, ram:4ff206d8, ram:4ff3ec14, ram:4ff3ee10, ram:4ff45158
+
+GET /can_pin_layout 0x480681de
+JS: loadCanPinLayout@58, saveCanPinLayout@59
+C strings: ["Cache-Control", "no-store", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48038bec, ram:48065e9c, ram:48066484, ram:480667a8, ram:4ff206d8, ram:4ff45158
+
+POST /can_pin_layout 0x480ff1e4
+JS: loadCanPinLayout@58, saveCanPinLayout@59
+C strings: ["{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"boot_validation_pending\\\"}", "layout", "0", "1", "2", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_layout\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_restore\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_quiesce\\\"}", "stored", "persistence", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_restore\\\",\\\"saved\\\":true}", "{\\\"ok\\\":false,\\\"error\\\":\\\"flash_write\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_restore\\\",\\\"saved\\\":false}"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4802af5a, ram:4802b18e, ram:4802b80a, ram:4802b91c, ram:4802f236, ram:48038bec, ram:4806562c, ram:48065e9c, ram:48066484, ram:48067954, ram:4806acb0, ram:480fe83a, ram:480fed16, ram:48121fd6, ram:48121fe0, ram:48121fee, ram:48122142, ram:481222a4, ram:4ff206d8, ram:4ff45158
+
+GET /rear_fog/config 0x48066e12
+JS: anonymous_L866_200831@866, saveRearFogConfig@886, driverFeatureRequest@1226
+C strings: ["application/json"]
+Direct calls: ram:4802a59e, ram:48054344, ram:48065e9c, ram:48066484, ram:4ff206d8, ram:4ff45158
+
+POST /rear_fog/config 0x480f4dda
+JS: anonymous_L866_200831@866, saveRearFogConfig@886, driverFeatureRequest@1226
+C strings: ["{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "application/json", "enabled", "reverseWarningEnabled", "rearFogPilotEnabled", "reverseRearFogSteadyEnabled", "mildDecelCx100", "hardDecelCx100", "stored", "persistence", "{\\\"ok\\\":false,\\\"error\\\":\\\"flash_write\\\"}"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4802af5a, ram:4802b80a, ram:4802f236, ram:4803165c, ram:480316a0, ram:48036236, ram:48036a9a, ram:48054344, ram:48065e9c, ram:48066484, ram:48066698, ram:48067a66, ram:4806acb0, ram:480aecea, ram:480ee046, ram:480f4aca, ram:4ff206d8, ram:4ff45158
+
+POST /rear_fog/runtime 0x481015a6
+JS: toggleRearFogRuntime@889
+C strings: ["enabled", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"pilot_not_permitted\\\"}", "rearFogPilotActive", "true", "false", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:4802af2c, ram:4802af5a, ram:4802f022, ram:48036a9a, ram:48053f2a, ram:48065e9c, ram:48066484, ram:48066698, ram:481012a2, ram:4ff206d8, ram:4ff45158
+
+POST /config/ble_obstacle 0x480f1e34
+JS: saveBleObstacleConfig@854, driverFeatureRequest@1226
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "enabled", "requestId", "plain", "revision", "{\\\"ok\\\":", "false", "true", ",\\\"requestId\\\":", ",\\\"requested\\\":", ",\\\"ram\\\":", ",\\\"flashOk\\\":", ",\\\"persistenceAccepted\\\":", ",\\\"persistence\\\":\\\"", "failed", "stored", "pending", ",\\\"revision\\\":", "{\\\"ok\\\":false,\\\"error\\\":\\\"revision_conflict\\\",\\\"requestId\\\":"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802a970, ram:4802aa44, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802afaa, ram:4802afda, ram:4802b058, ram:4802b18e, ram:4802b91c, ram:48036a9a, ram:48066698, ram:48067a66, ram:4806acb0, ram:480aecea, ram:480edbbe, ram:480ee8aa, ram:4ff3ec14, ram:4ff3ee10
+
+POST /fsd_auto_start/master 0x480f2fc2
+JS: setFsdAutoStartMaster@269, driverFeatureRequest@1226
+C strings: ["application/json", "enabled", "{\\\"ok\\\":", ",\\\"ramApplied\\\":true,\\\"flashOk\\\":", ",\\\"persistence\\\":\\\"", "stored", "\\\",\\\"revision\\\":", ",\\\"enabled\\\":", "false", "pending", ",\\\"error\\\":\\\"flash_write\\\""]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4802aa44, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:48035914, ram:48036a9a, ram:48065e9c, ram:48066484, ram:48067a66, ram:4806c250, ram:480aecea, ram:480edbbe, ram:480ee046, ram:4ff206d8, ram:4ff3ec14, ram:4ff3ee10, ram:4ff45158
+
+POST /save 0x480f34ec
+JS: saveTorqueNagEnabled@662, retryBatteryPreheatStop@729, saveConfig@999
+C strings: ["{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "application/json", "{\\\"ok\\\":true,\\\"persistence\\\":\\\"stored\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"flash_write\\\",\\\"saveFailedMask\\\":%u}"]
+Direct calls: ram:48031876, ram:48031a56, ram:48035914, ram:48065e9c, ram:48066484, ram:48067954, ram:480aecea, ram:480ee046, ram:4819ad74, ram:4fc00268, ram:4fc00288, ram:4ff206d8, ram:4ff45158
+
+POST /seat_action 0x48100e14
+JS: triggerSeatAction@291, postSeatManual@292
+C strings: ["{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "application/json", "action", "plain", "save", "recall", "cancel", "manual", "manual_start", "manual_stop", "{\\\"ok\\\":true}", "{\\\"ok\\\":false,\\\"error\\\":\\\"seat_busy\\\"}"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802b18e, ram:4802b91c, ram:4802e260, ram:48036236, ram:4806562c, ram:48065e9c, ram:48066484, ram:480ea41a, ram:480edf6a, ram:480ee046, ram:48100218, ram:4810051c, ram:48100820, ram:48100b10, ram:4ff206d8, ram:4ff45158
+
+GET /driver_profiles 0x4806d76e
+JS: setDriverFeature@1238, loadDriverProfiles@1324, postDriverProfile@1347
+C strings: ["Cache-Control", "no-store", "{\\\"ok\\\":false,\\\"error\\\":\\\"driver_storage_unavailable\\\"}", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48052ffe, ram:48065e9c, ram:48066484, ram:480667a8, ram:4ff206d8, ram:4ff45158
+
+POST /driver_profiles 0x480fa85c
+JS: setDriverFeature@1238, loadDriverProfiles@1324, postDriverProfile@1347
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"driver_storage_unavailable\\\"}", "action", "rebind", "{\\\"ok\\\":false,\\\"error\\\":\\\"vehicle_not_parked\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_name\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"driver_workspace_unavailable\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"flash_write\\\"}", "Cache-Control", "no-store", "{\\\"ok\\\":false,\\\"error\\\":\\\"missing_id\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"driver_not_found\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"seat_position_stale\\\"}", "manual", "select", "rename", "delete", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_action\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"ambient_settings_update\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"speed_target_settings_unavailable\\\"}", "s%08lx", "p4_data", "sp_target_v2", "{\\\"ok\\\":false,\\\"error\\\":\\\"ambient_settings_erase_pending\\\",\\\"persistence\\\":\\\"pending\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"speed_target_settings_erase\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"ambient_settings_unavailable\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"driver_storage_full\\\"}"]
+Direct calls: ram:48025b94, ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:4802ad02, ram:4802ad2c, ram:4802b18e, ram:4802c448, ram:4802feee, ram:480315f4, ram:48032378, ram:48032f3e, ram:4803618c, ram:4803702a, ram:480373e6, ram:4803862c, ram:48041cb4, ram:4805228e, ram:48052ffe, ram:4805883a, ram:4806562c, ram:48066698, ram:480667a8, ram:48066cec, ram:48067954, ram:4806acb0, ram:4806b5b0, ram:4807e216, ram:480aecea, ram:480af438, ram:480ee8aa, ram:480f2420, ram:480f245a, ram:480f2488, ram:480f24c2, ram:480f47ac, ram:480f4aca, ram:480f50d2, ram:480f536a, ram:480f9e86, ram:480f9fa8, ram:480fa426, ram:48159fd2, ram:4815a050, ram:4815a1c4, ram:4815a218, ram:4819ad74, ram:4fc00268, ram:4ff3ec14, ram:4ff3ee10
+
+GET /fsd_records 0x480b4abe
+JS: anonymous_L1742_449197@1742
+C strings: ["Cache-Control", "no-store", "{\\\"ok\\\":false,\\\"error\\\":\\\"records_unavailable\\\"}", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"records_body_overflow\\\"}"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4802d110, ram:48065e9c, ram:48066484, ram:48066698, ram:480667a8, ram:480b41ec, ram:4fc00268, ram:4ff206d8, ram:4ff45158
+
+GET /fsd_records/clock 0x4806c0d4
+JS: anonymous_L1772_455342@1772
+C strings: ["Cache-Control", "no-store", "{\\\"ok\\\":false,\\\"error\\\":\\\"records_unavailable\\\"}", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:480667a8, ram:4806b32e, ram:4ff206d8, ram:4ff45158
+
+POST /fsd_records/clock 0x4806ef66
+JS: anonymous_L1772_455342@1772
+C strings: ["Cache-Control", "no-store", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"records_unavailable\\\"}", "bootId", "unixMs", "uptimeMs", "{\\\"ok\\\":false,\\\"error\\\":\\\"stale_boot\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"records_busy\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_clock_sample\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_clock\\\"}"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:4802b13e, ram:4802b18e, ram:48030d52, ram:4806124c, ram:480612e0, ram:4806562c, ram:48065e9c, ram:48066484, ram:48066698, ram:480667a8, ram:48067954, ram:4806b32e, ram:4fc00838, ram:4ff206d8, ram:4ff21a0a, ram:4ff45158
+
+POST /fsd_records/clear 0x480d338a
+JS: clearFsdRecords@1753
+C strings: ["confirm", "plain", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"confirmation_required\\\"}", "clear", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"storage_unavailable\\\"}", "{\\\"ok\\\":true,\\\"persistence\\\":\\\"stored\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"clear_failed\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"cloud_control_store_unavailable\\\"}"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802b18e, ram:4802d110, ram:4802e57c, ram:48032bca, ram:48065e9c, ram:48066484, ram:48066698, ram:48067954, ram:480b66f6, ram:480cea00, ram:480d2e90, ram:4ff206d8, ram:4ff45158
+
+POST /fsd_records/subtotal/reset 0x480d2a5e
+JS: resetFsdSubtotal@1747
+C strings: ["confirm", "plain", "reset", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"storage_unavailable\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"subtotal_reset_failed\\\"}", "{\\\"ok\\\":true,\\\"persistence\\\":\\\"stored\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"confirmation_required\\\"}"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802b18e, ram:48065e9c, ram:48066484, ram:48066698, ram:48067954, ram:480d2450, ram:4ff206d8, ram:4ff45158
+
+GET /cloud/status 0x480d0b14
+JS: cloudLoadStatus@1650
+C strings: ["Cache-Control", "no-store", "application/json", "resource_error"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:480667a8, ram:4808cb66, ram:480cfa62, ram:4fc00268, ram:4ff206d8, ram:4ff45158
+
+GET /onboarding/status 0x4808d6c6
+JS: onboardingStart@1606
+C strings: ["{\\\"ok\\\":false,\\\"error\\\":\\\"storage_unavailable\\\"}", "application/json", "Cache-Control", "no-store"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:480667a8, ram:4808d544, ram:4fc00268, ram:4ff206d8, ram:4ff45158
+
+POST /onboarding/complete 0x4808e07e
+JS: onboardingCompleteChoice@1607
+C strings: ["choice", "plain", "later", "restored", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_choice\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"storage_unavailable\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"restore_not_complete\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"choice_already_stored\\\"}", "completed", "new", "persistence", "stored", "Cache-Control", "no-store", "{\\\"ok\\\":false,\\\"error\\\":\\\"response_unavailable\\\"}", "p4_data", "p4_onboard", "{\\\"ok\\\":false,\\\"error\\\":\\\"persistence_failed\\\"}"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802b18e, ram:4802ed9c, ram:480330be, ram:48064bd0, ram:48064c42, ram:48065e9c, ram:48066484, ram:48066698, ram:480667a8, ram:48067954, ram:4807df16, ram:4807e2fa, ram:4808c244, ram:4808c2dc, ram:4808c64a, ram:4808c96e, ram:4808cb32, ram:48159fd2, ram:4815a050, ram:4815a104, ram:4815a1c4, ram:4fc00268, ram:4fc0077c, ram:4ff206d8, ram:4ff21a0a, ram:4ff45158
+
+GET /cloud/agent/config 0x4808eb2e
+JS: 
+C strings: ["resource_wait"]
+Direct calls: ram:4808cb66, ram:4808cdaa, ram:4808e6ee
+
+POST /cloud/agent/config 0x4808cf44
+JS: 
+C strings: ["unified_backend_use_cloud_config"]
+Direct calls: ram:4808cb66, ram:4808cdaa
+
+POST /cloud/settings/restore 0x480b6d24
+JS: cloudRestoreSettings@1644
+C strings: ["confirmation", "plain", "restore", "confirmation_required", "restore_unavailable", "scopes", "settings,records", "backup_revision", "latest", "request_id", "settings", "records", "invalid_restore_id", "restore_id_collision", "queued", "persistence", "pending", "restore_id", "application/json", "restore_busy_or_local_changed", "agent_busy", "invalid_restore_selection"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802b18e, ram:48032c1a, ram:4806562c, ram:48066698, ram:48075cde, ram:4808c168, ram:4808c2dc, ram:4808c64a, ram:4808cb32, ram:4808cb66, ram:480a3262, ram:480b6a26, ram:4fc00268, ram:4ff453ae
+
+GET /cloud/settings/conflicts 0x480b31d8
+JS: cloudLoadSettingsConflicts@1637
+C strings: ["resource_wait"]
+Direct calls: ram:4808cb66, ram:480b294e
+
+POST /cloud/settings/conflict 0x480d103e
+JS: cloudResolveSettingsConflict@1638
+C strings: ["resource_wait", "agent_busy", "command_id", "action", "keep_device", "apply_cloud", "invalid_action", "cloud-backup", "conflict_not_found", "resolution_store_failed", "latest", "application/json", "{\\\"ok\\\":true,\\\"queued\\\":true}", "restore_busy_or_local_changed", "device_unsaved", "resolution_pending"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:4802b18e, ram:4802c48c, ram:48032bca, ram:4806562c, ram:48067954, ram:4808cb66, ram:480a3262, ram:480b610a, ram:480b66f6, ram:480b6a26, ram:480cf35c, ram:4fc00268, ram:4ff45158, ram:4ff454c4
+
+POST /cloud/developer 0x4808d958
+JS: commercialVerifyPassword@1600, cloudRevokeDeveloperToken@1627
+C strings: ["lock", "plain", "1", "X-P4-Developer", "application/json", "{\\\"ok\\\":true}", "developer_throttled", "password", "0123456789abcdef", "developerToken", "Cache-Control", "no-store", "developer_password"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802b18e, ram:48033124, ram:48066698, ram:480667a8, ram:4808c2dc, ram:4808c96e, ram:4808cb66, ram:48132f46, ram:4817b062, ram:4819ad74, ram:4fc00268, ram:4fc00288, ram:4ff45158
+
+GET /cloud/config 0x480b4fa4
+JS: cloudLoadConfig@1652, cloudSaveConfig@1653
+C strings: ["resource_error", "url", "tokenConfigured", "intervalSec", "enabled", "generation", "identityParameters", "04c9f49bd2038c7df56a14898364c403fed03c81d060d7e175f1d4905dd252f1", "presetParameters", "ea5a23e5653092c96f92a42531ac0067641ba675c7efb4e02d2898ef5ecb2c8b", "Cache-Control", "no-store", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:480667a8, ram:4808c2dc, ram:4808c96e, ram:4808cb66, ram:4808cdaa, ram:480b2068, ram:480b4e36, ram:4fc00268, ram:4fc00288, ram:4ff206d8, ram:4ff45158
+
+POST /cloud/config 0x480b3e2c
+JS: cloudLoadConfig@1652, cloudSaveConfig@1653
+C strings: ["resource_error"]
+Direct calls: ram:4808cb66, ram:4808cdaa, ram:480b3dca
+
+POST /cloud/test 0x4811e15c
+JS: cloudTestConnection@1654
+C strings: ["resource_error", "storage_wait", "token_required", "identity_unavailable", "testing", "application/json", "{\\\"ok\\\":true,\\\"queued\\\":true}", "sync_busy_or_unavailable", "time_wait", "offline", "ota_busy"]
+Direct calls: ram:48032c1a, ram:48067954, ram:4808cb66, ram:4808cdaa, ram:4808d01a, ram:480b8c0a, ram:48118d2c, ram:481249ba, ram:4819b728
+
+POST /cloud/enabled 0x480b3e6c
+JS: cloudSetEnabled@1658
+C strings: ["resource_error", "enabled", "plain", "0", "1", "invalid_enabled"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802b18e, ram:4808cb66, ram:480b3b14
+
+POST /cloud/upload 0x4808cf68
+JS: cloudUploadNow@1659
+C strings: ["resource_error", "application/json", "{\\\"ok\\\":true,\\\"queued\\\":true}", "upload_disabled", "ota_busy"]
+Direct calls: ram:48025ba6, ram:48032c1a, ram:48066698, ram:4808cb66
+
+POST /rec_start 0x480fd584
+JS: startRec@1066
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"recording_download_busy\\\"}", "include", "ids", "exclude", "buses", "0", "duration", "{\\\"ok\\\":false,\\\"error\\\":\\\"rx_or_tx_required\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_bg_unavailable\\\"}", "{\\\"ok\\\":true,\\\"cap\\\":", "{\\\"ok\\\":false,\\\"error\\\":\\\"buffer_unavailable\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"filter_transition_failed\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"recorder_pipeline_busy\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"recorder_active\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_id_list\\\"}"]
+Direct calls: ram:48025b94, ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:4802af5a, ram:4802afaa, ram:4802b18e, ram:4802b91c, ram:4802c55c, ram:4802cf56, ram:4802eb3a, ram:4802f486, ram:480329ca, ram:4806562c, ram:48067954, ram:4806acb0, ram:480fd2fc, ram:4fc00268, ram:4ff3abd4, ram:4ff3afa2, ram:4ff3b5f0, ram:4ff3ec14, ram:4ff3ee10
+
+POST /rec_stop 0x480fd45c
+JS: stopRec@1067
+C strings: ["{\\\"ok\\\":true}", "application/json"]
+Direct calls: ram:48065e9c, ram:48066484, ram:480fd37e, ram:4ff206d8, ram:4ff45158
+
+POST /rec_clear 0x4806e04e
+JS: clearRec@1068
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"recording_active\\\"}", "{\\\"ok\\\":true}", "{\\\"ok\\\":false,\\\"error\\\":\\\"recording_download_busy\\\"}"]
+Direct calls: ram:48065e9c, ram:48066484, ram:48066698, ram:4ff206d8, ram:4ff3abd4, ram:4ff3ec14, ram:4ff3ee10, ram:4ff45158
+
+GET /rec_status 0x4806c4e8
+JS: pollRec@1065
+C strings: ["ready", "false", "true", "active", "saved", "startState", "count", "bytes", "formatVersion", "lifecycle_events", "txCountUnit", "dropped", "optionalSinkRejected", "internal", "native", "psram", "none", "source", "stopReason", "elapsed", "duration", "ring", "include", "exclude", "buses", "rxEnabled", "txEnabled", "filterGeneration", "filterAppliedGeneration", "customFilter", "customFilterAcceptedIds", "busRx", "busTx", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4802a8ec, ram:4802a928, ram:4802a970, ram:4802aa44, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802afda, ram:4802b058, ram:4802cf56, ram:4802f022, ram:4802f236, ram:4802f278, ram:48065e9c, ram:48066484, ram:4ff206d8, ram:4ff3ec14, ram:4ff3ee10, ram:4ff45158
+
+GET /rec_download 0x4806fee2
+JS: downloadRecorderFile@1070
+C strings: ["No recording saved yet", "Stop recording before download", "text/plain", "format", "plain", "Content-Disposition", "attachment; filename=\\\"p1_3can_recording.csv\\\"", "attachment; filename=\\\"p1_3can_recording.bin\\\"", "Cache-Control", "no-store", "text/csv; charset=utf-8", "application/octet-stream", "{\\\"ok\\\":false,\\\"error\\\":\\\"recording_download_busy\\\"}", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802b18e, ram:4802b810, ram:4802cf56, ram:48065e9c, ram:48066484, ram:480667a8, ram:48067954, ram:4ff206d8, ram:4ff3ec14, ram:4ff3ee10, ram:4ff45158
+
+GET /wifi/status 0x48066f4c
+JS: loadWifiStatus@1083
+C strings: ["configurationState", "configurationGeneration", "enabled", "false", "true", "connected", "connecting", "savedSsid", "connectedSsid", "ip", "apRunning", "wifiMode", "apModeEnabled", "null", "Albert-P4-FSD", "apSsid", "apRestartPending", "apAutoOffEnabled", "apDisableInSec", "idle", "scanning", "scanState", "error", "retryInSec", "retryDeferredForAp", "apClients", "connectAttempts", "disconnectEvents", "lastDisconnectReason", "networks", "{\\\"ssid\\\":\\\"", "\\\",\\\"rssi\\\":", "application/json"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:4802a970, ram:4802aa00, ram:4802aa44, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802afda, ram:4802f022, ram:4802f07e, ram:4802f152, ram:4802f236, ram:48065e9c, ram:48066484, ram:48121b46, ram:48124918, ram:48124968, ram:48124990, ram:481249ba, ram:48124a4e, ram:48124a64, ram:48124a7a, ram:48169598, ram:4ff206d8, ram:4ff45158
+
+POST /wifi/scan 0x4806b7e4
+JS: scanWifi@1086
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "scan_failed", "{\\\"ok\\\":true}"]
+Direct calls: ram:4802ad46, ram:48065e9c, ram:48066484, ram:48066698, ram:4812471a, ram:481248e0, ram:4ff206d8, ram:4ff45158
+
+POST /wifi/connect 0x480f38e4
+JS: connectWifi@1087
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "plain", "{\\\"ok\\\":false,\\\"error\\\":\\\"ssid_required\\\"}", "password", "{\\\"ok\\\":true}", "{\\\"ok\\\":false,\\\"error\\\":\\\"flash_write\\\"}"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802ad02, ram:4802b13e, ram:4802b18e, ram:4802e260, ram:48030bc0, ram:480334d2, ram:48065e9c, ram:48066484, ram:48066698, ram:48067954, ram:480ee046, ram:4ff206d8, ram:4ff45158
+
+POST /wifi/disconnect 0x480f2624
+JS: disconnectWifi@1088
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"flash_write\\\"}", "{\\\"ok\\\":true}", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}"]
+Direct calls: ram:4802e7d0, ram:480334d2, ram:48065e9c, ram:48066484, ram:48066698, ram:480ee046, ram:48124a1a, ram:4ff206d8, ram:4ff45158
+
+POST /wifi/forget 0x480f2918
+JS: forgetWifi@1089
+C strings: ["{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"flash_write\\\"}", "{\\\"ok\\\":true}"]
+Direct calls: ram:4802ad46, ram:4802e7d0, ram:480334d2, ram:48065e9c, ram:48066484, ram:480ee046, ram:48124a1a, ram:4ff206d8, ram:4ff45158
+
+POST /wifi/ap-config 0x480f3d2c
+JS: saveWifiAp@1084
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"ap_restart_pending\\\"}", "password", "plain", "{\\\"ok\\\":false,\\\"error\\\":\\\"invalid_ap_password\\\"}", "{\\\"ok\\\":true,\\\"apRestarting\\\":true}", "{\\\"ok\\\":false,\\\"error\\\":\\\"preferences_write\\\"}"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802ad02, ram:4802ad46, ram:4802b13e, ram:4802b18e, ram:480334d2, ram:48066698, ram:48067954, ram:480ee046
+
+POST /wifi/ap-auto-off 0x480f2c14
+JS: setWifiApAutoOff@1085
+C strings: ["enabled", "{\\\"ok\\\":", "false", ",\\\"apAutoOffEnabled\\\":", "true", "application/json"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:4802af2c, ram:4802af5a, ram:480334d2, ram:48036a9a, ram:48065e9c, ram:48066484, ram:480ee046, ram:481249ba, ram:4ff206d8, ram:4ff45158
+
+GET /ota/status 0x4806bbf8
+JS: captureCoreDumpEvidence@831, loadOtaStatus@1121
+C strings: ["P1.6.4", "version", "buildVersion", "4d97f369e1a32f126b7121a66a70a53fca628dfa", "sourceCommit", "sourceDirty", "false", "appElfSha256", "bootSlot", "targetSlot", "bootMatchesRunning", "true", "maxSize", "token", "bootValidationKnown", "pendingVerify", "writing", "idle", "ready", "succeeded", "failed", "state", "error", "bytes", "Cache-Control", "no-store", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4802a9b8, ram:4802aa44, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802f022, ram:4802f236, ram:4803840a, ram:48039a3e, ram:48065e9c, ram:48066484, ram:480667a8, ram:4ff206d8, ram:4ff45158
+
+POST /ota/start 0x480ffd82
+JS: startOta@1132
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"token\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"pending_boot_verification\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"session_generation_exhausted\\\"}", "preparing", "failed", "can_quiesce", "{\\\"ok\\\":false,\\\"error\\\":\\\"", "\\\"}", "ready", "{\\\"ok\\\":true,\\\"token\\\":\\\"", "persistence", "persistence_flush", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_restore\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"persistence_flush\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"wifi_transition\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_not_ready\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:4802a8ec, ram:4802ad46, ram:4802ae48, ram:4802af2c, ram:4802afda, ram:4802b022, ram:4802e5c0, ram:4802f152, ram:48035faa, ram:48065e9c, ram:48066484, ram:48066698, ram:48067954, ram:4806acb0, ram:480f24fc, ram:480fe83a, ram:480fed16, ram:4ff206d8, ram:4ff45158
+
+POST /ota/cancel 0x480ff590
+JS: startOta@1132
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"token\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_inactive\\\"}", "cancelled", "{\\\"ok\\\":true}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_restore\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_committed_reboot_pending\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"online_ota_busy\\\"}"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4802f888, ram:48035faa, ram:48065e9c, ram:48066484, ram:48066698, ram:48067954, ram:48070652, ram:480fed16, ram:4ff206d8, ram:4ff45158
+
+POST /ota/upload 0x480ff860
+JS: anonymous_L1157_258917@1157
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"token\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"upload_not_ready\\\"}", "{\\\"ok\\\":true,\\\"bytes\\\":", ",\\\"rebooting\\\":true}", "upload_incomplete", "{\\\"ok\\\":false,\\\"error\\\":\\\"", "ota_failed", "\\\"}"]
+Direct calls: ram:48025ba6, ram:4802a59e, ram:4802a8a8, ram:4802a8ec, ram:4802ae48, ram:4802af2c, ram:4802af76, ram:4802f152, ram:4802f888, ram:48035faa, ram:48065e9c, ram:48066484, ram:48066698, ram:4806acb0, ram:480fed16, ram:4ff206d8, ram:4ff45158
+
+GET /ota/online/status 0x480bdfce
+JS: loadOnlineOtaStatus@1118
+C strings: ["{\\\"ok\\\":false,\\\"error\\\":\\\"status_buffer_unavailable\\\"}", "application/json", "Cache-Control", "no-store", "{\\\"ok\\\":false,\\\"error\\\":\\\"status_capacity\\\"}"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:48065e9c, ram:48066484, ram:48066698, ram:480667a8, ram:480bd6c6, ram:4fc00268, ram:4ff206d8, ram:4ff45158
+
+POST /ota/online/check 0x4806b9ae
+JS: checkOnlineOta@1119
+C strings: ["{\\\"ok\\\":false,\\\"error\\\":\\\"pending_boot_verification\\\"}", "checking", "{\\\"ok\\\":true,\\\"state\\\":\\\"checking\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"wifi_not_connected\\\"}", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"online_ota_busy\\\"}"]
+Direct calls: ram:48025ba6, ram:48065e9c, ram:48066484, ram:48067954, ram:481249ba, ram:4ff206d8, ram:4ff45158
+
+POST /ota/online/install 0x4807be92
+JS: installOnlineOta@1120
+C strings: ["available", "{\\\"ok\\\":false,\\\"error\\\":\\\"update_check_required\\\"}", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"management_target_changed\\\"}", "P1.6.4", "4d97f369e1a32f126b7121a66a70a53fca628dfa", "already_current", "invalid_release", "{\\\"ok\\\":false,\\\"error\\\":\\\"%s\\\"}", "preparing", "{\\\"ok\\\":true,\\\"state\\\":\\\"preparing\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"online_ota_busy\\\"}"]
+Direct calls: ram:4802e468, ram:4802e4fc, ram:48065e9c, ram:48066484, ram:48066698, ram:48067954, ram:4807bafc, ram:4819ad74, ram:4fc00268, ram:4ff206d8, ram:4ff45158, ram:4ff453ae
+
+POST /reboot 0x480ffb40
+JS: rebootBoard@1055
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"ota_busy\\\"}", "{\\\"ok\\\":true,\\\"rebooting\\\":true}", "{\\\"ok\\\":false,\\\"error\\\":\\\"reboot_busy\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_quiesce\\\"}", "{\\\"ok\\\":true}", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_restore\\\"}", "{\\\"ok\\\":false,\\\"error\\\":\\\"persistence_flush\\\"}"]
+Direct calls: ram:48025ba6, ram:4802ad46, ram:48066698, ram:48067954, ram:480a3262, ram:480f24fc, ram:480fe83a, ram:480fed16, ram:4fc00288, ram:4ff45158, ram:4ff454c4
+
+POST /api/can-experiment/listen 0x480ed598
+JS: canExperimentListen@84
+C strings: ["{\\\"ok\\\":false,\\\"error\\\":\\\"can_experiment_quiesced\\\"}", "application/json", "{\\\"ok\\\":true}"]
+Direct calls: ram:48065e9c, ram:48066484, ram:48066698, ram:48088676, ram:4808999a, ram:480ed24a, ram:4fc00268, ram:4ff206d8, ram:4ff45158
+
+POST /api/can-experiment/listen/stop 0x480ecf86
+JS: 
+C strings: ["{\\\"ok\\\":true}", "application/json"]
+Direct calls: ram:48065e9c, ram:48066484, ram:480ecf52, ram:4fc00268, ram:4ff206d8, ram:4ff3ec14, ram:4ff3ee10, ram:4ff45158
+
+POST /api/can-experiment/source/confirm 0x480ab7ba
+JS: canExperimentConfirmSource@85
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_experiment_quiesced\\\"}", "plain"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802af2c, ram:4802af5a, ram:4802b18e, ram:4802b206, ram:4805ebaa, ram:48066698, ram:4808999a, ram:480ab726, ram:4fc0036c
+
+POST /api/can-experiment/validate 0x480ec3f8
+JS: canExperimentValidate@86
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_experiment_quiesced\\\"}", "false", "generation", "errors", "message", "otherRule", "bus", "warnings"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4802a928, ram:4802aa44, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802b206, ram:48067954, ram:4806acb0, ram:480881e0, ram:48088676, ram:4808999a, ram:480ebb1a, ram:4fc00268
+
+POST /api/can-experiment/start 0x480eb56e
+JS: canExperimentStart@87
+C strings: ["application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_experiment_quiesced\\\"}", "confirmedGeneration", "plain", "generation"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802aa44, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802b18e, ram:4802b206, ram:48066698, ram:4806acb0, ram:480881e0, ram:48088676, ram:4808999a, ram:480ead1c, ram:4fc00268, ram:4fc0036c, ram:4ff3ec14, ram:4ff3ee10
+
+POST /api/can-experiment/stop 0x480eab84
+JS: canExperimentStop@88
+C strings: ["{\\\"ok\\\":true}", "application/json"]
+Direct calls: ram:48065e9c, ram:48066484, ram:480eaa3a, ram:4ff206d8, ram:4ff45158
+
+GET /api/can-experiment/status 0x480acf1c
+JS: canExperimentPollStatus@119
+C strings: ["state", "running", "listening", "ready", "stopping", "error_stopped", "stopped", "stopReason", "generation", "ruleCount", "laneCount", "true", "false", "dispatchPriority", "inherit", "takeoverActive", "rules", "sourceConfirmed", "lanes", "bus", "id", "waiting_bus", "waiting_template", "waiting_builtin_owner", "single_completed", "templateValid", "templateAgeMs", "observedPeriodMs", "source", "0123456789ABCDEF", "output", "stableSourceFrames", "generated", "accepted", "rejected", "terminalOk", "terminalFail", "busySkip", "staleSkip", "dlcMismatch", "delayedSupersededCount", "lastAcceptedLatencyUs", "maxAcceptedLatencyUs", "lastTerminalLatencyUs", "maxTerminalLatencyUs", "pendingToken", "priority", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a79a, ram:4802a8a8, ram:4802a928, ram:4802aa44, ram:4802ad46, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802b206, ram:4806acb0, ram:480881e0, ram:480ab726, ram:480abb04, ram:4fc00268, ram:4ff3ec14, ram:4ff3ee10
+
+GET /api/can-experiment/presets 0x4806da0c
+JS: canExperimentLoadPresets@133, canExperimentPresetAction@143, canExperimentPresetDelete@144
+C strings: ["{\\\"ok\\\":true,\\\"slots\\\":[", "occupied", "false", "valid", "persistencePending", "name", "generation", "persistedGeneration", "application/json"]
+Direct calls: ram:4802a59e, ram:4802a8a8, ram:4802a928, ram:4802aa44, ram:4802ae48, ram:4802af2c, ram:4802af5a, ram:4802b206, ram:48065e9c, ram:48066484, ram:4fc00268, ram:4ff206d8, ram:4ff45158
+
+POST /api/can-experiment/presets 0x480ac732
+JS: canExperimentLoadPresets@133, canExperimentPresetAction@143, canExperimentPresetDelete@144
+C strings: ["plain", "action", "load", "rename", "save", "name", "application/json", "{\\\"ok\\\":false,\\\"error\\\":\\\"can_experiment_quiesced\\\"}", "ruleCount", "rules"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802af2c, ram:4802af5a, ram:4802b18e, ram:4806562c, ram:48066698, ram:4806acb0, ram:48085db8, ram:480881e0, ram:48088676, ram:4808999a, ram:48089eac, ram:480ab726, ram:480abb04, ram:4fc00268, ram:4fc0036c
+
+DELETE /api/can-experiment/presets 0x4808a37e
+JS: canExperimentLoadPresets@133, canExperimentPresetAction@143, canExperimentPresetDelete@144
+C strings: ["{\\\"ok\\\":false,\\\"error\\\":\\\"can_experiment_quiesced\\\"}", "application/json", "plain"]
+Direct calls: ram:4802a59e, ram:4802a888, ram:4802a8a8, ram:4802b18e, ram:48065e9c, ram:48066484, ram:48085fb4, ram:4808999a, ram:48089eac, ram:4fc0036c, ram:4ff206d8, ram:4ff45158

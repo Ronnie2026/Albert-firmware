@@ -1,0 +1,405 @@
+{
+  "/dev/console": {
+    "firmware_offset": 17540,
+    "address": 1209746564
+  },
+  "/dev/uart": {
+    "firmware_offset": 19348,
+    "address": 1209748372
+  },
+  "/dev/secondary": {
+    "firmware_offset": 21468,
+    "address": 1209750492
+  },
+  "/dev/uart/0": {
+    "firmware_offset": 21600,
+    "address": 1209750624
+  },
+  "/dev/null": {
+    "firmware_offset": 21708,
+    "address": 1209750732
+  },
+  "/dev/esps0": {
+    "firmware_offset": 27248,
+    "address": 1209756272
+  },
+  "/health": {
+    "firmware_offset": 100556,
+    "address": 1209829580,
+    "seen_in_web": true
+  },
+  "/status_fast": {
+    "firmware_offset": 100564,
+    "address": 1209829588,
+    "seen_in_web": true
+  },
+  "/cloud/status": {
+    "firmware_offset": 100580,
+    "address": 1209829604,
+    "seen_in_web": true
+  },
+  "/ota/online/status": {
+    "firmware_offset": 100596,
+    "address": 1209829620,
+    "seen_in_web": true
+  },
+  "/management/status": {
+    "firmware_offset": 109104,
+    "address": 1209838128,
+    "seen_in_web": true
+  },
+  "/auth/login": {
+    "firmware_offset": 109124,
+    "address": 1209838148,
+    "seen_in_web": true
+  },
+  "/auth/logout": {
+    "firmware_offset": 109136,
+    "address": 1209838160,
+    "seen_in_web": true
+  },
+  "/auth/status": {
+    "firmware_offset": 109152,
+    "address": 1209838176,
+    "seen_in_web": true
+  },
+  "/generate_204": {
+    "firmware_offset": 109168,
+    "address": 1209838192
+  },
+  "/gen_204": {
+    "firmware_offset": 109184,
+    "address": 1209838208
+  },
+  "/hotspot-detect.html": {
+    "firmware_offset": 109196,
+    "address": 1209838220
+  },
+  "/web_metrics": {
+    "firmware_offset": 109220,
+    "address": 1209838244,
+    "seen_in_web": true
+  },
+  "/torque_nag/status": {
+    "firmware_offset": 109236,
+    "address": 1209838260,
+    "seen_in_web": true
+  },
+  "/runtime_status": {
+    "firmware_offset": 109256,
+    "address": 1209838280,
+    "seen_in_web": true
+  },
+  "/system_status": {
+    "firmware_offset": 109272,
+    "address": 1209838296,
+    "seen_in_web": true
+  },
+  "/can_diag": {
+    "firmware_offset": 109288,
+    "address": 1209838312,
+    "seen_in_web": true
+  },
+  "/can_hot_ids": {
+    "firmware_offset": 109300,
+    "address": 1209838324,
+    "seen_in_web": true
+  },
+  "/coredump/info": {
+    "firmware_offset": 109316,
+    "address": 1209838340,
+    "seen_in_web": true
+  },
+  "/coredump.bin": {
+    "firmware_offset": 109332,
+    "address": 1209838356,
+    "seen_in_web": true
+  },
+  "/config/uss_radar": {
+    "firmware_offset": 109348,
+    "address": 1209838372,
+    "seen_in_web": true
+  },
+  "/ambient_config": {
+    "firmware_offset": 109368,
+    "address": 1209838392,
+    "seen_in_web": true
+  },
+  "/speed_target/config": {
+    "firmware_offset": 109384,
+    "address": 1209838408,
+    "seen_in_web": true
+  },
+  "/speed_target/save": {
+    "firmware_offset": 109408,
+    "address": 1209838432,
+    "seen_in_web": true
+  },
+  "/can_pin_layout": {
+    "firmware_offset": 109428,
+    "address": 1209838452,
+    "seen_in_web": true
+  },
+  "/rear_fog/config": {
+    "firmware_offset": 109444,
+    "address": 1209838468,
+    "seen_in_web": true
+  },
+  "/rear_fog/runtime": {
+    "firmware_offset": 109464,
+    "address": 1209838488,
+    "seen_in_web": true
+  },
+  "/config/ble_obstacle": {
+    "firmware_offset": 109484,
+    "address": 1209838508,
+    "seen_in_web": true
+  },
+  "/fsd_auto_start/master": {
+    "firmware_offset": 109508,
+    "address": 1209838532,
+    "seen_in_web": true
+  },
+  "/save": {
+    "firmware_offset": 109532,
+    "address": 1209838556,
+    "seen_in_web": true
+  },
+  "/seat_action": {
+    "firmware_offset": 109540,
+    "address": 1209838564,
+    "seen_in_web": true
+  },
+  "/driver_profiles": {
+    "firmware_offset": 109556,
+    "address": 1209838580,
+    "seen_in_web": true
+  },
+  "/fsd_records": {
+    "firmware_offset": 109576,
+    "address": 1209838600,
+    "seen_in_web": true
+  },
+  "/fsd_records/clock": {
+    "firmware_offset": 109592,
+    "address": 1209838616,
+    "seen_in_web": true
+  },
+  "/fsd_records/clear": {
+    "firmware_offset": 109612,
+    "address": 1209838636,
+    "seen_in_web": true
+  },
+  "/fsd_records/subtotal/reset": {
+    "firmware_offset": 109632,
+    "address": 1209838656,
+    "seen_in_web": true
+  },
+  "/onboarding/status": {
+    "firmware_offset": 109660,
+    "address": 1209838684,
+    "seen_in_web": true
+  },
+  "/onboarding/complete": {
+    "firmware_offset": 109680,
+    "address": 1209838704,
+    "seen_in_web": true
+  },
+  "/cloud/agent/config": {
+    "firmware_offset": 109704,
+    "address": 1209838728
+  },
+  "/cloud/settings/restore": {
+    "firmware_offset": 109724,
+    "address": 1209838748,
+    "seen_in_web": true
+  },
+  "/cloud/settings/conflicts": {
+    "firmware_offset": 109748,
+    "address": 1209838772,
+    "seen_in_web": true
+  },
+  "/cloud/settings/conflict": {
+    "firmware_offset": 109776,
+    "address": 1209838800,
+    "seen_in_web": true
+  },
+  "/cloud/developer": {
+    "firmware_offset": 109804,
+    "address": 1209838828,
+    "seen_in_web": true
+  },
+  "/cloud/config": {
+    "firmware_offset": 109824,
+    "address": 1209838848,
+    "seen_in_web": true
+  },
+  "/cloud/test": {
+    "firmware_offset": 109840,
+    "address": 1209838864,
+    "seen_in_web": true
+  },
+  "/cloud/enabled": {
+    "firmware_offset": 109852,
+    "address": 1209838876,
+    "seen_in_web": true
+  },
+  "/cloud/upload": {
+    "firmware_offset": 109868,
+    "address": 1209838892,
+    "seen_in_web": true
+  },
+  "/rec_start": {
+    "firmware_offset": 109884,
+    "address": 1209838908,
+    "seen_in_web": true
+  },
+  "/rec_stop": {
+    "firmware_offset": 109896,
+    "address": 1209838920,
+    "seen_in_web": true
+  },
+  "/rec_clear": {
+    "firmware_offset": 109908,
+    "address": 1209838932,
+    "seen_in_web": true
+  },
+  "/rec_status": {
+    "firmware_offset": 109920,
+    "address": 1209838944,
+    "seen_in_web": true
+  },
+  "/rec_download": {
+    "firmware_offset": 109932,
+    "address": 1209838956,
+    "seen_in_web": true
+  },
+  "/wifi/status": {
+    "firmware_offset": 109948,
+    "address": 1209838972,
+    "seen_in_web": true
+  },
+  "/wifi/scan": {
+    "firmware_offset": 109964,
+    "address": 1209838988,
+    "seen_in_web": true
+  },
+  "/wifi/connect": {
+    "firmware_offset": 109976,
+    "address": 1209839000,
+    "seen_in_web": true
+  },
+  "/wifi/disconnect": {
+    "firmware_offset": 109992,
+    "address": 1209839016,
+    "seen_in_web": true
+  },
+  "/wifi/forget": {
+    "firmware_offset": 110012,
+    "address": 1209839036,
+    "seen_in_web": true
+  },
+  "/wifi/ap-config": {
+    "firmware_offset": 110028,
+    "address": 1209839052,
+    "seen_in_web": true
+  },
+  "/wifi/ap-auto-off": {
+    "firmware_offset": 110044,
+    "address": 1209839068,
+    "seen_in_web": true
+  },
+  "/ota/status": {
+    "firmware_offset": 110064,
+    "address": 1209839088,
+    "seen_in_web": true
+  },
+  "/ota/start": {
+    "firmware_offset": 110076,
+    "address": 1209839100,
+    "seen_in_web": true
+  },
+  "/ota/cancel": {
+    "firmware_offset": 110088,
+    "address": 1209839112,
+    "seen_in_web": true
+  },
+  "/ota/upload": {
+    "firmware_offset": 110100,
+    "address": 1209839124,
+    "seen_in_web": true
+  },
+  "/ota/online/check": {
+    "firmware_offset": 110112,
+    "address": 1209839136,
+    "seen_in_web": true
+  },
+  "/ota/online/install": {
+    "firmware_offset": 110132,
+    "address": 1209839156,
+    "seen_in_web": true
+  },
+  "/reboot": {
+    "firmware_offset": 110152,
+    "address": 1209839176,
+    "seen_in_web": true
+  },
+  "/api/can-experiment/listen": {
+    "firmware_offset": 110160,
+    "address": 1209839184,
+    "seen_in_web": true
+  },
+  "/api/can-experiment/listen/stop": {
+    "firmware_offset": 110188,
+    "address": 1209839212
+  },
+  "/api/can-experiment/source/confirm": {
+    "firmware_offset": 110220,
+    "address": 1209839244,
+    "seen_in_web": true
+  },
+  "/api/can-experiment/validate": {
+    "firmware_offset": 110256,
+    "address": 1209839280,
+    "seen_in_web": true
+  },
+  "/api/can-experiment/start": {
+    "firmware_offset": 110288,
+    "address": 1209839312,
+    "seen_in_web": true
+  },
+  "/api/can-experiment/stop": {
+    "firmware_offset": 110316,
+    "address": 1209839340,
+    "seen_in_web": true
+  },
+  "/api/can-experiment/status": {
+    "firmware_offset": 110344,
+    "address": 1209839368,
+    "seen_in_web": true
+  },
+  "/api/can-experiment/presets": {
+    "firmware_offset": 110372,
+    "address": 1209839396,
+    "seen_in_web": true
+  },
+  "/reboot/status": {
+    "firmware_offset": 136340,
+    "address": 1209865364,
+    "seen_in_web": true
+  },
+  "/fsd_records/live": {
+    "firmware_offset": 137516,
+    "address": 1209866540,
+    "seen_in_web": true
+  },
+  "/config": {
+    "seen_in_web": true
+  },
+  "/status": {
+    "seen_in_web": true
+  },
+  "/s": {
+    "seen_in_web": true
+  }
+}

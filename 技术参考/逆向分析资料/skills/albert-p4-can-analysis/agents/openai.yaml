@@ -1,0 +1,4 @@
+interface:
+  display_name: "Albert P4 CAN 逆向分析"
+  short_description: "查网页功能对应的 CAN 通道、ID、控制字段、数值及 C 逻辑"
+  default_prompt: "使用 $albert-p4-can-analysis 中独立收录的资料解释指定功能，给出 CAN 通道、ID、DLC/MUX、字节/bit、控制值、门控、反馈、C 伪代码和地址备注，并标注未确认字段。"

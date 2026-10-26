@@ -1,0 +1,12 @@
+# Local tools and generated files
+.DS_Store
+._*
+**/.pio/
+**/.cache/
+**/__pycache__/
+*.pyc
+**/compile_commands.json
+**/.vscode/
+**/*.rep/
+**/*.gpr
+技术参考/逆向分析资料/reconstructed/build/
